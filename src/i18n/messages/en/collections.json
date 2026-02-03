@@ -12,17 +12,12 @@
         "content": "Joined Stats Perform as a Product Data Intern, working on sports analytics and data science."
       },
       {
-        "date": "2025.1",
-        "title": "Selected by [Antler](https://www.antler.co/) Accelerator",
-        "content": "Nordlys Labs was selected by the Antler accelerator programme to scale our intelligent LLM routing platform."
-      },
-      {
         "date": "2024.12",
         "title": "ML Research Assistant at Royal Holloway",
         "content": "Started as an ML Research Assistant at Royal Holloway, working on transformer attention mechanisms and adversarial robustness."
       },
       {
-        "date": "2024.2",
+        "date": "2025.2",
         "title": "Founded [Nordlys Labs](https://www.nordlyslabs.com/)",
         "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems. Scaled to 500+ users."
       },
@@ -74,18 +69,6 @@
           }
         ],
         "image": "/proj-llm-journey.png",
-        "video": ""
-      },
-      {
-        "title": "Student Copilot",
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
-        "active": true,
-        "description": "AI-powered study tool that helps students with revision, note-taking, and exam preparation using LLM capabilities.",
-        "technologies": ["TypeScript", "Next.js", "Python", "LangChain"],
-        "authors": "",
-        "links": [],
-        "image": "/proj-student-copilot.png",
         "video": ""
       },
       {
@@ -214,10 +197,6 @@
   },
   "awards": {
     "items": [
-      {
-        "year": 2024,
-        "title": "Selected by Antler Accelerator"
-      },
       {
         "year": 2024,
         "title": "Scaled Nordlys Labs to 500+ users"

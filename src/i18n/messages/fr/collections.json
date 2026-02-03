@@ -12,17 +12,12 @@
         "content": "Int\u00e9gration chez Stats Perform en tant que stagiaire Data Produit, travaillant sur l'analyse sportive et la science des donn\u00e9es."
       },
       {
-        "date": "2025.1",
-        "title": "S\u00e9lectionn\u00e9 par l'acc\u00e9l\u00e9rateur [Antler](https://www.antler.co/)",
-        "content": "Nordlys Labs a \u00e9t\u00e9 s\u00e9lectionn\u00e9 par le programme d'acc\u00e9l\u00e9ration Antler pour d\u00e9velopper notre plateforme de routage LLM intelligent."
-      },
-      {
         "date": "2024.12",
         "title": "Assistant de recherche ML \u00e0 Royal Holloway",
         "content": "D\u00e9but en tant qu'assistant de recherche ML \u00e0 Royal Holloway, travaillant sur les m\u00e9canismes d'attention des transformers et la robustesse adversariale."
       },
       {
-        "date": "2024.2",
+        "date": "2025.2",
         "title": "Fondation de [Nordlys Labs](https://www.nordlyslabs.com/)",
         "content": "Co-fondation de Nordlys Labs, construisant des syst\u00e8mes de routage LLM intelligents. Mise \u00e0 l'\u00e9chelle \u00e0 plus de 500 utilisateurs."
       },
@@ -74,18 +69,6 @@
           }
         ],
         "image": "/proj-llm-journey.png",
-        "video": ""
-      },
-      {
-        "title": "Student Copilot",
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
-        "active": true,
-        "description": "Outil d'\u00e9tude aliment\u00e9 par l'IA qui aide les \u00e9tudiants avec la r\u00e9vision, la prise de notes et la pr\u00e9paration aux examens.",
-        "technologies": ["TypeScript", "Next.js", "Python", "LangChain"],
-        "authors": "",
-        "links": [],
-        "image": "/proj-student-copilot.png",
         "video": ""
       },
       {
@@ -214,10 +197,6 @@
   },
   "awards": {
     "items": [
-      {
-        "year": 2024,
-        "title": "S\u00e9lectionn\u00e9 par l'acc\u00e9l\u00e9rateur Antler"
-      },
       {
         "year": 2024,
         "title": "Nordlys Labs : plus de 500 utilisateurs"
