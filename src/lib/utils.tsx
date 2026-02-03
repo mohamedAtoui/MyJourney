@@ -23,21 +23,21 @@ export function formatDate(date: string, locale: string = "en-US") {
   });
 
   if (daysAgo < 1) {
-    return locale.startsWith("zh") ? "今天" : "Today";
+    return locale.startsWith("fr") ? "Aujourd'hui" : "Today";
   } else if (daysAgo < 7) {
-    const agoText = locale.startsWith("zh") ? "天前" : "d ago";
+    const agoText = locale.startsWith("fr") ? "j" : "d ago";
     return `${fullDate} (${daysAgo}${agoText})`;
   } else if (daysAgo < 30) {
     const weeksAgo = Math.floor(daysAgo / 7);
-    const agoText = locale.startsWith("zh") ? "周前" : "w ago";
+    const agoText = locale.startsWith("fr") ? " sem." : "w ago";
     return `${fullDate} (${weeksAgo}${agoText})`;
   } else if (daysAgo < 365) {
     const monthsAgo = Math.floor(daysAgo / 30);
-    const agoText = locale.startsWith("zh") ? "个月前" : "mo ago";
+    const agoText = locale.startsWith("fr") ? " mois" : "mo ago";
     return `${fullDate} (${monthsAgo}${agoText})`;
   } else {
     const yearsAgo = Math.floor(daysAgo / 365);
-    const agoText = locale.startsWith("zh") ? "年前" : "y ago";
+    const agoText = locale.startsWith("fr") ? " an(s)" : "y ago";
     return `${fullDate} (${yearsAgo}${agoText})`;
   }
 }
