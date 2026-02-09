@@ -2,6 +2,11 @@
   "news": {
     "items": [
       {
+        "date": "2026.2",
+        "title": "Presented MoM Framework at Online Meetup",
+        "content": "Presented the MoM (Mixture of Models) framework in an online meetup, followed by engaging discussions with the audience on LLM routing and model selection strategies."
+      },
+      {
         "date": "2025.10",
         "title": "Teaching Assistant at Royal Holloway",
         "content": "Started as a Teaching Assistant for Object-Oriented Programming & Software Engineering at Royal Holloway, University of London."
@@ -19,7 +24,7 @@
       {
         "date": "2025.2",
         "title": "Founded [Nordlys Labs](https://www.nordlyslabs.com/)",
-        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems. Scaled to 500+ users."
+        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems that select the best model for each task. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users."
       },
       {
         "date": "2023.9",
@@ -35,7 +40,7 @@
         "href": "https://www.nordlyslabs.com/",
         "dates": "Feb. 2024 - Present",
         "active": true,
-        "description": "Intelligent LLM routing startup that cuts AI inference costs by 50-60%. Selected by the Antler accelerator, scaled to 500+ users.",
+        "description": "Intelligent LLM routing startup that selects the best model for each task, cutting AI inference costs by 50-60%. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users.",
         "technologies": ["Python", "FastAPI", "LangChain", "Redis", "PostgreSQL", "Docker"],
         "authors": "",
         "links": [
@@ -158,7 +163,7 @@
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Feb. 2024",
         "end": "Present",
-        "description": "Building intelligent LLM routing systems that cut AI inference costs by 50-60%. Selected by Antler accelerator. Scaled to 500+ users."
+        "description": "Building intelligent LLM routing systems that select the best model for each task, cutting AI inference costs by 50-60%. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users."
       },
       {
         "company": "Stats Perform",
