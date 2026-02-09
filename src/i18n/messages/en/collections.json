@@ -40,7 +40,7 @@
         "href": "https://www.nordlyslabs.com/",
         "dates": "Feb. 2024 - Present",
         "active": true,
-        "description": "Intelligent LLM routing startup that selects the best model for each task, cutting AI inference costs by 50-60%. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users.",
+        "description": "Intelligent LLM routing startup that selects the best model for each task. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users.",
         "technologies": ["Python", "FastAPI", "LangChain", "Redis", "PostgreSQL", "Docker"],
         "authors": "",
         "links": [
@@ -163,7 +163,7 @@
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Feb. 2024",
         "end": "Present",
-        "description": "Building intelligent LLM routing systems that select the best model for each task, cutting AI inference costs by 50-60%. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users."
+        "description": "Building intelligent LLM routing systems that select the best model for each task. Beat Opus-4-5 on SWE-bench benchmarks. Scaled to 500+ users."
       },
       {
         "company": "Stats Perform",
