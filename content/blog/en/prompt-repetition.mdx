@@ -1,12 +1,12 @@
 ---
 title: "Say It Again: Does Repeating the Prompt Make Small LLMs Smarter?"
 date: "2026-02-22"
-summary: "A Google Research paper found that repeating the prompt improves LLM accuracy. I tested whether this trick works on small, open-source models you can run for free."
+summary: "I tested a dead-simple trick from a Google Research paper — just repeat the prompt — on small open-source models. On ARC-Challenge, accuracy doubled."
 ---
 
-## The Idea
+## A Paper That Shouldn't Work
 
-The paper ["Prompt Repetition Improves Non-Reasoning LLMs"](https://arxiv.org/abs/2512.14982) has a surprisingly simple premise. Take your prompt, repeat it verbatim, then ask for the answer:
+I came across ["Prompt Repetition Improves Non-Reasoning LLMs"](https://arxiv.org/abs/2512.14982) and almost scrolled past it. The claim sounded too simple: copy-paste your prompt inside a single request, and the model gets more accurate. No fine-tuning. No chain-of-thought. Just... say it twice.
 
 ```
 Q: What gas do plants absorb?
@@ -17,28 +17,38 @@ Q: What gas do plants absorb?
 A:
 ```
 
-That's it. The authors tested this on Gemini, GPT-4o, Claude, and DeepSeek — all large API models. Across 70 model-benchmark pairs, repetition helped or was neutral in every single case. Zero regressions.
+The authors tested this on Gemini, GPT-4o, Claude, and DeepSeek. Across 70 model-benchmark pairs, repetition helped or stayed neutral in every case. Not a single regression.
 
-**Why does it work?** Transformers read left-to-right. The first copy of the prompt is processed with only forward context. But the second copy can attend to everything — including the first copy. It's a cheap approximation of bidirectional attention, giving the model a second pass to understand the question before answering.
+The intuition makes sense once you think about it. Transformers process tokens left-to-right. The first copy of the prompt only has forward context. But the second copy gets to attend to everything — including the first copy. It's basically a cheap approximation of bidirectional attention. The model gets a second pass at understanding the question before it has to commit to an answer.
 
-## My Question
+---
 
-The paper only tested large, closed-source models. I wanted to know: **does this work on small open-source models (0.5B–9B parameters) that you can run on a single GPU?**
+## But Does It Work on Small Models?
+
+The paper only tested large, closed-source models behind APIs. That's great, but I was more interested in a different question: **what happens when you try this on a 1.5B parameter model running on a free Colab GPU?**
+
+Small models are where this trick would matter most. If you're already paying for GPT-4o, a few extra input tokens is nothing. But if you're running Qwen 1.5B locally because you need it cheap or private, squeezing out extra accuracy for free is a big deal.
+
+So I ran the experiment.
+
+---
 
 ## Setup
 
-I ran the experiment on Google Colab with an A100 GPU using [Unsloth](https://unsloth.ai) for fast inference. The code evaluates multiple prompt variants:
+Google Colab, A100 GPU, [Unsloth](https://unsloth.ai) for fast inference. I tested four prompt variants:
 
-- **Baseline** — ask once
-- **Repeat x2** — ask twice
-- **Repeat x3** — ask three times
-- **Options-first** — show answer choices before the question
+- **Baseline** — ask the question once
+- **Repeat x2** — ask it twice
+- **Repeat x3** — ask it three times
+- **Options-first** — show answer choices before the question (a different reordering trick)
 
-Models tested span three families (Qwen, Llama, Gemma) from 0.5B to 9B parameters. Benchmarks include ARC-Challenge (science QA), OpenBookQA, and the paper's custom NameIndex task.
+I ran this across three model families (Qwen, Llama, Gemma) from 0.5B to 9B parameters, on ARC-Challenge (science reasoning), OpenBookQA, and the paper's custom NameIndex task.
+
+---
 
 ## Results
 
-Here's what happened with Qwen2.5-1.5B on 50 ARC-Challenge samples:
+Qwen2.5-1.5B on 50 ARC-Challenge samples:
 
 | Variant | Accuracy |
 |---------|----------|
@@ -47,15 +57,19 @@ Here's what happened with Qwen2.5-1.5B on 50 ARC-Challenge samples:
 | Repeat x3 | **44%** |
 | Options-first | 26% |
 
-**Accuracy doubled.** And this isn't noise — McNemar's test confirms the x3 result is statistically significant at p=0.022.
+22% to 44%. Accuracy doubled by repeating the prompt three times.
 
-OpenBookQA showed a smaller, non-significant gain (+4pp with x2). This matches the original paper's finding that the effect varies by benchmark.
+This isn't noise — McNemar's test gives p=0.022 for the x3 result. And it cost nothing extra in terms of output tokens. The only overhead is a longer input, which only affects prefill time, not generation speed.
 
-### NameIndex: The Stress Test
+OpenBookQA was less dramatic — a +4 percentage point bump with x2, not statistically significant. This tracks with the original paper: the effect depends on the benchmark. Tasks that require careful reasoning over multiple answer choices benefit the most.
 
-The paper's most dramatic result was on NameIndex — a task where the model must find a specific name in a list of 50 random names. The original paper saw accuracy jump from 21% to 97%.
+---
 
-At 1.5B scale, the model struggles regardless:
+### NameIndex
+
+The paper's wildest result was on NameIndex — find a specific name in a list of 50 random names. Large models went from 21% to 97% with repetition.
+
+Small models? Not so much:
 
 | Variant | Accuracy |
 |---------|----------|
@@ -63,34 +77,36 @@ At 1.5B scale, the model struggles regardless:
 | Repeat x2 | 6.7% |
 | Repeat x3 | 8.0% |
 
-The direction is right — repetition helps — but 1.5B parameters simply isn't enough for this task. This is where scaling to 7B+ models matters.
+The trend is there — repetition still helps — but 1.5B parameters just doesn't have the attention capacity to handle a 50-item lookup. This task needs the raw horsepower of a 7B+ model. Repetition can't compensate for what the model fundamentally can't do.
 
-## What I Learned
+---
 
-**1. Prompt repetition works on small models too.** The ARC-Challenge results are striking. A 1.5B model with a repeated prompt outperforms its single-prompt baseline by 22 percentage points.
+## What This Tells Us
 
-**2. The effect is benchmark-dependent.** Tasks requiring precise reasoning over answer choices (like ARC) benefit most. Simpler QA (OpenBookQA) shows weaker gains.
+**Prompt repetition works on small models.** Not on every task, but on reasoning-heavy benchmarks like ARC, the gains are real and significant. A 1.5B model with a triple-repeated prompt beats its own baseline by 22 percentage points.
 
-**3. Model scale still matters.** NameIndex is essentially an attention-and-retrieval task. At 1.5B, the model doesn't have enough capacity to leverage the repeated context. The paper's 21%-to-97% jump likely requires 7B+ parameters.
+**The effect is task-dependent.** If the task requires the model to carefully weigh multiple options (like multiple-choice science questions), repetition helps a lot. If it's more about recall or simple lookup, the gains are smaller.
 
-**4. It's free.** No training. No API changes. No extra output tokens. Just repeat the prompt. Latency per output token stays the same because the extra input tokens only add to prefill time, not generation time.
+**Scale still matters.** Repetition gives the model a better chance to use the capacity it has. It doesn't give it capacity it doesn't have. NameIndex proves that — the 21%-to-97% jump from the original paper almost certainly requires 7B+ parameters.
 
-## Try It Yourself
+**It's genuinely free.** No training, no API changes, no extra output tokens. The input gets longer, but that only affects prefill time. Per-token generation latency stays the same.
 
-The full experiment is open-source:
+---
+
+## Code
+
+Everything is open-source:
 
 **[github.com/mohamedAtoui/prompt-repetition-experiment](https://github.com/mohamedAtoui/prompt-repetition-experiment)**
 
-Upload `notebooks/colab_full_run.ipynb` to Colab, set the runtime to GPU, and hit Run All. Change one line to test different models:
+Upload `notebooks/colab_full_run.ipynb` to Colab, set the runtime to GPU, and run it. Swap in a different model with one line:
 
 ```python
 MODEL_NAME = "llama3.1-8b"  # or qwen2.5-7b, gemma2-9b, etc.
 ```
 
-## The Takeaway
-
-If you're using a small LLM and accuracy matters more than input cost, try repeating the prompt. It's the simplest performance trick I've seen — and it actually works.
+If you're running small models and accuracy matters, try repeating the prompt before reaching for anything more complicated. Sometimes the dumbest trick is the one that works.
 
 ---
 
-*Based on: Leviathan, Y., Kalman, M., & Matias, Y. (2024). "Prompt Repetition Improves Non-Reasoning LLMs." [arXiv:2512.14982](https://arxiv.org/abs/2512.14982)*
+*Paper: Leviathan, Y., Kalman, M., & Matias, Y. (2024). "Prompt Repetition Improves Non-Reasoning LLMs." [arXiv:2512.14982](https://arxiv.org/abs/2512.14982)*
