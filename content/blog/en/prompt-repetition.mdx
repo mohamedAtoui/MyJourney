@@ -1,7 +1,7 @@
 ---
 title: "Say It Again: Does Repeating the Prompt Make Small LLMs Smarter?"
 date: "2026-02-22"
-summary: "I tested a dead-simple trick from a Google Research paper -just repeat the prompt -on small open-source models. On ARC-Challenge, accuracy doubled."
+summary: "I tested a dead-simple trick from a Google Research paper on small open-source models. Just repeat the prompt. On ARC-Challenge, accuracy doubled."
 ---
 
 ## A Paper That Shouldn't Work
@@ -19,7 +19,7 @@ A:
 
 The authors tested this on Gemini, GPT-4o, Claude, and DeepSeek. Across 70 model-benchmark pairs, repetition helped or stayed neutral in every case. Not a single regression.
 
-The intuition makes sense once you think about it. Transformers process tokens left-to-right. The first copy of the prompt only has forward context. But the second copy gets to attend to everything -including the first copy. It's basically a cheap approximation of bidirectional attention. The model gets a second pass at understanding the question before it has to commit to an answer.
+The intuition makes sense once you think about it. Transformers process tokens left-to-right. The first copy of the prompt only has forward context. But the second copy gets to attend to everything, including the first copy. It's basically a cheap approximation of bidirectional attention. The model gets a second pass at understanding the question before it has to commit to an answer.
 
 ## But Does It Work on Small Models?
 
@@ -33,10 +33,10 @@ So I ran the experiment.
 
 Google Colab, A100 GPU, [Unsloth](https://unsloth.ai) for fast inference. I tested four prompt variants:
 
-- **Baseline** -ask the question once
-- **Repeat x2** -ask it twice
-- **Repeat x3** -ask it three times
-- **Options-first** -show answer choices before the question (a different reordering trick)
+- **Baseline**: ask the question once
+- **Repeat x2**: ask it twice
+- **Repeat x3**: ask it three times
+- **Options-first**: show answer choices before the question (a different reordering trick)
 
 I ran this across three model families (Qwen, Llama, Gemma) from 0.5B to 9B parameters, on ARC-Challenge (science reasoning), OpenBookQA, and the paper's custom NameIndex task.
 
@@ -53,13 +53,13 @@ Qwen2.5-1.5B on 50 ARC-Challenge samples:
 
 22% to 44%. Accuracy doubled by repeating the prompt three times.
 
-This isn't noise -McNemar's test gives p=0.022 for the x3 result. And it cost nothing extra in terms of output tokens. The only overhead is a longer input, which only affects prefill time, not generation speed.
+This isn't noise. McNemar's test gives p=0.022 for the x3 result. And it cost nothing extra in terms of output tokens. The only overhead is a longer input, which only affects prefill time, not generation speed.
 
-OpenBookQA was less dramatic -a +4 percentage point bump with x2, not statistically significant. This tracks with the original paper: the effect depends on the benchmark. Tasks that require careful reasoning over multiple answer choices benefit the most.
+OpenBookQA was less dramatic, a +4 percentage point bump with x2, not statistically significant. This tracks with the original paper: the effect depends on the benchmark. Tasks that require careful reasoning over multiple answer choices benefit the most.
 
 ### NameIndex
 
-The paper's wildest result was on NameIndex -find a specific name in a list of 50 random names. Large models went from 21% to 97% with repetition.
+The paper's wildest result was on NameIndex, a task where the model must find a specific name in a list of 50 random names. Large models went from 21% to 97% with repetition.
 
 Small models? Not so much:
 
@@ -69,7 +69,7 @@ Small models? Not so much:
 | Repeat x2 | 6.7% |
 | Repeat x3 | 8.0% |
 
-The trend is there -repetition still helps -but 1.5B parameters just doesn't have the attention capacity to handle a 50-item lookup. This task needs the raw horsepower of a 7B+ model. Repetition can't compensate for what the model fundamentally can't do.
+The trend is there. Repetition still helps. But 1.5B parameters just doesn't have the attention capacity to handle a 50-item lookup. This task needs the raw horsepower of a 7B+ model. Repetition can't compensate for what the model fundamentally can't do.
 
 ## What This Tells Us
 
@@ -77,7 +77,7 @@ The trend is there -repetition still helps -but 1.5B parameters just doesn't hav
 
 **The effect is task-dependent.** If the task requires the model to carefully weigh multiple options (like multiple-choice science questions), repetition helps a lot. If it's more about recall or simple lookup, the gains are smaller.
 
-**Scale still matters.** Repetition gives the model a better chance to use the capacity it has. It doesn't give it capacity it doesn't have. NameIndex proves that -the 21%-to-97% jump from the original paper almost certainly requires 7B+ parameters.
+**Scale still matters.** Repetition gives the model a better chance to use the capacity it has. It doesn't give it capacity it doesn't have. NameIndex proves that. The 21% to 97% jump from the original paper almost certainly requires 7B+ parameters.
 
 **It's genuinely free.** No training, no API changes, no extra output tokens. The input gets longer, but that only affects prefill time. Per-token generation latency stays the same.
 
