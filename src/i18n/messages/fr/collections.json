@@ -3,28 +3,28 @@
     "items": [
       {
         "date": "2025.10",
-        "title": "Assistant d'enseignement \u00e0 Royal Holloway",
-        "content": "D\u00e9but en tant qu'assistant d'enseignement pour la Programmation Orient\u00e9e Objet & Ing\u00e9nierie Logicielle \u00e0 Royal Holloway, University of London."
+        "title": "Assistant d'enseignement à Royal Holloway",
+        "content": "Début en tant qu'assistant d'enseignement pour la Programmation Orientée Objet & Ingénierie Logicielle à Royal Holloway, University of London."
       },
       {
         "date": "2025.6",
         "title": "Stagiaire Data Produit chez [Stats Perform](https://www.statsperform.com/)",
-        "content": "Int\u00e9gration chez Stats Perform en tant que stagiaire Data Produit, travaillant sur l'analyse sportive et la science des donn\u00e9es."
+        "content": "Intégration chez Stats Perform en tant que stagiaire Data Produit, travaillant sur l'analyse sportive et la science des données."
       },
       {
         "date": "2024.12",
-        "title": "Assistant de recherche ML \u00e0 Royal Holloway",
-        "content": "D\u00e9but en tant qu'assistant de recherche ML \u00e0 Royal Holloway, travaillant sur les m\u00e9canismes d'attention des transformers et la robustesse adversariale."
+        "title": "Assistant de recherche ML à Royal Holloway",
+        "content": "Début en tant qu'assistant de recherche ML à Royal Holloway, travaillant sur les mécanismes d'attention des transformers et la robustesse adversariale."
       },
       {
         "date": "2025.2",
         "title": "Fondation de [Nordlys Labs](https://www.nordlyslabs.com/)",
-        "content": "Co-fondation de Nordlys Labs, construisant des syst\u00e8mes de routage LLM intelligents. Mise \u00e0 l'\u00e9chelle \u00e0 plus de 500 utilisateurs."
+        "content": "Co-fondation de Nordlys Labs, construisant des systèmes de routage LLM intelligents. Mise à l'échelle à plus de 500 utilisateurs."
       },
       {
         "date": "2023.9",
-        "title": "D\u00e9but du BSc Informatique & IA \u00e0 [Royal Holloway](https://www.royalholloway.ac.uk/)",
-        "content": "D\u00e9but de ma licence en Informatique & Intelligence Artificielle \u00e0 Royal Holloway, University of London."
+        "title": "Début du BSc Informatique & IA à [Royal Holloway](https://www.royalholloway.ac.uk/)",
+        "content": "Début de ma licence en Informatique & Intelligence Artificielle à Royal Holloway, University of London."
       }
     ]
   },
@@ -33,10 +33,17 @@
       {
         "title": "Nordlys Labs",
         "href": "https://www.nordlyslabs.com/",
-        "dates": "F\u00e9v. 2024 - Pr\u00e9sent",
+        "dates": "Fév. 2025 - Présent",
         "active": true,
-        "description": "Startup de routage LLM intelligent qui r\u00e9duit les co\u00fbts d'inf\u00e9rence IA de 50-60%. S\u00e9lectionn\u00e9e par l'acc\u00e9l\u00e9rateur Antler, mise \u00e0 l'\u00e9chelle \u00e0 plus de 500 utilisateurs.",
-        "technologies": ["Python", "FastAPI", "LangChain", "Redis", "PostgreSQL", "Docker"],
+        "description": "Startup de routage LLM intelligent qui réduit les coûts d'inférence IA de 50-60%. Sélectionnée par l'accélérateur Antler, mise à l'échelle à plus de 500 utilisateurs.",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "LangChain",
+          "Redis",
+          "PostgreSQL",
+          "Docker"
+        ],
         "authors": "",
         "links": [
           {
@@ -51,15 +58,26 @@
           }
         ],
         "image": "/proj-nordlys.png",
-        "video": ""
+        "video": "",
+        "slug": "nordlys-labs",
+        "categories": [
+          "IA",
+          "Business"
+        ],
+        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche, réduisant les coûts d’inférence IA de 50-60%. Nous avons été sélectionnés par l’accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Réalisations clés\n\n- Dépassé les modèles frontière sur les benchmarks SWE-bench\n- Réduction des coûts d’inférence IA de 50-60%\n- Plus de 500 utilisateurs actifs\n- Sélectionnés par le programme accélérateur Antler",
+        "gallery": []
       },
       {
-        "title": "LLM Journey",
+        "title": "KV-cache optimization",
         "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
+        "dates": "Sept. 2025",
         "active": true,
-        "description": "Construction d'une architecture transformer de z\u00e9ro, impl\u00e9mentant les m\u00e9canismes d'attention, l'encodage positionnel et les pipelines d'entra\u00eenement.",
-        "technologies": ["Python", "PyTorch", "NumPy"],
+        "description": "Construction d'une architecture transformer de zéro, implémentant les mécanismes d'attention, l'encodage positionnel et les pipelines d'entraînement.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -68,16 +86,27 @@
             "icon": "github"
           }
         ],
-        "image": "/proj-llm-journey.png",
-        "video": ""
+        "image": "/proj-kv-cache-optimization.png",
+        "video": "",
+        "slug": "kv-cache-optimization",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "longDescription": "## À propos\n\nUne plongée approfondie dans les architectures transformer, construisant chaque composant de zéro pour développer une compréhension approfondie du fonctionnement des grands modèles de langage.\n\n## Ce que j’ai construit\n\n- Mécanisme d’attention multi-têtes\n- Encodage positionnel (sinusoïdal et appris)\n- Pipelines d’entraînement avec accumulation de gradients\n- Intégration de tokenizer et génération de texte",
+        "gallery": []
       },
       {
         "title": "Readyou",
         "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
+        "dates": "Jan. 2025",
         "active": true,
-        "description": "G\u00e9n\u00e9rateur dynamique de README qui cr\u00e9e automatiquement une documentation de d\u00e9p\u00f4t \u00e9l\u00e9gante et informative.",
-        "technologies": ["TypeScript", "Next.js", "Python"],
+        "description": "Générateur dynamique de README qui crée automatiquement une documentation de dépôt élégante et informative.",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "Python"
+        ],
         "authors": "",
         "links": [
           {
@@ -92,15 +121,26 @@
           }
         ],
         "image": "/proj-readyou.png",
-        "video": ""
+        "video": "",
+        "slug": "readyou",
+        "categories": [
+          "SWE",
+          "IA"
+        ],
+        "longDescription": "## À propos\n\nReadyou est un générateur dynamique de README qui analyse votre codebase et crée automatiquement une documentation de dépôt élégante et informative.\n\n## Fonctionnalités\n\n- Analyse automatique du code\n- Génération de markdown élégant\n- Support pour plusieurs langages de programmation\n- Templates et thèmes personnalisables",
+        "gallery": []
       },
       {
         "title": "Transformer From Stones",
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
-        "description": "Impl\u00e9mentation d'un mod\u00e8le transformer depuis les principes fondamentaux, construisant chaque composant de z\u00e9ro.",
-        "technologies": ["Python", "PyTorch", "NumPy"],
+        "description": "Implémentation d'un modèle transformer depuis les principes fondamentaux, construisant chaque composant de zéro.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -110,15 +150,27 @@
           }
         ],
         "image": "/proj-transformer.png",
-        "video": ""
+        "video": "",
+        "slug": "transformer-from-stones",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "longDescription": "## À propos\n\nUne implémentation de l’architecture transformer depuis les principes fondamentaux, construisant chaque composant de zéro pour développer une compréhension approfondie du modèle.\n\n## Détails d’implémentation\n\n- Normalisation de couche et connexions résiduelles\n- Attention par produit scalaire\n- Réseaux feed-forward avec activation GELU\n- Tokenisation byte-pair encoding",
+        "gallery": []
       },
       {
-        "title": "D\u00e9tection de cyberattaques",
+        "title": "Détection de cyberattaques",
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
-        "description": "Syst\u00e8me de d\u00e9tection de menaces bas\u00e9 sur l'apprentissage automatique qui identifie et classifie les cyberattaques via l'analyse du trafic r\u00e9seau.",
-        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+        "description": "Système de détection de menaces basé sur l'apprentissage automatique qui identifie et classifie les cyberattaques via l'analyse du trafic réseau.",
+        "technologies": [
+          "Python",
+          "scikit-learn",
+          "Pandas",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -128,7 +180,14 @@
           }
         ],
         "image": "",
-        "video": ""
+        "video": "",
+        "slug": "cyber-attack-detection",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "longDescription": "## À propos\n\nUn système de détection de menaces basé sur l’apprentissage automatique qui identifie et classifie les cyberattaques en analysant les patterns du trafic réseau.\n\n## Approche\n\n- Ingénierie de features sur les données de trafic réseau\n- Plusieurs classifieurs ML (Random Forest, SVM, réseaux de neurones)\n- Pipeline de classification en temps réel\n- Haute précision sur les jeux de données de référence",
+        "gallery": []
       }
     ]
   },
@@ -140,7 +199,7 @@
       {
         "school": "Royal Holloway, University of London",
         "href": "https://www.royalholloway.ac.uk/",
-        "degree": "Licence Informatique & Intelligence Artificielle (mention Tr\u00e8s Bien)",
+        "degree": "Licence Informatique & Intelligence Artificielle (mention Très Bien)",
         "logoUrl": "/icon/rhul.png",
         "start": "2023",
         "end": "2026"
@@ -156,9 +215,9 @@
         "location": "Royaume-Uni",
         "title": "Co-Fondateur & Responsable Recherche ML",
         "logoUrl": "/icon/nordlys_logo.png",
-        "start": "F\u00e9v. 2024",
-        "end": "Pr\u00e9sent",
-        "description": "Construction de syst\u00e8mes de routage LLM intelligents r\u00e9duisant les co\u00fbts d'inf\u00e9rence IA de 50-60%. S\u00e9lectionn\u00e9 par l'acc\u00e9l\u00e9rateur Antler. Plus de 500 utilisateurs."
+        "start": "Fév. 2025",
+        "end": "Présent",
+        "description": "Construction de systèmes de routage LLM intelligents réduisant les coûts d'inférence IA de 50-60%. Sélectionné par l'accélérateur Antler. Plus de 500 utilisateurs."
       },
       {
         "company": "Stats Perform",
@@ -169,7 +228,7 @@
         "logoUrl": "/icon/statsperform.png",
         "start": "Juin 2025",
         "end": "Oct. 2025",
-        "description": "Travail sur l'analyse sportive et la science des donn\u00e9es, contribuant aux pipelines de donn\u00e9es produit et aux solutions analytiques."
+        "description": "Travail sur l'analyse sportive et la science des données, contribuant aux pipelines de données produit et aux solutions analytiques."
       },
       {
         "company": "Royal Holloway, University of London",
@@ -178,9 +237,9 @@
         "location": "Egham, Royaume-Uni",
         "title": "Assistant de recherche ML",
         "logoUrl": "/icon/rhul.png",
-        "start": "D\u00e9c. 2024",
+        "start": "Déc. 2024",
         "end": "Sep. 2025",
-        "description": "Recherche sur les m\u00e9canismes d'attention des transformers et la robustesse adversariale des mod\u00e8les d'apprentissage automatique."
+        "description": "Recherche sur les mécanismes d'attention des transformers et la robustesse adversariale des modèles d'apprentissage automatique."
       },
       {
         "company": "Royal Holloway, University of London",
@@ -190,15 +249,15 @@
         "title": "Assistant d'enseignement",
         "logoUrl": "/icon/rhul.png",
         "start": "Oct. 2025",
-        "end": "Pr\u00e9sent",
-        "description": "Assistant d'enseignement pour la Programmation Orient\u00e9e Objet & Ing\u00e9nierie Logicielle."
+        "end": "Présent",
+        "description": "Assistant d'enseignement pour la Programmation Orientée Objet & Ingénierie Logicielle."
       }
     ]
   },
   "awards": {
     "items": [
       {
-        "year": 2024,
+        "year": 2025,
         "title": "Nordlys Labs : plus de 500 utilisateurs"
       },
       {
@@ -215,7 +274,7 @@
       {
         "date": "Automne 2025",
         "location": "Royal Holloway, University of London",
-        "title": "Programmation Orient\u00e9e Objet & Ing\u00e9nierie Logicielle"
+        "title": "Programmation Orientée Objet & Ingénierie Logicielle"
       }
     ]
   },

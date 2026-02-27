@@ -10,6 +10,14 @@
         "workExperience": "Stages & Exp\u00e9rience professionnelle",
         "awards": "Prix & Distinctions",
         "academicServices": "Services acad\u00e9miques",
+        "work": {
+            "title": "Projets",
+            "tagline": "Une collection de mes projets et de ce que j'ai construit.",
+            "allCategories": "Tout",
+            "technologies": "Technologies",
+            "gallery": "Galerie",
+            "viewProject": "Voir le projet"
+        },
         "news": {
             "title": "Derni\u00e8res actualit\u00e9s"
         },
@@ -41,6 +49,11 @@
                 "href": "/",
                 "icon": "home",
                 "label": "Accueil"
+            },
+            {
+                "href": "/work",
+                "icon": "folder",
+                "label": "Projets"
             },
             {
                 "href": "/blog",

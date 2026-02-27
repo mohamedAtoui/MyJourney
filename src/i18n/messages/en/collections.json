@@ -37,10 +37,13 @@
     "items": [
       {
         "title": "Nordlys Labs",
+        "slug": "nordlys-labs",
+        "categories": ["AI", "Business"],
         "href": "https://www.nordlyslabs.com/",
-        "dates": "Feb. 2024 - Present",
+        "dates": "Feb. 2025 - Present",
         "active": true,
         "description": "Intelligent LLM routing startup that selects the best model for each task. Beat frontier models on SWE-bench benchmarks. Scaled to 500+ users.",
+        "longDescription": "## About\n\nNordlys Labs is an intelligent LLM routing startup that selects the best model for each task, reducing AI inference costs by 50-60%. We were selected by the Antler accelerator and scaled to over 500 users.\n\n## Key Achievements\n\n- Beat frontier models on SWE-bench benchmarks\n- Reduced AI inference costs by 50-60%\n- Scaled to 500+ active users\n- Selected by the Antler accelerator program",
         "technologies": ["Python", "FastAPI", "LangChain", "Redis", "PostgreSQL", "Docker"],
         "authors": "",
         "links": [
@@ -56,14 +59,18 @@
           }
         ],
         "image": "/proj-nordlys.png",
-        "video": ""
+        "video": "",
+        "gallery": []
       },
       {
-        "title": "LLM Journey",
+        "title": "KV-cache optimization",
+        "slug": "kv-cache-optimization",
+        "categories": ["AI", "Research"],
         "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
+        "dates": "Sep. 2025",
         "active": true,
         "description": "Built a transformer architecture from scratch, implementing attention mechanisms, positional encoding, and training pipelines from first principles.",
+        "longDescription": "## About\n\nA deep dive into transformer architectures, building every component from scratch to develop a thorough understanding of how large language models work.\n\n## What I Built\n\n- Multi-head self-attention mechanism\n- Positional encoding (sinusoidal and learned)\n- Training pipelines with gradient accumulation\n- Tokenizer integration and text generation",
         "technologies": ["Python", "PyTorch", "NumPy"],
         "authors": "",
         "links": [
@@ -73,15 +80,19 @@
             "icon": "github"
           }
         ],
-        "image": "/proj-llm-journey.png",
-        "video": ""
+        "image": "/proj-kv-cache-optimization.png",
+        "video": "",
+        "gallery": []
       },
       {
         "title": "Readyou",
+        "slug": "readyou",
+        "categories": ["SWE", "AI"],
         "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
+        "dates": "Jan. 2025",
         "active": true,
         "description": "Dynamic README generator that automatically creates beautiful and informative repository documentation from your codebase.",
+        "longDescription": "## About\n\nReadyou is a dynamic README generator that analyzes your codebase and automatically creates beautiful, informative repository documentation.\n\n## Features\n\n- Automatic codebase analysis\n- Beautiful markdown generation\n- Support for multiple programming languages\n- Customizable templates and themes",
         "technologies": ["TypeScript", "Next.js", "Python"],
         "authors": "",
         "links": [
@@ -97,14 +108,18 @@
           }
         ],
         "image": "/proj-readyou.png",
-        "video": ""
+        "video": "",
+        "gallery": []
       },
       {
         "title": "Transformer From Stones",
+        "slug": "transformer-from-stones",
+        "categories": ["AI", "Research"],
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
         "description": "Implementing a transformer model from first principles, building each component from the ground up to deeply understand the architecture.",
+        "longDescription": "## About\n\nA from-scratch implementation of the transformer architecture, building each component from the ground up to develop deep understanding of the model.\n\n## Implementation Details\n\n- Layer normalization and residual connections\n- Scaled dot-product attention\n- Feed-forward networks with GELU activation\n- Byte-pair encoding tokenization",
         "technologies": ["Python", "PyTorch", "NumPy"],
         "authors": "",
         "links": [
@@ -115,14 +130,18 @@
           }
         ],
         "image": "/proj-transformer.png",
-        "video": ""
+        "video": "",
+        "gallery": []
       },
       {
         "title": "Cyber Attack Detection",
+        "slug": "cyber-attack-detection",
+        "categories": ["AI", "Research"],
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
         "description": "Machine learning-based threat detection system that identifies and classifies cyber attacks using network traffic analysis.",
+        "longDescription": "## About\n\nA machine learning-based threat detection system that identifies and classifies cyber attacks by analyzing network traffic patterns.\n\n## Approach\n\n- Feature engineering on network traffic data\n- Multiple ML classifiers (Random Forest, SVM, Neural Networks)\n- Real-time classification pipeline\n- High accuracy on benchmark datasets",
         "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
         "authors": "",
         "links": [
@@ -133,7 +152,8 @@
           }
         ],
         "image": "",
-        "video": ""
+        "video": "",
+        "gallery": []
       }
     ]
   },
@@ -161,7 +181,7 @@
         "location": "United Kingdom",
         "title": "Co-Founder & ML Research Lead",
         "logoUrl": "/icon/nordlys_logo.png",
-        "start": "Feb. 2024",
+        "start": "Feb. 2025",
         "end": "Present",
         "description": "Building intelligent LLM routing systems that select the best model for each task. Beat frontier models on SWE-bench benchmarks. Scaled to 500+ users."
       },
@@ -203,7 +223,7 @@
   "awards": {
     "items": [
       {
-        "year": 2024,
+        "year": 2025,
         "title": "Scaled Nordlys Labs to 500+ users"
       },
       {

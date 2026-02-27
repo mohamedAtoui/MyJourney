@@ -10,6 +10,14 @@
         "workExperience": "Internship & Work Experience",
         "awards": "Awards & Honors",
         "academicServices": "Academic Services",
+        "work": {
+            "title": "Work",
+            "tagline": "A collection of my projects and things I've built.",
+            "allCategories": "All",
+            "technologies": "Technologies",
+            "gallery": "Gallery",
+            "viewProject": "View Project"
+        },
         "news": {
             "title": "Latest News"
         },
@@ -41,6 +49,11 @@
                 "href": "/",
                 "icon": "home",
                 "label": "Home"
+            },
+            {
+                "href": "/work",
+                "icon": "folder",
+                "label": "Work"
             },
             {
                 "href": "/blog",
