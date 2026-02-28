@@ -190,7 +190,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-cyber-attack.png",
         "video": "",
         "gallery": []
       },
@@ -219,7 +219,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-mom.png",
         "video": "",
         "gallery": []
       },
@@ -247,7 +247,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-git-rlms.png",
         "video": "",
         "gallery": []
       },
@@ -302,11 +302,6 @@
         "authors": "",
         "links": [
           {
-            "type": "Website",
-            "href": "https://get-me-clients.vercel.app",
-            "icon": "globe"
-          },
-          {
             "type": "Github",
             "href": "https://github.com/mohamedAtoui/get-me-clients",
             "icon": "github"
@@ -351,8 +346,8 @@
         "gallery": []
       },
       {
-        "title": "Claude Thrad Ads",
-        "slug": "claude-thrad-ads",
+        "title": "Claude with Ads",
+        "slug": "claude-with-ads",
         "categories": [
           "AI",
           "SWE"
@@ -377,9 +372,15 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-claude-ads.png",
         "video": "",
-        "gallery": []
+        "gallery": [
+          {
+            "type": "image",
+            "src": "/proj-claude-ads-2.png",
+            "alt": "Claude with Ads screenshot"
+          }
+        ]
       },
       {
         "title": "Altair",
@@ -462,7 +463,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-lstm.png",
         "video": "",
         "gallery": []
       },
@@ -502,8 +503,8 @@
         "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
         "dates": "Jul. 2024",
         "active": false,
-        "description": "Neural network-based text generator trained on Harry Potter books to produce novel passages in the style of J.K. Rowling.",
-        "longDescription": "## About\n\nA text generation project using neural networks trained on Harry Potter books. The model learns the writing patterns and style to generate novel passages.\n\n## Approach\n\n- Character/word-level language modeling\n- Training on Harry Potter text corpus\n- Temperature-controlled text generation",
+        "description": "Character-level RNN text generator trained on Harry Potter books, exploring sequence modeling, vanishing gradients, and the limits of recurrent architectures.",
+        "longDescription": "## About\n\nA character-level text generation project using Recurrent Neural Networks trained on the Harry Potter corpus. The goal was to understand sequence modeling from first principles and observe where vanilla RNNs break down.\n\n## Technical Approach\n\n- Character-level tokenization with one-hot encoding\n- Vanilla RNN cells with tanh activation and hidden state propagation\n- Cross-entropy loss with temperature-controlled softmax sampling\n- Backpropagation through time (BPTT) with gradient clipping\n\n## Lessons Learned\n\n- Vanishing gradients make it difficult for vanilla RNNs to capture long-range dependencies, the model loses coherence beyond short phrases\n- Without gating mechanisms (LSTM/GRU), the hidden state saturates and forgets earlier context\n- Temperature tuning is critical: too low produces repetitive text, too high produces gibberish\n- This project motivated my subsequent LSTM from Scratch implementation to address these limitations",
         "technologies": [
           "Python",
           "PyTorch",
@@ -517,7 +518,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-harry-potter.png",
         "video": "",
         "gallery": []
       }

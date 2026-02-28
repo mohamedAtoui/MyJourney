@@ -179,7 +179,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-cyber-attack.png",
         "video": "",
         "slug": "cyber-attack-detection",
         "categories": [
@@ -214,7 +214,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-mom.png",
         "video": "",
         "gallery": []
       },
@@ -242,7 +242,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-git-rlms.png",
         "video": "",
         "gallery": []
       },
@@ -297,11 +297,6 @@
         "authors": "",
         "links": [
           {
-            "type": "Site web",
-            "href": "https://get-me-clients.vercel.app",
-            "icon": "globe"
-          },
-          {
             "type": "Github",
             "href": "https://github.com/mohamedAtoui/get-me-clients",
             "icon": "github"
@@ -346,8 +341,8 @@
         "gallery": []
       },
       {
-        "title": "Claude Thrad Ads",
-        "slug": "claude-thrad-ads",
+        "title": "Claude avec Pub",
+        "slug": "claude-with-ads",
         "categories": [
           "IA",
           "SWE"
@@ -372,9 +367,15 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-claude-ads.png",
         "video": "",
-        "gallery": []
+        "gallery": [
+          {
+            "type": "image",
+            "src": "/proj-claude-ads-2.png",
+            "alt": "Claude with Ads screenshot"
+          }
+        ]
       },
       {
         "title": "Altair",
@@ -457,7 +458,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-lstm.png",
         "video": "",
         "gallery": []
       },
@@ -497,8 +498,8 @@
         "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
         "dates": "Juil. 2024",
         "active": false,
-        "description": "Generateur de texte base sur les reseaux de neurones, entraine sur les livres Harry Potter pour produire des passages dans le style de J.K. Rowling.",
-        "longDescription": "## A propos\n\nUn projet de generation de texte utilisant des reseaux de neurones entraines sur les livres Harry Potter. Le modele apprend les patterns d'ecriture et le style pour generer de nouveaux passages.\n\n## Approche\n\n- Modelisation de langage au niveau caractere/mot\n- Entrainement sur le corpus de texte Harry Potter\n- Generation de texte avec controle de temperature",
+        "description": "Generateur de texte RNN au niveau caractere entraine sur les livres Harry Potter, explorant la modelisation de sequences, les gradients evanescents et les limites des architectures recurrentes.",
+        "longDescription": "## A propos\n\nUn projet de generation de texte au niveau caractere utilisant des reseaux de neurones recurrents entraines sur le corpus Harry Potter. L'objectif etait de comprendre la modelisation de sequences depuis les principes fondamentaux et d'observer ou les RNN classiques echouent.\n\n## Approche technique\n\n- Tokenisation au niveau caractere avec encodage one-hot\n- Cellules RNN avec activation tanh et propagation d'etat cache\n- Loss cross-entropy avec echantillonnage softmax controle par temperature\n- Retropropagation a travers le temps (BPTT) avec clipping de gradient\n\n## Lecons apprises\n\n- Les gradients evanescents rendent difficile la capture de dependances a longue portee\n- Sans mecanismes de porte (LSTM/GRU), l'etat cache sature et oublie le contexte anterieur\n- Le reglage de la temperature est critique : trop basse produit du texte repetitif, trop haute du charabia\n- Ce projet a motive mon implementation LSTM from Scratch pour resoudre ces limitations",
         "technologies": [
           "Python",
           "PyTorch",
@@ -512,7 +513,7 @@
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-harry-potter.png",
         "video": "",
         "gallery": []
       }
