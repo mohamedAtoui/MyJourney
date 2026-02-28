@@ -38,13 +38,23 @@
       {
         "title": "Nordlys Labs",
         "slug": "nordlys-labs",
-        "categories": ["AI", "Business"],
+        "categories": [
+          "AI",
+          "Business"
+        ],
         "href": "https://www.nordlyslabs.com/",
         "dates": "Feb. 2025 - Present",
         "active": true,
         "description": "Intelligent LLM routing startup that selects the best model for each task. Beat frontier models on SWE-bench benchmarks. Scaled to 500+ users.",
         "longDescription": "## About\n\nNordlys Labs is an intelligent LLM routing startup that selects the best model for each task, reducing AI inference costs by 50-60%. We were selected by the Antler accelerator and scaled to over 500 users.\n\n## Key Achievements\n\n- Beat frontier models on SWE-bench benchmarks\n- Reduced AI inference costs by 50-60%\n- Scaled to 500+ active users\n- Selected by the Antler accelerator program",
-        "technologies": ["Python", "FastAPI", "LangChain", "Redis", "PostgreSQL", "Docker"],
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "LangChain",
+          "Redis",
+          "PostgreSQL",
+          "Docker"
+        ],
         "authors": "",
         "links": [
           {
@@ -65,13 +75,20 @@
       {
         "title": "KV-cache optimization",
         "slug": "kv-cache-optimization",
-        "categories": ["AI", "Research"],
+        "categories": [
+          "AI",
+          "Research"
+        ],
         "href": "https://github.com/mohamedAtoui",
         "dates": "Sep. 2025",
         "active": true,
         "description": "Built a transformer architecture from scratch, implementing attention mechanisms, positional encoding, and training pipelines from first principles.",
         "longDescription": "## About\n\nA deep dive into transformer architectures, building every component from scratch to develop a thorough understanding of how large language models work.\n\n## What I Built\n\n- Multi-head self-attention mechanism\n- Positional encoding (sinusoidal and learned)\n- Training pipelines with gradient accumulation\n- Tokenizer integration and text generation",
-        "technologies": ["Python", "PyTorch", "NumPy"],
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -87,13 +104,20 @@
       {
         "title": "Readyou",
         "slug": "readyou",
-        "categories": ["SWE", "AI"],
+        "categories": [
+          "SWE",
+          "AI"
+        ],
         "href": "https://github.com/mohamedAtoui",
         "dates": "Jan. 2025",
         "active": true,
         "description": "Dynamic README generator that automatically creates beautiful and informative repository documentation from your codebase.",
         "longDescription": "## About\n\nReadyou is a dynamic README generator that analyzes your codebase and automatically creates beautiful, informative repository documentation.\n\n## Features\n\n- Automatic codebase analysis\n- Beautiful markdown generation\n- Support for multiple programming languages\n- Customizable templates and themes",
-        "technologies": ["TypeScript", "Next.js", "Python"],
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "Python"
+        ],
         "authors": "",
         "links": [
           {
@@ -114,13 +138,20 @@
       {
         "title": "Transformer From Stones",
         "slug": "transformer-from-stones",
-        "categories": ["AI", "Research"],
+        "categories": [
+          "AI",
+          "Research"
+        ],
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
         "description": "Implementing a transformer model from first principles, building each component from the ground up to deeply understand the architecture.",
         "longDescription": "## About\n\nA from-scratch implementation of the transformer architecture, building each component from the ground up to develop deep understanding of the model.\n\n## Implementation Details\n\n- Layer normalization and residual connections\n- Scaled dot-product attention\n- Feed-forward networks with GELU activation\n- Byte-pair encoding tokenization",
-        "technologies": ["Python", "PyTorch", "NumPy"],
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -136,18 +167,353 @@
       {
         "title": "Cyber Attack Detection",
         "slug": "cyber-attack-detection",
-        "categories": ["AI", "Research"],
+        "categories": [
+          "AI",
+          "Research"
+        ],
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
         "active": true,
         "description": "Machine learning-based threat detection system that identifies and classifies cyber attacks using network traffic analysis.",
         "longDescription": "## About\n\nA machine learning-based threat detection system that identifies and classifies cyber attacks by analyzing network traffic patterns.\n\n## Approach\n\n- Feature engineering on network traffic data\n- Multiple ML classifiers (Random Forest, SVM, Neural Networks)\n- Real-time classification pipeline\n- High accuracy on benchmark datasets",
-        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+        "technologies": [
+          "Python",
+          "scikit-learn",
+          "Pandas",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
             "type": "Github",
             "href": "https://github.com/mohamedAtoui",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "MoM Framework",
+        "slug": "mom-paper",
+        "categories": [
+          "AI",
+          "Research"
+        ],
+        "href": "https://github.com/mohamedAtoui/MoM-paper",
+        "dates": "Feb. 2026",
+        "active": true,
+        "description": "Research paper on the Mixture of Models (MoM) framework for intelligent LLM routing and model selection strategies.",
+        "longDescription": "## About\n\nThe MoM (Mixture of Models) framework is a research contribution to intelligent LLM routing. It introduces a systematic approach to selecting the best model for each task, combining routing strategies with cost optimization.\n\n## Key Contributions\n\n- Novel framework for LLM model selection\n- Cost-aware routing strategies\n- Benchmarking across multiple model families\n- Presented at an online meetup with community engagement",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "LangChain"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/MoM-paper",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Git-RLMs",
+        "slug": "git-rlms",
+        "categories": [
+          "AI",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Git-RLMs",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "Recursive Language Models for git repository analysis, enabling LLM-based code exploration through incremental data filtering.",
+        "longDescription": "## About\n\nGit-RLM applies Recursive Language Models to analyze git repositories. Based on research showing that long prompts should be stored as environment variables for programmatic interaction, it enables models to explore repos incrementally.\n\n## Features\n\n- CLI and Python API for querying repositories\n- Examine commit histories and file contents at specific versions\n- Search code, analyze authorship, and compare changes\n- Sandboxed Python environment for safe execution\n- Support for multiple LLM providers (OpenAI, Anthropic)\n- Trajectory logging and cost management",
+        "technologies": [
+          "Python",
+          "LangChain"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Git-RLMs",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Vantage",
+        "slug": "vantage",
+        "categories": [
+          "AI",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/Vantage",
+        "dates": "Nov. 2025",
+        "active": true,
+        "description": "AI ROI Calculator that evaluates AI implementation feasibility and returns strategic investment assessments in minutes.",
+        "longDescription": "## About\n\nVantage is a strategic AI investment assessment platform that compresses 40+ consultant hours into a 5-10 minute evaluation. It combines financial modeling, industry benchmarking, and AI analysis.\n\n## Key Capabilities\n\n- Feasibility scoring across technical complexity, data readiness, and risk\n- Three-year financial projections with risk-adjusted returns\n- Industry benchmarking grounded in 200+ real-world case studies\n- Build-vs-buy analysis and implementation roadmaps\n\n## Tech Stack\n\nUses Claude API with LangGraph for multi-step reasoning, Sentence Transformers for semantic search, and ChromaDB for vector-based case study retrieval.",
+        "technologies": [
+          "Python",
+          "LangGraph",
+          "ChromaDB",
+          "Sentence Transformers"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Vantage",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Get Me Clients",
+        "slug": "get-me-clients",
+        "categories": [
+          "AI",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/get-me-clients",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "AI-powered lead generation tool for SMEs, targeting the pharmaceutical industry with location-based client discovery across Algeria.",
+        "longDescription": "## About\n\nA lead generation platform designed for small and medium enterprises. The tool helps sales teams identify potential clients using location-based data and AI-powered analysis.\n\n## Features\n\n- Location-based lead discovery across 58 regions\n- Google Maps API integration for geographical queries\n- AI-powered lead analysis with DeepSeek\n- FastAPI backend with Streamlit frontend",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Streamlit",
+          "Google Maps API"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Website",
+            "href": "https://get-me-clients.vercel.app",
+            "icon": "globe"
+          },
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/get-me-clients",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Sales Assistant",
+        "slug": "sales-assistant",
+        "categories": [
+          "AI",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/sales-assistant",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "AI-powered sales assistant application built with Next.js to help sales teams streamline their workflow.",
+        "longDescription": "## About\n\nAn AI-powered sales assistant designed to help sales teams be more productive. Built as a full-stack web application with a modern UI.\n\n## Features\n\n- AI-driven sales insights and recommendations\n- Modern, responsive web interface\n- Real-time interaction capabilities",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Website",
+            "href": "https://sales-assistant-brown.vercel.app",
+            "icon": "globe"
+          },
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/sales-assistant",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Claude Thrad Ads",
+        "slug": "claude-thrad-ads",
+        "categories": [
+          "AI",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
+        "dates": "Feb. 2026",
+        "active": true,
+        "description": "Ad-supported AI chat application providing free access to Claude-level intelligence, funded by contextual ads from Thrad's network.",
+        "longDescription": "## About\n\nAn ad-supported AI chat application that gives users free access to Claude-level AI, funded by contextual advertisements. After each AI response, contextual ads from Thrad's ad network are displayed.\n\n## Features\n\n- Real-time message streaming\n- Email-based authentication via verification codes\n- Contextual ad integration with Thrad network\n- Redis-based data persistence\n- Full-stack deployment on Vercel",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "Django",
+          "Redis"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Altair",
+        "slug": "altair",
+        "categories": [
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Altair",
+        "dates": "Feb. 2026",
+        "active": true,
+        "description": "A React and TypeScript web application built with Vite for fast development and optimized builds.",
+        "longDescription": "## About\n\nAltair is a web application built with React, TypeScript, and Vite, leveraging modern frontend tooling for fast development and optimized production builds.",
+        "technologies": [
+          "TypeScript",
+          "React",
+          "Vite"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Altair",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Prompt Repetition Experiment",
+        "slug": "prompt-repetition-experiment",
+        "categories": [
+          "AI",
+          "Research"
+        ],
+        "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+        "dates": "Feb. 2026",
+        "active": true,
+        "description": "Research replication testing whether prompt repetition improves small language models' accuracy, achieving near-doubling on ARC-Challenge benchmarks.",
+        "longDescription": "## About\n\nA research experiment investigating whether repeating prompts within a single request boosts accuracy on standardized benchmarks for small language models.\n\n## Key Findings\n\n- Tested 9 open-source models (0.5B to 9B parameters)\n- Benchmarks: ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- ARC-Challenge accuracy nearly doubled from 22% to 44% with triple repetition (p=0.022)\n- Leverages transformer left-to-right processing for quasi-bidirectional understanding",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "LSTM from Scratch",
+        "slug": "lstm-from-scratch",
+        "categories": [
+          "AI",
+          "Research"
+        ],
+        "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
+        "dates": "Jan. 2025",
+        "active": true,
+        "description": "Implementation of Long Short-Term Memory neural networks from first principles, building the architecture from the ground up.",
+        "longDescription": "## About\n\nA from-scratch implementation of LSTM (Long Short-Term Memory) networks, building every gate and cell state mechanism from first principles to understand recurrent neural network architectures.\n\n## Implementation\n\n- Forget, input, and output gates\n- Cell state management\n- Backpropagation through time\n- Training on sequence data",
+        "technologies": [
+          "Python",
+          "NumPy"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Mini Compiler",
+        "slug": "mini-compiler",
+        "categories": [
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Mini-Compiler",
+        "dates": "Oct. 2025",
+        "active": true,
+        "description": "A mini compiler built with Lex for lexical analysis and parsing, exploring compiler design and language processing.",
+        "longDescription": "## About\n\nA mini compiler implementation covering lexical analysis and parsing. Built as a deep dive into compiler design principles and language processing fundamentals.\n\n## Components\n\n- Lexical analyzer using Lex\n- Token generation and parsing\n- Syntax analysis",
+        "technologies": [
+          "Lex",
+          "C"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Mini-Compiler",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Harry Potter Text Generator",
+        "slug": "generate-harry-potter",
+        "categories": [
+          "AI"
+        ],
+        "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
+        "dates": "Jul. 2024",
+        "active": false,
+        "description": "Neural network-based text generator trained on Harry Potter books to produce novel passages in the style of J.K. Rowling.",
+        "longDescription": "## About\n\nA text generation project using neural networks trained on Harry Potter books. The model learns the writing patterns and style to generate novel passages.\n\n## Approach\n\n- Character/word-level language modeling\n- Training on Harry Potter text corpus\n- Temperature-controlled text generation",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
             "icon": "github"
           }
         ],

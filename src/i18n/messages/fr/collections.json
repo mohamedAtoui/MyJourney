@@ -188,6 +188,333 @@
         ],
         "longDescription": "## À propos\n\nUn système de détection de menaces basé sur l’apprentissage automatique qui identifie et classifie les cyberattaques en analysant les patterns du trafic réseau.\n\n## Approche\n\n- Ingénierie de features sur les données de trafic réseau\n- Plusieurs classifieurs ML (Random Forest, SVM, réseaux de neurones)\n- Pipeline de classification en temps réel\n- Haute précision sur les jeux de données de référence",
         "gallery": []
+      },
+      {
+        "title": "MoM Framework",
+        "slug": "mom-paper",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "href": "https://github.com/mohamedAtoui/MoM-paper",
+        "dates": "Fev. 2026",
+        "active": true,
+        "description": "Article de recherche sur le framework Mixture of Models (MoM) pour le routage intelligent de LLM et les strategies de selection de modeles.",
+        "longDescription": "## A propos\n\nLe framework MoM (Mixture of Models) est une contribution de recherche au routage intelligent de LLM. Il introduit une approche systematique pour selectionner le meilleur modele pour chaque tache.\n\n## Contributions cles\n\n- Framework innovant pour la selection de modeles LLM\n- Strategies de routage optimisees en couts\n- Benchmarking sur plusieurs familles de modeles\n- Presente lors d'un meetup en ligne",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "LangChain"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/MoM-paper",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Git-RLMs",
+        "slug": "git-rlms",
+        "categories": [
+          "IA",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Git-RLMs",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "Modeles de langage recursifs pour l'analyse de depots git, permettant l'exploration de code par LLM via le filtrage incremental de donnees.",
+        "longDescription": "## A propos\n\nGit-RLM applique les modeles de langage recursifs a l'analyse de depots git. Permet aux modeles d'explorer les depots de maniere incrementale.\n\n## Fonctionnalites\n\n- CLI et API Python pour interroger les depots\n- Examen de l'historique des commits et du contenu des fichiers\n- Recherche de code, analyse d'auteurs et comparaison de changements\n- Environnement Python securise\n- Support multi-fournisseurs LLM (OpenAI, Anthropic)",
+        "technologies": [
+          "Python",
+          "LangChain"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Git-RLMs",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Vantage",
+        "slug": "vantage",
+        "categories": [
+          "IA",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/Vantage",
+        "dates": "Nov. 2025",
+        "active": true,
+        "description": "Calculateur de ROI IA qui evalue la faisabilite d'implementation de l'IA et fournit des evaluations strategiques d'investissement en quelques minutes.",
+        "longDescription": "## A propos\n\nVantage est une plateforme d'evaluation strategique d'investissement IA qui compresse plus de 40 heures de conseil en une evaluation de 5-10 minutes.\n\n## Capacites cles\n\n- Scoring de faisabilite sur la complexite technique et les risques\n- Projections financieres sur trois ans\n- Benchmarking industriel base sur plus de 200 etudes de cas\n- Analyse build-vs-buy et feuilles de route d'implementation",
+        "technologies": [
+          "Python",
+          "LangGraph",
+          "ChromaDB",
+          "Sentence Transformers"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Vantage",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Get Me Clients",
+        "slug": "get-me-clients",
+        "categories": [
+          "IA",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/get-me-clients",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "Outil de generation de leads alimente par l'IA pour les PME, ciblant l'industrie pharmaceutique avec la decouverte de clients par localisation.",
+        "longDescription": "## A propos\n\nUne plateforme de generation de leads concue pour les petites et moyennes entreprises. L'outil aide les equipes commerciales a identifier des clients potentiels.\n\n## Fonctionnalites\n\n- Decouverte de leads par localisation dans 58 regions\n- Integration Google Maps API\n- Analyse de leads par IA avec DeepSeek\n- Backend FastAPI avec frontend Streamlit",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Streamlit",
+          "Google Maps API"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Site web",
+            "href": "https://get-me-clients.vercel.app",
+            "icon": "globe"
+          },
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/get-me-clients",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Sales Assistant",
+        "slug": "sales-assistant",
+        "categories": [
+          "IA",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/sales-assistant",
+        "dates": "Jan. 2026",
+        "active": true,
+        "description": "Application d'assistant commercial alimentee par l'IA, construite avec Next.js pour aider les equipes commerciales.",
+        "longDescription": "## A propos\n\nUn assistant commercial alimente par l'IA concu pour aider les equipes de vente a etre plus productives.\n\n## Fonctionnalites\n\n- Insights et recommandations commerciales par IA\n- Interface web moderne et responsive\n- Capacites d'interaction en temps reel",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Site web",
+            "href": "https://sales-assistant-brown.vercel.app",
+            "icon": "globe"
+          },
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/sales-assistant",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Claude Thrad Ads",
+        "slug": "claude-thrad-ads",
+        "categories": [
+          "IA",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
+        "dates": "Fev. 2026",
+        "active": true,
+        "description": "Application de chat IA financee par la publicite, offrant un acces gratuit a l'intelligence de Claude via des publicites contextuelles.",
+        "longDescription": "## A propos\n\nUne application de chat IA financee par la publicite qui offre un acces gratuit a l'IA de niveau Claude, financee par des publicites contextuelles du reseau Thrad.\n\n## Fonctionnalites\n\n- Streaming de messages en temps reel\n- Authentification par email avec codes de verification\n- Integration publicitaire contextuelle avec le reseau Thrad\n- Persistance des donnees via Redis\n- Deploiement full-stack sur Vercel",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "Django",
+          "Redis"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Altair",
+        "slug": "altair",
+        "categories": [
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Altair",
+        "dates": "Fev. 2026",
+        "active": true,
+        "description": "Application web React et TypeScript construite avec Vite pour un developpement rapide et des builds optimises.",
+        "longDescription": "## A propos\n\nAltair est une application web construite avec React, TypeScript et Vite, utilisant des outils frontend modernes pour un developpement rapide et des builds de production optimises.",
+        "technologies": [
+          "TypeScript",
+          "React",
+          "Vite"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Altair",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Prompt Repetition Experiment",
+        "slug": "prompt-repetition-experiment",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+        "dates": "Fev. 2026",
+        "active": true,
+        "description": "Replication de recherche testant si la repetition de prompts ameliore la precision des petits modeles de langage, doublant quasi les scores ARC-Challenge.",
+        "longDescription": "## A propos\n\nUne experience de recherche qui teste si la repetition de prompts dans une seule requete ameliore la precision sur des benchmarks standardises.\n\n## Resultats cles\n\n- 9 modeles open-source testes (0.5B a 9B parametres)\n- Benchmarks : ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- Precision ARC-Challenge quasi doublee de 22% a 44% avec triple repetition (p=0.022)\n- Exploite le traitement gauche-a-droite des transformers",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "LSTM from Scratch",
+        "slug": "lstm-from-scratch",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
+        "dates": "Jan. 2025",
+        "active": true,
+        "description": "Implementation de reseaux neuronaux LSTM depuis les principes fondamentaux, construisant l'architecture de zero.",
+        "longDescription": "## A propos\n\nUne implementation de zero des reseaux LSTM, construisant chaque porte et mecanisme d'etat de cellule depuis les principes fondamentaux.\n\n## Implementation\n\n- Portes d'oubli, d'entree et de sortie\n- Gestion de l'etat de cellule\n- Retropropagation a travers le temps\n- Entrainement sur des donnees sequentielles",
+        "technologies": [
+          "Python",
+          "NumPy"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Mini Compiler",
+        "slug": "mini-compiler",
+        "categories": [
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Mini-Compiler",
+        "dates": "Oct. 2025",
+        "active": true,
+        "description": "Un mini compilateur construit avec Lex pour l'analyse lexicale et le parsing, explorant la conception de compilateurs.",
+        "longDescription": "## A propos\n\nUne implementation de mini compilateur couvrant l'analyse lexicale et le parsing. Construit comme une exploration approfondie des principes de conception de compilateurs.\n\n## Composants\n\n- Analyseur lexical utilisant Lex\n- Generation de tokens et parsing\n- Analyse syntaxique",
+        "technologies": [
+          "Lex",
+          "C"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Mini-Compiler",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Generateur de texte Harry Potter",
+        "slug": "generate-harry-potter",
+        "categories": [
+          "IA"
+        ],
+        "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
+        "dates": "Juil. 2024",
+        "active": false,
+        "description": "Generateur de texte base sur les reseaux de neurones, entraine sur les livres Harry Potter pour produire des passages dans le style de J.K. Rowling.",
+        "longDescription": "## A propos\n\nUn projet de generation de texte utilisant des reseaux de neurones entraines sur les livres Harry Potter. Le modele apprend les patterns d'ecriture et le style pour generer de nouveaux passages.\n\n## Approche\n\n- Modelisation de langage au niveau caractere/mot\n- Entrainement sur le corpus de texte Harry Potter\n- Generation de texte avec controle de temperature",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
       }
     ]
   },
