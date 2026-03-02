@@ -72,6 +72,7 @@ export default async function WorkPage(props: {
             allCategories: t("sections.work.allCategories"),
             technologies: t("sections.work.technologies"),
             gallery: t("sections.work.gallery"),
+            noResults: t("sections.work.noResults"),
           }}
         />
       </div>

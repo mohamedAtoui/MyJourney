@@ -6,9 +6,9 @@ import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Icons } from "@/components/icons";
 import { CustomReactMarkdown } from "@/components/react-markdown";
 import { Badge } from "@/components/ui/badge";
+import { getIconForLink } from "@/lib/link-icons";
 import type { ProjectItem } from "@/lib/projects";
 
 interface ProjectDetailModalProps {
@@ -19,15 +19,6 @@ interface ProjectDetailModalProps {
     technologies: string;
     gallery: string;
   };
-}
-
-function getIconForLink(iconName: string) {
-  const iconMap: Record<string, React.ReactNode> = {
-    globe: <Icons.globe className="size-3" />,
-    github: <Icons.github className="size-3" />,
-    linkedin: <Icons.linkedin className="size-3" />,
-  };
-  return iconMap[iconName] || <Icons.globe className="size-3" />;
 }
 
 export function ProjectDetailModal({
@@ -110,17 +101,9 @@ export function ProjectDetailModal({
                   <h2 className="text-2xl font-semibold tracking-tight">
                     {project.title}
                   </h2>
-                  <div className="mt-1 flex items-center gap-2">
-                    <time className="text-muted-foreground text-sm">
-                      {project.dates}
-                    </time>
-                    {project.active && (
-                      <span className="inline-flex items-center gap-1 text-xs text-green-500">
-                        <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-                        Active
-                      </span>
-                    )}
-                  </div>
+                  <time className="text-muted-foreground mt-1 block text-sm">
+                    {project.dates}
+                  </time>
                 </div>
 
                 {/* Category badges */}

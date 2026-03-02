@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 import { CustomReactMarkdown } from "@/components/react-markdown";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTouchFeedback } from "@/hooks/use-touch-feedback";
 import type { ProjectItem } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 
@@ -21,19 +21,7 @@ interface WorkProjectCardProps {
 }
 
 export function WorkProjectCard({ project, onClick }: WorkProjectCardProps) {
-  const [isTapped, setIsTapped] = useState(false);
-
-  const handleTouchStart = () => {
-    if (window.innerWidth < 640) {
-      setIsTapped(true);
-    }
-  };
-
-  const handleTouchEnd = () => {
-    if (window.innerWidth < 640) {
-      setTimeout(() => setIsTapped(false), 200);
-    }
-  };
+  const { isTapped, handleTouchStart, handleTouchEnd } = useTouchFeedback();
 
   return (
     <Card
@@ -113,15 +101,7 @@ export function WorkProjectCard({ project, onClick }: WorkProjectCardProps) {
           <CardTitle className="mt-1 text-base [&_img]:my-0 [&_img]:inline-block [&_img]:h-[1em] [&_img]:w-auto [&_img]:align-baseline">
             <CustomReactMarkdown>{project.title}</CustomReactMarkdown>
           </CardTitle>
-          <div className="flex items-center gap-2">
-            <time className="font-sans text-xs">{project.dates}</time>
-            {project.active && (
-              <span className="inline-flex items-center gap-1 text-xs text-green-500">
-                <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-                Active
-              </span>
-            )}
-          </div>
+          <time className="font-sans text-xs">{project.dates}</time>
           <div className="prose text-muted-foreground dark:prose-invert max-w-full font-sans text-xs text-pretty mt-1 mb-1 [&_p]:mt-1 [&_p]:mb-1 [&_img]:my-0 [&_img]:inline-block [&_img]:h-[1em] [&_img]:w-auto [&_img]:align-baseline">
             <CustomReactMarkdown>{project.description}</CustomReactMarkdown>
           </div>
@@ -159,9 +139,17 @@ export function WorkProjectCard({ project, onClick }: WorkProjectCardProps) {
         {project.links && project.links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {project.links.map((link, idx) => (
-              <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                {link.type}
-              </Badge>
+              <a
+                key={idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Badge className="flex gap-2 px-2 py-1 text-[10px]">
+                  {link.type}
+                </Badge>
+              </a>
             ))}
           </div>
         )}

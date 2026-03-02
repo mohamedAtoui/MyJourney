@@ -34,7 +34,7 @@
         "title": "Nordlys Labs",
         "href": "https://www.nordlyslabs.com/",
         "dates": "Fév. 2025 - Présent",
-        "active": true,
+        "active": false,
         "description": "Startup de routage LLM intelligent qui réduit les coûts d'inférence IA de 50-60%. Sélectionnée par l'accélérateur Antler, mise à l'échelle à plus de 500 utilisateurs.",
         "technologies": [
           "Python",
@@ -71,8 +71,8 @@
         "title": "KV-cache optimization",
         "href": "https://github.com/mohamedAtoui",
         "dates": "Sept. 2025",
-        "active": true,
-        "description": "Construction d'une architecture transformer de zéro, implémentant les mécanismes d'attention, l'encodage positionnel et les pipelines d'entraînement.",
+        "active": false,
+        "description": "Comparaison empirique des mecanismes d’attention MHA, MQA et GQA, mesurant les compromis perplexite vs taille du KV-cache sur TinyStories. GQA a atteint une reduction de cache de 4x avec une perte de qualite minimale.",
         "technologies": [
           "Python",
           "PyTorch",
@@ -93,49 +93,15 @@
           "IA",
           "Recherche"
         ],
-        "longDescription": "## À propos\n\nUne plongée approfondie dans les architectures transformer, construisant chaque composant de zéro pour développer une compréhension approfondie du fonctionnement des grands modèles de langage.\n\n## Ce que j’ai construit\n\n- Mécanisme d’attention multi-têtes\n- Encodage positionnel (sinusoïdal et appris)\n- Pipelines d’entraînement avec accumulation de gradients\n- Intégration de tokenizer et génération de texte",
-        "gallery": []
-      },
-      {
-        "title": "Readyou",
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "Jan. 2025",
-        "active": true,
-        "description": "Générateur dynamique de README qui crée automatiquement une documentation de dépôt élégante et informative.",
-        "technologies": [
-          "TypeScript",
-          "Next.js",
-          "Python"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
-            "icon": "github"
-          },
-          {
-            "type": "Site web",
-            "href": "https://github.com/mohamedAtoui",
-            "icon": "globe"
-          }
-        ],
-        "image": "/proj-readyou.png",
-        "video": "",
-        "slug": "readyou",
-        "categories": [
-          "SWE",
-          "IA"
-        ],
-        "longDescription": "## À propos\n\nReadyou est un générateur dynamique de README qui analyse votre codebase et crée automatiquement une documentation de dépôt élégante et informative.\n\n## Fonctionnalités\n\n- Analyse automatique du code\n- Génération de markdown élégant\n- Support pour plusieurs langages de programmation\n- Templates et thèmes personnalisables",
+        "longDescription": "## A propos\n\nUne etude empirique comparant trois mecanismes d’attention : Multi-Head Attention (MHA), Multi-Query Attention (MQA) et Grouped-Query Attention (GQA), en se concentrant sur le compromis entre qualite du modele et utilisation memoire du KV-cache.\n\n## Configuration experimentale\n\n- Transformers decoder-only avec 256 dimensions cachees, 4 couches et 8 tetes d’attention\n- Entraines et evalues sur le dataset TinyStories\n- Mesure de la perplexite, taille du KV-cache et debit d’inference\n\n## Resultats cles\n\n| Mecanisme | Perplexite | Taille KV-cache | Reduction |\n|-----------|-----------|-----------------|------------|\n| MHA       | Reference | 100%            | -          |\n| MQA       | +2.1%     | 12.5%           | 8x         |\n| GQA (g=2) | +0.8%     | 25%             | 4x         |\n\n## Conclusion\n\nGQA offre le meilleur equilibre : reduction de cache de 4x avec seulement 0.8% d’augmentation de perplexite. Cela explique son adoption dans les modeles de production comme LLaMA 2 et Mistral.",
         "gallery": []
       },
       {
         "title": "Transformer From Stones",
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
-        "active": true,
-        "description": "Implémentation d'un modèle transformer depuis les principes fondamentaux, construisant chaque composant de zéro.",
+        "active": false,
+        "description": "Implementation de l’architecture Transformer originale de ‘Attention is All You Need’, construisant l’attention multi-tetes, l’encodage positionnel et les pipelines d’entrainement.",
         "technologies": [
           "Python",
           "PyTorch",
@@ -156,14 +122,14 @@
           "IA",
           "Recherche"
         ],
-        "longDescription": "## À propos\n\nUne implémentation de l’architecture transformer depuis les principes fondamentaux, construisant chaque composant de zéro pour développer une compréhension approfondie du modèle.\n\n## Détails d’implémentation\n\n- Normalisation de couche et connexions résiduelles\n- Attention par produit scalaire\n- Réseaux feed-forward avec activation GELU\n- Tokenisation byte-pair encoding",
+        "longDescription": "## A propos\n\nUne implementation de l’architecture Transformer originale telle que decrite dans l’article \"Attention is All You Need\". Chaque composant est construit depuis les principes fondamentaux.\n\n## Details d’implementation\n\n- Attention multi-tetes avec produit scalaire\n- Encodage positionnel sinusoidal\n- Normalisation de couche et connexions residuelles\n- Reseaux feed-forward avec activation GELU\n- Tokenisation byte-pair encoding\n- Pipeline d’entrainement avec accumulation de gradients",
         "gallery": []
       },
       {
         "title": "Détection de cyberattaques",
         "href": "https://github.com/mohamedAtoui",
         "dates": "2024",
-        "active": true,
+        "active": false,
         "description": "Système de détection de menaces basé sur l'apprentissage automatique qui identifie et classifie les cyberattaques via l'analyse du trafic réseau.",
         "technologies": [
           "Python",
@@ -198,7 +164,7 @@
         ],
         "href": "https://github.com/mohamedAtoui/MoM-paper",
         "dates": "Fev. 2026",
-        "active": true,
+        "active": false,
         "description": "Article de recherche sur le framework Mixture of Models (MoM) pour le routage intelligent de LLM et les strategies de selection de modeles.",
         "longDescription": "## A propos\n\nLe framework MoM (Mixture of Models) est une contribution de recherche au routage intelligent de LLM. Il introduit une approche systematique pour selectionner le meilleur modele pour chaque tache.\n\n## Contributions cles\n\n- Framework innovant pour la selection de modeles LLM\n- Strategies de routage optimisees en couts\n- Benchmarking sur plusieurs familles de modeles\n- Presente lors d'un meetup en ligne",
         "technologies": [
@@ -227,9 +193,9 @@
         ],
         "href": "https://github.com/mohamedAtoui/Git-RLMs",
         "dates": "Jan. 2026",
-        "active": true,
-        "description": "Modeles de langage recursifs pour l'analyse de depots git, permettant l'exploration de code par LLM via le filtrage incremental de donnees.",
-        "longDescription": "## A propos\n\nGit-RLM applique les modeles de langage recursifs a l'analyse de depots git. Permet aux modeles d'explorer les depots de maniere incrementale.\n\n## Fonctionnalites\n\n- CLI et API Python pour interroger les depots\n- Examen de l'historique des commits et du contenu des fichiers\n- Recherche de code, analyse d'auteurs et comparaison de changements\n- Environnement Python securise\n- Support multi-fournisseurs LLM (OpenAI, Anthropic)",
+        "active": false,
+        "description": "Framework permettant aux LLMs d'analyser des depots git via une boucle REPL iterative, explorant le code de maniere incrementale au lieu de charger tout le codebase en contexte.",
+        "longDescription": "## A propos\n\nGit-RLMs est un framework qui permet aux LLMs d'explorer et d'analyser des depots git via une boucle REPL iterative. Au lieu de charger tout un codebase en contexte, le modele decouvre le code pertinent de maniere incrementale avec 12 outils integres.\n\n## Fonctionnement\n\n1. Le LLM envoie une commande outil (ex: `git_log`, `read_file`, `search_code`)\n2. Le REPL l'execute contre le depot\n3. Les resultats alimentent le LLM pour l'etape suivante\n4. Delegation a un sous-modele via `llm_query` pour l'analyse ciblee\n\n## Outils disponibles\n\n`git_log`, `git_show`, `git_diff`, `search_code`, `read_file`, `list_files`, `get_file_at_commit`, `git_blame`, `git_branches`, `git_tags`, `llm_query`, `python_exec`\n\n## Fonctionnalites\n\n- CLI et API Python\n- Support OpenAI et Anthropic\n- Suivi des couts et journalisation des trajectoires\n- Environnement Python securise",
         "technologies": [
           "Python",
           "LangChain"
@@ -255,7 +221,7 @@
         ],
         "href": "https://github.com/mohamedAtoui/Vantage",
         "dates": "Nov. 2025",
-        "active": true,
+        "active": false,
         "description": "Calculateur de ROI IA qui evalue la faisabilite d'implementation de l'IA et fournit des evaluations strategiques d'investissement en quelques minutes.",
         "longDescription": "## A propos\n\nVantage est une plateforme d'evaluation strategique d'investissement IA qui compresse plus de 40 heures de conseil en une evaluation de 5-10 minutes.\n\n## Capacites cles\n\n- Scoring de faisabilite sur la complexite technique et les risques\n- Projections financieres sur trois ans\n- Benchmarking industriel base sur plus de 200 etudes de cas\n- Analyse build-vs-buy et feuilles de route d'implementation",
         "technologies": [
@@ -285,14 +251,15 @@
         ],
         "href": "https://github.com/mohamedAtoui/get-me-clients",
         "dates": "Jan. 2026",
-        "active": true,
-        "description": "Outil de generation de leads alimente par l'IA pour les PME, ciblant l'industrie pharmaceutique avec la decouverte de clients par localisation.",
-        "longDescription": "## A propos\n\nUne plateforme de generation de leads concue pour les petites et moyennes entreprises. L'outil aide les equipes commerciales a identifier des clients potentiels.\n\n## Fonctionnalites\n\n- Decouverte de leads par localisation dans 58 regions\n- Integration Google Maps API\n- Analyse de leads par IA avec DeepSeek\n- Backend FastAPI avec frontend Streamlit",
+        "active": false,
+        "description": "Outil de prospection pharmaceutique par IA qui decouvre des medecins dans les 58 wilayas d'Algerie via Google Maps Places API, avec affinement de recherche par DeepSeek et scoring de qualite des leads.",
+        "longDescription": "## A propos\n\nUn outil de generation de leads par IA concu pour les equipes commerciales pharmaceutiques. Il decouvre des medecins et professionnels de sante dans les 58 wilayas d'Algerie via Google Maps Places API, puis score et deduplique les leads pour l'export.\n\n## Workflow\n\n1. **Contexte business** : Decrivez votre produit et audience cible\n2. **Affinement IA** : DeepSeek genere des questions pour affiner la recherche\n3. **Matrice de recherche** : Combine wilayas et specialites medicales\n4. **Deduplication** : Fusion des doublons avec rapidfuzz\n5. **Scoring qualite** : Notation IA de la pertinence de chaque lead\n6. **Export Excel** : Telechargez des listes de leads propres et scorees",
         "technologies": [
           "Python",
           "FastAPI",
           "Streamlit",
-          "Google Maps API"
+          "Google Maps API",
+          "DeepSeek"
         ],
         "authors": "",
         "links": [
@@ -307,21 +274,24 @@
         "gallery": []
       },
       {
-        "title": "Sales Assistant",
-        "slug": "sales-assistant",
+        "title": "MedVoice Assistant",
+        "slug": "medvoice-assistant",
         "categories": [
           "IA",
           "Business"
         ],
         "href": "https://github.com/mohamedAtoui/sales-assistant",
         "dates": "Jan. 2026",
-        "active": true,
-        "description": "Application d'assistant commercial alimentee par l'IA, construite avec Next.js pour aider les equipes commerciales.",
-        "longDescription": "## A propos\n\nUn assistant commercial alimente par l'IA concu pour aider les equipes de vente a etre plus productives.\n\n## Fonctionnalites\n\n- Insights et recommandations commerciales par IA\n- Interface web moderne et responsive\n- Capacites d'interaction en temps reel",
+        "active": false,
+        "description": "Assistant medical IA vocal avec push-to-talk, transcription parole-texte en temps reel et recherche PubMed pour des discussions produit basees sur les preuves.",
+        "longDescription": "## A propos\n\nUn assistant IA vocal concu pour les representants commerciaux medicaux. Il combine l'interaction vocale push-to-talk avec la recherche PubMed, permettant des conversations basees sur les preuves avec les professionnels de sante.\n\n## Fonctionnalites\n\n- **Push-to-talk** : Maintenez la barre d'espace pour parler, avec visualisation audio en temps reel\n- **Parole-texte** : Transcription en direct affichee pendant que l'utilisateur parle\n- **Recherche PubMed** : Outil IA citant des etudes medicales pertinentes\n- **Redemarrage automatique** : La conversation reprend automatiquement apres chaque reponse\n- **Authentification** : Connexion et gestion de session NextAuth\n- **Backend Mistral AI** : Reponses medicales rapides et precises",
         "technologies": [
           "TypeScript",
           "Next.js",
-          "React"
+          "React",
+          "Mistral AI",
+          "AI SDK",
+          "NextAuth"
         ],
         "authors": "",
         "links": [
@@ -349,7 +319,7 @@
         ],
         "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
         "dates": "Fev. 2026",
-        "active": true,
+        "active": false,
         "description": "Application de chat IA financee par la publicite, offrant un acces gratuit a l'intelligence de Claude via des publicites contextuelles.",
         "longDescription": "## A propos\n\nUne application de chat IA financee par la publicite qui offre un acces gratuit a l'IA de niveau Claude, financee par des publicites contextuelles du reseau Thrad.\n\n## Fonctionnalites\n\n- Streaming de messages en temps reel\n- Authentification par email avec codes de verification\n- Integration publicitaire contextuelle avec le reseau Thrad\n- Persistance des donnees via Redis\n- Deploiement full-stack sur Vercel",
         "technologies": [
@@ -385,13 +355,17 @@
         ],
         "href": "https://github.com/mohamedAtoui/Altair",
         "dates": "Fev. 2026",
-        "active": true,
-        "description": "Application web React et TypeScript construite avec Vite pour un developpement rapide et des builds optimises.",
-        "longDescription": "## A propos\n\nAltair est une application web construite avec React, TypeScript et Vite, utilisant des outils frontend modernes pour un developpement rapide et des builds de production optimises.",
+        "active": false,
+        "description": "Plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules, controles par gestes de la main via webcam avec MediaPipe.",
+        "longDescription": "## A propos\n\nAltair est une plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules explorables. Les utilisateurs interagissent avec les donnees via des gestes de la main suivis en temps reel par webcam.\n\n## Fonctionnalites\n\n- **Trois modes de topologie** : Centralise, decentralise et distribue\n- **Controles gestuels** : Main ouverte pour repulsion, pince pour selectionner, poing pour effondrer, pointer pour surligner\n- **Support 10K+ particules** via les meshes instances de Three.js pour un rendu fluide a 60fps\n- **Suivi des mains sur appareil** avec MediaPipe pour la confidentialite\n- Upload CSV et mapping automatique des colonnes",
         "technologies": [
           "TypeScript",
           "React",
-          "Vite"
+          "Vite",
+          "Three.js",
+          "React Three Fiber",
+          "MediaPipe",
+          "Zustand"
         ],
         "authors": "",
         "links": [
@@ -414,7 +388,7 @@
         ],
         "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
         "dates": "Fev. 2026",
-        "active": true,
+        "active": false,
         "description": "Replication de recherche testant si la repetition de prompts ameliore la precision des petits modeles de langage, doublant quasi les scores ARC-Challenge.",
         "longDescription": "## A propos\n\nUne experience de recherche qui teste si la repetition de prompts dans une seule requete ameliore la precision sur des benchmarks standardises.\n\n## Resultats cles\n\n- 9 modeles open-source testes (0.5B a 9B parametres)\n- Benchmarks : ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- Precision ARC-Challenge quasi doublee de 22% a 44% avec triple repetition (p=0.022)\n- Exploite le traitement gauche-a-droite des transformers",
         "technologies": [
@@ -443,7 +417,7 @@
         ],
         "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
         "dates": "Jan. 2025",
-        "active": true,
+        "active": false,
         "description": "Implementation de reseaux neuronaux LSTM depuis les principes fondamentaux, construisant l'architecture de zero.",
         "longDescription": "## A propos\n\nUne implementation de zero des reseaux LSTM, construisant chaque porte et mecanisme d'etat de cellule depuis les principes fondamentaux.\n\n## Implementation\n\n- Portes d'oubli, d'entree et de sortie\n- Gestion de l'etat de cellule\n- Retropropagation a travers le temps\n- Entrainement sur des donnees sequentielles",
         "technologies": [
@@ -470,12 +444,14 @@
         ],
         "href": "https://github.com/mohamedAtoui/Mini-Compiler",
         "dates": "Oct. 2025",
-        "active": true,
-        "description": "Un mini compilateur construit avec Lex pour l'analyse lexicale et le parsing, explorant la conception de compilateurs.",
-        "longDescription": "## A propos\n\nUne implementation de mini compilateur couvrant l'analyse lexicale et le parsing. Construit comme une exploration approfondie des principes de conception de compilateurs.\n\n## Composants\n\n- Analyseur lexical utilisant Lex\n- Generation de tokens et parsing\n- Analyse syntaxique",
+        "active": false,
+        "description": "Analyseur lexical et parseur pour Mini3ADR, un langage simple avec variables, arithmetique et controle de flux. Construit avec Lex/Flex comme projet de cours de compilation.",
+        "longDescription": "## A propos\n\nUn analyseur lexical et parseur pour Mini3ADR, un langage de programmation simple concu pour un cours de construction de compilateurs.\n\n## Fonctionnalites du langage (Mini3ADR)\n\n- Declarations de variables entieres\n- Instructions d'affectation\n- Operateurs arithmetiques (+, -, *, /)\n- Operateurs relationnels (<, >, ==, !=)\n- Controle de flux : boucles `while` et instructions `if`/`else`\n\n## Implementation\n\n- **Lexer** : Tokenisation avec suivi de ligne via Lex/Flex\n- **Table des symboles** : Suivi des variables declarees et leurs types\n- **Parseur** : Integration prevue avec Yacc/Bison pour l'analyse syntaxique",
         "technologies": [
           "Lex",
-          "C"
+          "C",
+          "Flex",
+          "Yacc/Bison"
         ],
         "authors": "",
         "links": [
@@ -606,29 +582,12 @@
       }
     ]
   },
-  "skills": [
-    "Python",
-    "PyTorch",
-    "TensorFlow",
-    "Hugging Face",
-    "scikit-learn",
-    "LangChain",
-    "Java",
-    "TypeScript",
-    "C",
-    "SQL",
-    "Go",
-    "NumPy",
-    "Pandas",
-    "Docker",
-    "Redis",
-    "PostgreSQL",
-    "FastAPI",
-    "Next.js",
-    "Git",
-    "Linux",
-    "AWS"
-  ],
+  "skills": {
+    "ML & IA": ["Python", "PyTorch", "TensorFlow", "Hugging Face", "scikit-learn", "LangChain", "NumPy", "Pandas"],
+    "Backend": ["FastAPI", "PostgreSQL", "Redis", "SQL", "Go"],
+    "Frontend": ["TypeScript", "Next.js", "React", "Vite"],
+    "Infrastructure": ["Docker", "AWS", "Git", "Linux"]
+  },
   "reviewerConferences": [],
   "reviewerJournals": [],
   "social": {

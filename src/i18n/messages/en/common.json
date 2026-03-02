@@ -16,7 +16,8 @@
             "allCategories": "All",
             "technologies": "Technologies",
             "gallery": "Gallery",
-            "viewProject": "View Project"
+            "viewProject": "View Project",
+            "noResults": "No projects found"
         },
         "news": {
             "title": "Latest News"

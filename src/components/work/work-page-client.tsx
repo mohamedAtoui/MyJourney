@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { BlurFade } from "@/components/ui/blur-fade";
 import { ProjectDetailModal } from "@/components/work/project-detail-modal";
@@ -16,6 +16,7 @@ interface WorkPageClientProps {
     allCategories: string;
     technologies: string;
     gallery: string;
+    noResults: string;
   };
 }
 
@@ -33,6 +34,14 @@ export function WorkPageClient({
     ? projects.filter((p) => p.categories.includes(activeCategory))
     : projects;
 
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const cat of categories) {
+      counts[cat] = projects.filter((p) => p.categories.includes(cat)).length;
+    }
+    return counts;
+  }, [projects, categories]);
+
   return (
     <>
       {/* Filter bar */}
@@ -47,7 +56,7 @@ export function WorkPageClient({
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80",
             )}
           >
-            {labels.allCategories}
+            {labels.allCategories} ({projects.length})
           </button>
           {categories.map((cat) => (
             <button
@@ -62,23 +71,29 @@ export function WorkPageClient({
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80",
               )}
             >
-              {cat}
+              {cat} ({categoryCounts[cat]})
             </button>
           ))}
         </div>
       </BlurFade>
 
       {/* Project grid */}
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project, idx) => (
-          <BlurFade key={project.slug} delay={BLUR_FADE_DELAY * 4 + idx * BLUR_FADE_DELAY}>
-            <WorkProjectCard
-              project={project}
-              onClick={() => setSelectedProject(project)}
-            />
-          </BlurFade>
-        ))}
-      </div>
+      {filteredProjects.length > 0 ? (
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((project, idx) => (
+            <BlurFade key={project.slug} delay={BLUR_FADE_DELAY * 4 + idx * BLUR_FADE_DELAY}>
+              <WorkProjectCard
+                project={project}
+                onClick={() => setSelectedProject(project)}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      ) : (
+        <div className="flex items-center justify-center py-16">
+          <p className="text-muted-foreground text-sm">{labels.noResults}</p>
+        </div>
+      )}
 
       {/* Modal */}
       <ProjectDetailModal
