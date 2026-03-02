@@ -156,13 +156,13 @@
         "gallery": []
       },
       {
-        "title": "MoM Framework",
+        "title": "Mixture of Models Framework",
         "slug": "mom-paper",
         "categories": [
           "IA",
           "Recherche"
         ],
-        "href": "https://github.com/mohamedAtoui/MoM-paper",
+        "href": "https://github.com/Nordlys-Labs/nordlys/tree/main/nordlys",
         "dates": "Fev. 2026",
         "active": false,
         "description": "Article de recherche sur le framework Mixture of Models (MoM) pour le routage intelligent de LLM et les strategies de selection de modeles.",
@@ -176,7 +176,7 @@
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/MoM-paper",
+            "href": "https://github.com/Nordlys-Labs/nordlys/tree/main/nordlys",
             "icon": "github"
           }
         ],
