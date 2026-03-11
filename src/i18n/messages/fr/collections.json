@@ -213,6 +213,36 @@
         "gallery": []
       },
       {
+        "title": "CrossGen",
+        "slug": "crossgen",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+        "dates": "2025",
+        "active": false,
+        "description": "Generateur d'idees inter-domaines qui resout des problemes en cartographiant les relations structurelles entre domaines non lies, par raisonnement analogique plutot que par correspondance de mots-cles.",
+        "longDescription": "## A propos\n\nCrossGen est un generateur d'idees inter-domaines qui decouvre des solutions en cartographiant les relations structurelles profondes entre domaines non lies. Au lieu de demander \"quel domaine ressemble au mien\", il identifie les patterns relationnels fondamentaux qui transcendent les caracteristiques de surface, en utilisant la theorie du Structure-Mapping de Gentner.\n\n## Pipeline\n\n1. Decomposer le probleme en relations neutres au domaine\n2. Abstraire via quatre frameworks paralleles (SAPPhIRE, Biologize, WordTree, TRIZ)\n3. Etendre a 6-8 domaines distants\n4. Rechercher des analogies structurelles\n5. Synthetiser des solutions actionnables\n6. Evaluer sur la nouveaute, faisabilite et profondeur\n\n## Choix de conception cles\n\n- Cartographie les RELATIONS, pas les caracteristiques de surface\n- Honnetete obligatoire : au moins trois points faibles specifiques par solution\n- 40 principes universels et 42 domaines a travers 8 categories\n- Recherches TRIZ deterministes completees par le raisonnement LLM\n- CLI et interface web avec streaming en direct",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Typer",
+          "Claude API"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-crossgen.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "Vantage",
         "slug": "vantage",
         "categories": [

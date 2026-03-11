@@ -218,6 +218,36 @@
         "gallery": []
       },
       {
+        "title": "CrossGen",
+        "slug": "crossgen",
+        "categories": [
+          "AI",
+          "Research"
+        ],
+        "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+        "dates": "2025",
+        "active": false,
+        "description": "Cross-domain idea generator that solves problems by mapping structural relationships across unrelated fields using analogical reasoning, not surface-level keyword matching.",
+        "longDescription": "## About\n\nCrossGen is a cross-domain idea generator that discovers solutions by mapping deep structural relationships across unrelated fields. Instead of asking \"what field resembles mine,\" it identifies fundamental relational patterns that transcend surface features using Gentner's Structure-Mapping Theory.\n\n## Pipeline\n\n1. Decompose the problem into domain-neutral relations\n2. Abstract through four parallel frameworks (SAPPhIRE, Biologize, WordTree, TRIZ)\n3. Expand to 6-8 distant domains\n4. Mine for structural analogies\n5. Synthesize actionable solutions\n6. Evaluate on novelty, feasibility, and depth\n\n## Key Design Choices\n\n- Maps RELATIONS, not surface features\n- Mandatory honesty: at least three specific weak spots per solution\n- 40 universal principles and 42 curated domains across 8 categories\n- Deterministic TRIZ lookups complemented by LLM reasoning to prevent hallucination\n- CLI and web UI with live streaming output",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Typer",
+          "Claude API"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-crossgen.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "Vantage",
         "slug": "vantage",
         "categories": [
