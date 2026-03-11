@@ -62,7 +62,7 @@
                 "label": "Blog"
             },
             {
-                "href": "/resume.pdf",
+                "href": "/Mohamed_Atoui_CV.pdf",
                 "icon": "fileuser",
                 "label": "CV"
             }
@@ -110,7 +110,7 @@
             },
             {
                 "name": "T\u00e9l\u00e9charger le CV",
-                "url": "/resume.pdf"
+                "url": "/Mohamed_Atoui_CV.pdf"
             }
         ],
         "discover": [
