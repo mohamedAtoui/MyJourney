@@ -18,8 +18,8 @@
       },
       {
         "date": "2024.12",
-        "title": "ML Research Assistant at Royal Holloway",
-        "content": "Started as an ML Research Assistant at Royal Holloway, working on transformer attention mechanisms and adversarial robustness."
+        "title": "ML Research at ISG Smart Card & IoT Security Center",
+        "content": "Started ML research at the ISG Smart Card & IoT Security Center, working on adversarial robustness in ML-based intrusion detection for autonomous vehicles."
       },
       {
         "date": "2025.2",
@@ -570,15 +570,15 @@
         "description": "Worked on sports analytics and data science, contributing to product data pipelines and analytics solutions."
       },
       {
-        "company": "Royal Holloway, University of London",
-        "href": "https://www.royalholloway.ac.uk/",
+        "company": "ISG Smart Card & IoT Security Center",
+        "href": "",
         "badges": [],
         "location": "Egham, UK",
-        "title": "ML Research Assistant",
-        "logoUrl": "/icon/rhul.png",
+        "title": "Machine Learning Research",
+        "logoUrl": "/icon/isg_logo.png",
         "start": "Dec. 2024",
         "end": "Sep. 2025",
-        "description": "Research on transformer attention mechanisms and adversarial robustness in machine learning models."
+        "description": "Research on adversarial robustness in ML-based intrusion detection systems for autonomous vehicles."
       },
       {
         "company": "Royal Holloway, University of London",

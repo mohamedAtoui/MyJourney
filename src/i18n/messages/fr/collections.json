@@ -13,8 +13,8 @@
       },
       {
         "date": "2024.12",
-        "title": "Assistant de recherche ML à Royal Holloway",
-        "content": "Début en tant qu'assistant de recherche ML à Royal Holloway, travaillant sur les mécanismes d'attention des transformers et la robustesse adversariale."
+        "title": "Recherche ML à l'ISG Smart Card & IoT Security Center",
+        "content": "Début de la recherche ML à l'ISG Smart Card & IoT Security Center, travaillant sur la robustesse adversariale dans la détection d'intrusions basée sur le ML pour les véhicules autonomes."
       },
       {
         "date": "2025.2",
@@ -565,15 +565,15 @@
         "description": "Travail sur l'analyse sportive et la science des données, contribuant aux pipelines de données produit et aux solutions analytiques."
       },
       {
-        "company": "Royal Holloway, University of London",
-        "href": "https://www.royalholloway.ac.uk/",
+        "company": "ISG Smart Card & IoT Security Center",
+        "href": "",
         "badges": [],
         "location": "Egham, Royaume-Uni",
-        "title": "Assistant de recherche ML",
-        "logoUrl": "/icon/rhul.png",
+        "title": "Recherche en apprentissage automatique",
+        "logoUrl": "/icon/isg_logo.png",
         "start": "Déc. 2024",
         "end": "Sep. 2025",
-        "description": "Recherche sur les mécanismes d'attention des transformers et la robustesse adversariale des modèles d'apprentissage automatique."
+        "description": "Recherche sur la robustesse adversariale dans les systèmes de détection d'intrusions basés sur le ML pour les véhicules autonomes."
       },
       {
         "company": "Royal Holloway, University of London",
