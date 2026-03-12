@@ -30,7 +30,7 @@ At first glance, Opus appears to be the clear winner. The naive approach would b
 
 Analysis of per-task results reveals: "65 tasks that Opus failed were solved by other models." Specifically, 23 tasks that Opus failed were solved by Sonnet. The reverse is also true: 42 tasks that Sonnet failed were solved by Opus.
 
-This demonstrates that models have complementary strengths. The ceiling for a routing system that selects the optimal model per-task is significantly higher than any single model's performance.
+So models have complementary strengths. The ceiling for a routing system that picks the right model per-task is higher than any single model alone.
 
 ---
 
@@ -54,7 +54,7 @@ Using evaluation data from SWE-bench, we compute each model's success rate withi
 
 In some clusters, Gemini achieves 100% success rate while Sonnet only reaches 70%. In other clusters, Sonnet leads at 81% while Gemini drops to 76%. This variance is not random: it reflects genuine differences in model capabilities across problem types.
 
-**Key observation:** Each model has distinct strengths and weaknesses that manifest consistently within semantic clusters.
+**Bottom line:** Each model has strengths and weaknesses that show up consistently within semantic clusters.
 
 ![Model performance heatmap across clusters](/blogs/hypernova/hypernova-heatmap.png)
 *Model performance heatmap across clusters*
