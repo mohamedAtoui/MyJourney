@@ -68,6 +68,28 @@
         "gallery": []
       },
       {
+        "title": "ZeroToDiffusion",
+        "slug": "diffusion",
+        "categories": ["IA", "Recherche"],
+        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+        "dates": "Mars 2026",
+        "active": true,
+        "description": "Construit ma comprehension des modeles de diffusion depuis zero — en partant des maths de probabilite, puis en codant un VAE, et enfin en implementant DDPM etape par etape. Je voulais vraiment comprendre comment la generation d'images fonctionne sous le capot.",
+        "longDescription": "## A propos\n\nJe lisais sans cesse sur Stable Diffusion et DALL-E mais les maths ne cliquaient jamais a partir des articles de blog seuls. Alors j'ai decide de tout reprendre correctement — stylo et papier d'abord, puis code.\n\n## Comment j'ai procede\n\nLa premiere semaine, c'etait juste des probabilites : gaussiennes, Bayes, divergence KL, ELBO. Ennuyeux mais necessaire — il s'avere que toute la fonction de perte a du sens une fois qu'on la derive soi-meme.\n\nEnsuite j'ai construit un VAE sur MNIST. Les VAEs et les modeles de diffusion partagent la meme base probabiliste, ce qui a rendu la transition bien plus fluide que de sauter directement au DDPM.\n\nApres ca : le processus forward (ajout progressif de bruit aux images), le processus inverse (apprendre a debruiter), l'entrainement d'un UNet pour predire le bruit, et enfin la generation d'images a partir de bruit pur. Le voir fonctionner pour la premiere fois etait vraiment satisfaisant.\n\n## Ce que j'en retiens\n\n- La connexion entre VAEs et diffusion a clique quand j'ai vu les deux comme apprendre a inverser un processus de destruction\n- Les schedules de bruit comptent plus que je ne le pensais pour la qualite des echantillons\n- Les couches d'attention sont ce qui donne aux modeles de diffusion leur capacite a capturer la structure globale\n\n## Articles que j'ai etudies\n\n- Kingma & Welling (2014) — VAEs\n- Ho et al. (2020) — DDPM",
+        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-diffusion.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "KV-cache optimization",
         "href": "https://github.com/mohamedAtoui",
         "dates": "Sept. 2025",

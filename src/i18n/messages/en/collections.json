@@ -73,6 +73,28 @@
         "gallery": []
       },
       {
+        "title": "ZeroToDiffusion",
+        "slug": "diffusion",
+        "categories": ["AI", "Research"],
+        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+        "dates": "Mar. 2026",
+        "active": true,
+        "description": "Built my way up to diffusion models from scratch — started with the probability math, coded a VAE, then implemented DDPM step by step. Wanted to actually understand how image generation works under the hood.",
+        "longDescription": "## About\n\nI kept reading about Stable Diffusion and DALL-E but the math never clicked from blog posts alone. So I decided to go through it properly — pen and paper first, then code.\n\n## How I went about it\n\nWeek 1 was just probability: Gaussians, Bayes, KL divergence, ELBO. Boring but necessary — turns out the entire loss function makes sense once you actually derive it yourself.\n\nThen I built a VAE on MNIST. VAEs and diffusion models share the same probabilistic backbone, so this made the transition way smoother than jumping straight into DDPM.\n\nAfter that: the forward process (gradually adding noise to images), the reverse process (learning to denoise), training a UNet to predict the noise, and finally generating images from pure noise. Seeing it work for the first time was honestly pretty satisfying.\n\n## Takeaways\n\n- The connection between VAEs and diffusion clicked once I saw both as learning to reverse a destruction process\n- Noise schedules matter more than I expected for sample quality\n- Attention layers are what give diffusion models their ability to capture global structure\n\n## Papers I worked through\n\n- Kingma & Welling (2014) — VAEs\n- Ho et al. (2020) — DDPM",
+        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-diffusion.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "KV-cache optimization",
         "slug": "kv-cache-optimization",
         "categories": [
