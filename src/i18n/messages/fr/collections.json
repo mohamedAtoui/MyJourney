@@ -35,7 +35,7 @@
         "href": "https://www.nordlyslabs.com/",
         "dates": "Fév. 2025 - Présent",
         "active": false,
-        "description": "Startup de routage LLM intelligent qui réduit les coûts d'inférence IA de 50-60%. Sélectionnée par l'accélérateur Antler, mise à l'échelle à plus de 500 utilisateurs.",
+        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. A surpassé les modèles frontière sur les benchmarks SWE-bench, réduit les coûts d'inférence de 50–60% et atteint plus de 500 utilisateurs.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -74,7 +74,7 @@
         "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
         "dates": "Mars 2026",
         "active": true,
-        "description": "Construit ma comprehension des modeles de diffusion depuis zero. En partant des maths de probabilite, puis en codant un VAE, et enfin en implementant DDPM etape par etape. Je voulais vraiment comprendre comment la generation d'images fonctionne sous le capot.",
+        "description": "Implémentation de modèles de diffusion depuis zéro : dérivation de la théorie des probabilités, construction d'un VAE, puis implémentation de DDPM étape par étape pour comprendre la génération d'images depuis les principes fondamentaux.",
         "longDescription": "## A propos\n\nJe lisais sans cesse sur Stable Diffusion et DALL-E mais les maths ne cliquaient jamais a partir des articles de blog seuls. Alors j'ai decide de tout reprendre correctement. Stylo et papier d'abord, puis code.\n\n## Comment j'ai procede\n\nLa premiere semaine, c'etait juste des probabilites : gaussiennes, Bayes, divergence KL, ELBO. Ennuyeux mais necessaire. Il s'avere que toute la fonction de perte a du sens une fois qu'on la derive soi-meme.\n\nEnsuite j'ai construit un VAE sur MNIST. Les VAEs et les modeles de diffusion partagent la meme base probabiliste, ce qui a rendu la transition bien plus fluide que de sauter directement au DDPM.\n\nApres ca : le processus forward (ajout progressif de bruit aux images), le processus inverse (apprendre a debruiter), l'entrainement d'un UNet pour predire le bruit, et enfin la generation d'images a partir de bruit pur. Le voir fonctionner pour la premiere fois etait vraiment satisfaisant.\n\n## Ce que j'en retiens\n\n- La connexion entre VAEs et diffusion a clique quand j'ai vu les deux comme apprendre a inverser un processus de destruction\n- Les schedules de bruit comptent plus que je ne le pensais pour la qualite des echantillons\n- Les couches d'attention sont ce qui donne aux modeles de diffusion leur capacite a capturer la structure globale\n\n## Articles que j'ai etudies\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
         "technologies": ["Python", "PyTorch", "Jupyter"],
         "authors": "",
@@ -274,7 +274,7 @@
         "href": "https://github.com/mohamedAtoui/Vantage",
         "dates": "Nov. 2025",
         "active": false,
-        "description": "Calculateur de ROI IA qui vous dit si un projet IA vaut le coup, avec projections de couts et benchmarks industriels.",
+        "description": "Outil d'évaluation d'investissement IA qui détermine si un projet IA vaut le coup, avec projections de coûts sur trois ans et benchmarks industriels.",
         "longDescription": "## A propos\n\nVantage est une plateforme d'evaluation strategique d'investissement IA qui compresse plus de 40 heures de conseil en une evaluation de 5-10 minutes.\n\n## Ce que ca fait\n\n- Scoring de faisabilite sur la complexite technique et les risques\n- Projections financieres sur trois ans\n- Benchmarking industriel base sur plus de 200 etudes de cas\n- Analyse build-vs-buy et feuilles de route d'implementation",
         "technologies": [
           "Python",
@@ -304,7 +304,7 @@
         "href": "https://github.com/mohamedAtoui/get-me-clients",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Outil de prospection pharmaceutique par IA qui decouvre des medecins dans les 58 wilayas d'Algerie via Google Maps Places API, avec affinement de recherche par DeepSeek et scoring de qualite des leads.",
+        "description": "Outil de génération de leads par IA pour les équipes commerciales pharmaceutiques. Découvre des professionnels de santé dans les 58 wilayas d'Algérie via Google Maps API, avec affinement de recherche par LLM et scoring de qualité.",
         "longDescription": "## A propos\n\nUn outil de generation de leads par IA concu pour les equipes commerciales pharmaceutiques. Il decouvre des medecins et professionnels de sante dans les 58 wilayas d'Algerie via Google Maps Places API, puis score et deduplique les leads pour l'export.\n\n## Workflow\n\n1. **Contexte business** : Decrivez votre produit et audience cible\n2. **Affinement IA** : DeepSeek genere des questions pour affiner la recherche\n3. **Matrice de recherche** : Combine wilayas et specialites medicales\n4. **Deduplication** : Fusion des doublons avec rapidfuzz\n5. **Scoring qualite** : Notation IA de la pertinence de chaque lead\n6. **Export Excel** : Telechargez des listes de leads propres et scorees",
         "technologies": [
           "Python",
@@ -335,7 +335,7 @@
         "href": "https://github.com/mohamedAtoui/sales-assistant",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Assistant medical IA vocal avec push-to-talk, transcription en temps reel et recherche PubMed pour que les commerciaux puissent citer de vraies etudes.",
+        "description": "Assistant IA vocal pour les représentants commerciaux médicaux. Push-to-talk, transcription en temps réel et intégration PubMed pour citer des études pendant les conversations.",
         "longDescription": "## A propos\n\nUn assistant IA vocal concu pour les representants commerciaux medicaux. Il combine l'interaction vocale push-to-talk avec la recherche PubMed, pour que les commerciaux puissent citer de vraies etudes en parlant aux medecins.\n\n## Fonctionnalites\n\n- **Push-to-talk** : Maintenez la barre d'espace pour parler, avec visualisation audio en temps reel\n- **Parole-texte** : Transcription en direct affichee pendant que l'utilisateur parle\n- **Recherche PubMed** : Outil IA citant des etudes medicales pertinentes\n- **Redemarrage automatique** : La conversation reprend automatiquement apres chaque reponse\n- **Authentification** : Connexion et gestion de session NextAuth\n- **Backend Mistral AI** : Reponses medicales rapides et precises",
         "technologies": [
           "TypeScript",
@@ -372,7 +372,7 @@
         "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
         "dates": "Fev. 2026",
         "active": false,
-        "description": "Application de chat IA financee par la publicite, offrant un acces gratuit a l'intelligence de Claude via des publicites contextuelles.",
+        "description": "Application de chat IA financée par la publicité, offrant un accès gratuit à l'IA de niveau Claude via des publicités contextuelles du réseau Thrad.",
         "longDescription": "## A propos\n\nUne application de chat IA financee par la publicite qui offre un acces gratuit a l'IA de niveau Claude, financee par des publicites contextuelles du reseau Thrad.\n\n## Fonctionnalites\n\n- Streaming de messages en temps reel\n- Authentification par email avec codes de verification\n- Integration publicitaire contextuelle avec le reseau Thrad\n- Persistance des donnees via Redis\n- Deploiement full-stack sur Vercel",
         "technologies": [
           "TypeScript",
@@ -470,7 +470,7 @@
         "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
         "dates": "Jan. 2025",
         "active": false,
-        "description": "Implementation de reseaux neuronaux LSTM depuis les principes fondamentaux, construisant l'architecture de zero.",
+        "description": "Implémentation de réseaux LSTM depuis zéro, construisant chaque porte et mécanisme d'état de cellule depuis les principes fondamentaux avec rétropropagation à travers le temps.",
         "longDescription": "## A propos\n\nUne implementation de zero des reseaux LSTM, construisant chaque porte et mecanisme d'etat de cellule depuis les principes fondamentaux.\n\n## Implementation\n\n- Portes d'oubli, d'entree et de sortie\n- Gestion de l'etat de cellule\n- Retropropagation a travers le temps\n- Entrainement sur des donnees sequentielles",
         "technologies": [
           "Python",
@@ -497,7 +497,7 @@
         "href": "https://github.com/mohamedAtoui/Mini-Compiler",
         "dates": "Oct. 2025",
         "active": false,
-        "description": "Analyseur lexical et parseur pour Mini3ADR, un langage simple avec variables, arithmetique et controle de flux. Construit avec Lex/Flex comme projet de cours de compilation.",
+        "description": "Analyseur lexical et parseur pour Mini3ADR, un langage simple avec variables, arithmétique et contrôle de flux, construit avec Lex/Flex pour un cours de compilation.",
         "longDescription": "## A propos\n\nUn analyseur lexical et parseur pour Mini3ADR, un langage de programmation simple concu pour un cours de construction de compilateurs.\n\n## Fonctionnalites du langage (Mini3ADR)\n\n- Declarations de variables entieres\n- Instructions d'affectation\n- Operateurs arithmetiques (+, -, *, /)\n- Operateurs relationnels (<, >, ==, !=)\n- Controle de flux : boucles `while` et instructions `if`/`else`\n\n## Implementation\n\n- **Lexer** : Tokenisation avec suivi de ligne via Lex/Flex\n- **Table des symboles** : Suivi des variables declarees et leurs types\n- **Parseur** : Integration prevue avec Yacc/Bison pour l'analyse syntaxique",
         "technologies": [
           "Lex",
@@ -526,7 +526,7 @@
         "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
         "dates": "Juil. 2024",
         "active": false,
-        "description": "Generateur de texte RNN au niveau caractere entraine sur les livres Harry Potter, explorant la modelisation de sequences, les gradients evanescents et les limites des architectures recurrentes.",
+        "description": "Générateur de texte au niveau caractère utilisant des RNN classiques entraînés sur Harry Potter, explorant la modélisation de séquences et le problème des gradients évanescents dans les architectures récurrentes.",
         "longDescription": "## A propos\n\nUn projet de generation de texte au niveau caractere utilisant des reseaux de neurones recurrents entraines sur le corpus Harry Potter. L'objectif etait de comprendre la modelisation de sequences depuis les principes fondamentaux et d'observer ou les RNN classiques echouent.\n\n## Approche technique\n\n- Tokenisation au niveau caractere avec encodage one-hot\n- Cellules RNN avec activation tanh et propagation d'etat cache\n- Loss cross-entropy avec echantillonnage softmax controle par temperature\n- Retropropagation a travers le temps (BPTT) avec clipping de gradient\n\n## Ce que j'ai appris\n\n- Les gradients evanescents rendent difficile la capture de dependances a longue portee\n- Sans mecanismes de porte (LSTM/GRU), l'etat cache sature et oublie le contexte anterieur\n- Le reglage de la temperature est critique : trop basse produit du texte repetitif, trop haute du charabia\n- Ce projet a motive mon implementation LSTM from Scratch pour resoudre ces limitations",
         "technologies": [
           "Python",
@@ -584,7 +584,7 @@
         "logoUrl": "/icon/statsperform.png",
         "start": "Juin 2025",
         "end": "Oct. 2025",
-        "description": "Travail sur l'analyse sportive et la science des données, contribuant aux pipelines de données produit et aux solutions analytiques."
+        "description": "Construction et maintenance de pipelines de données produit pour l'analyse sportive, contribuant aux workflows de traitement de données et aux solutions analytiques."
       },
       {
         "company": "ISG Smart Card & IoT Security Center",
@@ -615,10 +615,6 @@
       {
         "year": 2025,
         "title": "Nordlys Labs : plus de 500 utilisateurs"
-      },
-      {
-        "year": 2024,
-        "title": "SwiftStore : 10 000 visiteurs en 4 mois"
       }
     ]
   },
