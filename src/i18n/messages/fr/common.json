@@ -135,7 +135,7 @@
             "support": "Support"
         },
         "legal": {
-            "allRightsReserved": "Tous droits r\u00e9serv\u00e9s",
+            "mitLicense": "Licence MIT",
             "privacyPolicy": "Politique de confidentialit\u00e9",
             "termsDisclaimer": "Conditions & Avertissement"
         },
@@ -193,12 +193,10 @@
             },
             "useLicense": {
                 "title": "Licence d'utilisation",
-                "description": "L'autorisation est accord\u00e9e de t\u00e9l\u00e9charger temporairement une copie des mat\u00e9riaux de ce site web pour un usage personnel et non commercial uniquement. Il s'agit d'un octroi de licence, et non d'un transfert de titre, et sous cette licence, vous ne pouvez pas :",
+                "description": "Ce site web est construit sur un logiciel open-source sous licence MIT. Sous la licence MIT, vous \u00eates libre d'utiliser, copier, modifier, fusionner, publier, distribuer, sous-licencier et/ou vendre des copies du logiciel, sous r\u00e9serve des conditions suivantes :",
                 "items": [
-                    "Modifier ou copier les mat\u00e9riaux",
-                    "Utiliser les mat\u00e9riaux \u00e0 des fins commerciales ou pour toute pr\u00e9sentation publique",
-                    "Tenter de d\u00e9compiler tout logiciel contenu sur le site web",
-                    "Supprimer toute mention de droit d'auteur ou autre notation propri\u00e9taire des mat\u00e9riaux"
+                    "L'avis de droit d'auteur original et l'avis de permission doivent \u00eatre inclus dans toutes les copies ou parties substantielles du logiciel",
+                    "Le logiciel est fourni \u00ab tel quel \u00bb, sans garantie d'aucune sorte"
                 ]
             },
             "disclaimer": {
