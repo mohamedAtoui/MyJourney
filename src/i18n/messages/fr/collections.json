@@ -18,8 +18,8 @@
       },
       {
         "date": "2025.2",
-        "title": "Fondation de [Nordlys Labs](https://www.nordlyslabs.com/)",
-        "content": "Co-fondation de Nordlys Labs, construisant des systèmes de routage LLM intelligents. Mise à l'échelle à plus de 500 utilisateurs."
+        "title": "Fondation de [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys)",
+        "content": "Co-fondation de Nordlys Labs, construisant des systèmes de routage LLM intelligents. Classé n°1 sur SWE-bench, battant les modèles frontière. Plus de 500 utilisateurs."
       },
       {
         "date": "2023.9",
@@ -32,10 +32,10 @@
     "items": [
       {
         "title": "Nordlys Labs",
-        "href": "https://www.nordlyslabs.com/",
+        "href": "https://github.com/Nordlys-Labs/nordlys",
         "dates": "Fév. 2025 - Présent",
         "active": false,
-        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. A surpassé les modèles frontière sur les benchmarks SWE-bench, réduit les coûts d'inférence de 50–60% et atteint plus de 500 utilisateurs.",
+        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Classé n°1 sur SWE-bench, battant les modèles frontière, et passé à plus de 500 utilisateurs.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -47,13 +47,8 @@
         "authors": "",
         "links": [
           {
-            "type": "Site web",
-            "href": "https://www.nordlyslabs.com/",
-            "icon": "globe"
-          },
-          {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
+            "href": "https://github.com/Nordlys-Labs/nordlys",
             "icon": "github"
           }
         ],
@@ -64,7 +59,7 @@
           "IA",
           "Business"
         ],
-        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche, réduisant les coûts d’inférence IA de 50-60%. Nous avons été sélectionnés par l’accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Points forts\n\n- Dépassé les modèles frontière sur les benchmarks SWE-bench\n- Réduction des coûts d’inférence IA de 50-60%\n- Plus de 500 utilisateurs actifs\n- Sélectionnés par le programme accélérateur Antler",
+        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Nous avons été sélectionnés par l'accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Points forts\n\n- Classé **n°1 sur SWE-bench**, battant les modèles frontière\n- **Plus de 500 utilisateurs actifs**\n- Sélectionnés par le programme accélérateur **Antler**\n- Stack de production : Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
         "gallery": []
       },
       {
@@ -90,21 +85,24 @@
         "gallery": []
       },
       {
-        "title": "KV-cache optimization",
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "Sept. 2025",
-        "active": false,
-        "description": "Comparaison empirique des mecanismes d’attention MHA, MQA et GQA, mesurant les compromis perplexite vs taille du KV-cache sur TinyStories. GQA a atteint une reduction de cache de 4x avec une perte de qualite minimale.",
+        "title": "KV Cache Optimization",
+        "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
+        "dates": "Sept. 2025 – Présent",
+        "active": true,
+        "description": "Recherche sur la compression du KV-cache pour les LLMs. Démarre par une comparaison des mécanismes d'attention (MHA / MQA / GQA / MLA) sur des modèles jouets, puis développe des techniques à l'échelle de production — conversion en état récurrent et compression adaptative multi-niveaux — pour Llama-3.1-8B-Instruct.",
         "technologies": [
           "Python",
           "PyTorch",
-          "NumPy"
+          "CUDA",
+          "Hugging Face",
+          "PEFT / LoRA",
+          "Flash Linear Attention"
         ],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
+            "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
             "icon": "github"
           }
         ],
@@ -115,7 +113,7 @@
           "IA",
           "Recherche"
         ],
-        "longDescription": "## A propos\n\nUne etude empirique comparant trois mecanismes d’attention : Multi-Head Attention (MHA), Multi-Query Attention (MQA) et Grouped-Query Attention (GQA), en se concentrant sur le compromis entre qualite du modele et utilisation memoire du KV-cache.\n\n## Configuration experimentale\n\n- Transformers decoder-only avec 256 dimensions cachees, 4 couches et 8 tetes d’attention\n- Entraines et evalues sur le dataset TinyStories\n- Mesure de la perplexite, taille du KV-cache et debit d’inference\n\n## Resultats\n\n| Mecanisme | Perplexite | Taille KV-cache | Reduction |\n|-----------|-----------|-----------------|------------|\n| MHA       | Reference | 100%            | -          |\n| MQA       | +2.1%     | 12.5%           | 8x         |\n| GQA (g=2) | +0.8%     | 25%             | 4x         |\n\n## Conclusion\n\nGQA offre le meilleur equilibre : reduction de cache de 4x avec seulement 0.8% d’augmentation de perplexite. Cela explique son adoption dans les modeles de production comme LLaMA 2 et Mistral.",
+        "longDescription": "## À propos\n\nProjet de recherche explorant les stratégies de compression du KV-cache pour les grands modèles de langage. Démarre par une comparaison des mécanismes d'attention (MHA, MQA, GQA, MLA) sur des modèles jouets, puis développe et benchmark des techniques à l'échelle de production — conversion en état récurrent streaming et compression adaptative multi-niveaux — pour Llama-3.1-8B-Instruct.\n\n## Structure du projet\n\n```\nKV-cache-optimization/\n├── AttentionHeads/           Modèles jouets ~16M paramètres comparant MHA / MQA / GQA / MLA\n│   ├── mha/                  Multi-Head Attention (référence)\n│   ├── mqa/                  Multi-Query Attention\n│   ├── gqa/                  Grouped Query Attention\n│   ├── mla/                  Multi-Head Latent Attention (style DeepSeek-V2)\n│   ├── notebooks/            Notebooks d'entraînement et d'évaluation\n│   └── results/              Graphiques de comparaison et analyses\n│\n├── streaming_attention/      Conversion KV-cache → état récurrent par tête\n│   ├── head_classifier.py    Chargement de motifs DuoAttention + classification des têtes\n│   ├── state_attention.py    État linéaire décroissant : S_t = λ·S_{t-1} + v_t·k_tᵀ\n│   ├── hybrid_attention.py   Patch de Llama pour attention hybride KV/état\n│   ├── calibration.py        Réglage en deux étapes : MSE par tête + fine-tuning LoRA\n│   ├── importance.py         Score d'importance des tokens multi-signaux\n│   ├── adaptive_cache.py     KV-cache à plusieurs niveaux (FP16 / INT8 / INT4 / éviction)\n│   ├── stratigraphic.py      Affectation de zones par tête avec métaphore géologique\n│   └── notebooks/            Expériences sur H100 (zero-shot, calibration, benchmarks)\n│\n├── kv_bench/                 Cadre de benchmarking pour les stratégies de KV-cache\n│   ├── strategies/           8 implémentations de stratégies\n│   ├── runner.py             Chargement du modèle + exécution des stratégies\n│   └── report.py             Sortie console / JSON / Markdown\n│\n└── docs/                     Journal de recherche et documents de conception\n```\n\n## Résultats clés\n\n| Stratégie          | Perplexité | Mémoire vs Référence |\n|--------------------|-----------:|---------------------:|\n| FullKV (référence) |       7.96 |                1.00× |\n| H2O (50%)          |       8.31 |                0.50× |\n| SnapKV (50%)       |       8.15 |                0.50× |\n| INT8               |       7.97 |                0.50× |\n| INT4               |       8.42 |                0.25× |\n| Stratigraphic      |       8.05 |                0.38× |\n\n## Références\n\n- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017)\n- [Fast Transformer Decoding](https://arxiv.org/abs/1911.02150) (Shazeer, 2019) — MQA\n- [GQA](https://arxiv.org/abs/2305.13245) (Ainslie et al., 2023)\n- [DuoAttention](https://arxiv.org/abs/2410.10819) (Xiao et al., 2024) — Classification des têtes\n- [H2O: Heavy-Hitter Oracle](https://arxiv.org/abs/2306.14048) (Zhang et al., 2023)\n- [SnapKV](https://arxiv.org/abs/2404.14469) (Li et al., 2024)",
         "gallery": []
       },
       {
@@ -558,7 +556,8 @@
         "degree": "Licence Informatique & Intelligence Artificielle (mention Très Bien)",
         "logoUrl": "/icon/rhul.png",
         "start": "2023",
-        "end": "2026"
+        "end": "2026",
+        "description": "Royal Holloway est un college de recherche de l'Université de Londres, dont le département d'informatique est reconnu pour l'IA, la sécurité de l'information (ISG) et l'informatique théorique.\n\n**Cours suivis :**\n\n- Informatique Quantique\n- Traitement Automatique du Langage Naturel\n- Apprentissage Automatique\n- Apprentissage Profond\n- Compilateurs\n- Finance Computationnelle\n- Gestion de Bases de Données\n- Ingénierie Logicielle\n- Programmation Orientée Objet\n- Introduction à la Sécurité\n- Projet d'Équipe\n- Traitement de Données Multidimensionnelles\n- IA Symbolique"
       }
     ]
   },
@@ -566,14 +565,14 @@
     "items": [
       {
         "company": "Nordlys Labs",
-        "href": "https://www.nordlyslabs.com/",
+        "href": "https://github.com/Nordlys-Labs/nordlys",
         "badges": [],
         "location": "Royaume-Uni",
         "title": "Co-Fondateur & Responsable Recherche ML",
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Fév. 2025",
         "end": "Présent",
-        "description": "Construction de systèmes de routage LLM intelligents réduisant les coûts d'inférence IA de 50-60%. Sélectionné par l'accélérateur Antler. Plus de 500 utilisateurs."
+        "description": "- Co-fondé Nordlys Labs et dirigé la recherche ML sur le **routage LLM** — choisir le meilleur modèle par requête selon les signaux de la tâche.\n- Conçu et livré un système de routage **classé n°1 sur SWE-bench**, battant des modèles frontière comme Claude et GPT.\n- Passé la plateforme à **plus de 500 utilisateurs** ; stack de production en Python / FastAPI / LangChain avec Redis + PostgreSQL derrière un déploiement Dockerisé.\n- Sélectionné pour l'accélérateur **Antler** ; présenté le framework *MoM (Mixture of Models)* lors d'un meetup en ligne."
       },
       {
         "company": "Stats Perform",
@@ -584,18 +583,18 @@
         "logoUrl": "/icon/statsperform.png",
         "start": "Juin 2025",
         "end": "Oct. 2025",
-        "description": "Construction et maintenance de pipelines de données produit pour l'analyse sportive, contribuant aux workflows de traitement de données et aux solutions analytiques."
+        "description": "- Travaillé dans l'équipe Product Data sur des pipelines d'analyse sportive utilisés par des clients broadcast et paris sportifs.\n- Construit et maintenu des workflows de traitement de données en Python ; mené des analyses exploratoires et des contrôles qualité sur des données de match au niveau évènement.\n- Collaboré avec les product managers et data scientists pour traduire les besoins analytiques en jobs livrables."
       },
       {
-        "company": "ISG Smart Card & IoT Security Center",
-        "href": "",
+        "company": "ISG Smart Card & IoT Security Centre",
+        "href": "https://www.royalholloway.ac.uk/research-and-teaching/departments-and-schools/information-security/",
         "badges": [],
         "location": "Egham, Royaume-Uni",
-        "title": "Recherche en apprentissage automatique",
+        "title": "Chercheur en apprentissage automatique",
         "logoUrl": "/icon/isg_logo.png",
         "start": "Déc. 2024",
         "end": "Sep. 2025",
-        "description": "Recherche sur la robustesse adversariale dans les systèmes de détection d'intrusions basés sur le ML pour les véhicules autonomes."
+        "description": "- Recherche sur la **robustesse adversariale** des systèmes de détection d'intrusions basés sur le ML pour véhicules autonomes.\n- Étudié les attaques par évasion contre les modèles IDS sur réseaux véhicules (trafic CAN-bus) et exploré des défenses : entraînement adversarial et assainissement des entrées.\n- Entraîné des classifieurs PyTorch sur des datasets d'intrusions automobiles et benchmarké leur comportement sous perturbations."
       },
       {
         "company": "Royal Holloway, University of London",
@@ -606,7 +605,7 @@
         "logoUrl": "/icon/rhul.png",
         "start": "Oct. 2025",
         "end": "Présent",
-        "description": "Assistant d'enseignement pour la Programmation Orientée Objet & Ingénierie Logicielle."
+        "description": "- Assistant d'enseignement pour **Programmation Orientée Objet** et **Ingénierie Logicielle** (2ème année).\n- Anime les sessions de TP hebdomadaires, debug le code étudiant en Java, et corrige les devoirs / copies d'examen.\n- Tient des permanences sur les patrons de conception, les pratiques de test et la modélisation OO."
       }
     ]
   },
@@ -631,10 +630,11 @@
     ]
   },
   "skills": {
-    "ML & IA": ["Python", "PyTorch", "TensorFlow", "Hugging Face", "scikit-learn", "LangChain", "NumPy", "Pandas"],
-    "Backend": ["FastAPI", "PostgreSQL", "Redis", "SQL", "Go"],
-    "Frontend": ["TypeScript", "Next.js", "React", "Vite"],
-    "Infrastructure": ["Docker", "AWS", "Git", "Linux"]
+    "ML & IA": ["Python", "PyTorch", "TensorFlow", "Hugging Face", "scikit-learn", "LangChain", "NumPy", "Pandas", "Prolog (IA Symbolique)"],
+    "Backend": ["FastAPI", "PostgreSQL", "Redis", "SQL", "Go", "Kafka"],
+    "Frontend": ["TypeScript", "Next.js", "React", "Vite", "Three.js"],
+    "Infrastructure": ["Docker", "AWS", "Modal", "Git", "Linux"],
+    "Langages": ["Java", "Pascal", "Lex (Compilateurs)"]
   },
   "reviewerConferences": [],
   "reviewerJournals": [],
@@ -651,6 +651,14 @@
       "name": "LinkedIn",
       "url": "https://www.linkedin.com/in/mohamed-el-amine-atoui-3a39a5299",
       "icon": "linkedin",
+      "navbar": false,
+      "content": true,
+      "footer": true
+    },
+    "X": {
+      "name": "X",
+      "url": "https://x.com/attaimen1",
+      "icon": "x",
       "navbar": false,
       "content": true,
       "footer": true

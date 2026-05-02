@@ -18,6 +18,7 @@ interface ProjectItem {
   readonly dates: string;
   readonly active: boolean;
   readonly description: string;
+  readonly longDescription?: string;
   readonly technologies?: readonly string[];
   readonly authors?: string;
   readonly links?: readonly ProjectLink[];
@@ -74,6 +75,7 @@ export default function ProjectsSection({
             href={project.href}
             title={project.title}
             description={project.description}
+            longDescription={project.longDescription}
             dates={project.dates}
             tags={project.technologies}
             image={project.image}
@@ -94,6 +96,7 @@ export default function ProjectsSection({
           href={project.href}
           title={project.title}
           description={project.description}
+          longDescription={project.longDescription}
           dates={project.dates}
           tags={project.technologies}
           image={project.image}
