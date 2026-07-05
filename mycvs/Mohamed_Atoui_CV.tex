@@ -1,0 +1,180 @@
+% Mohamed Atoui — CV
+% Build:  xelatex Mohamed_Atoui_CV.tex
+% Editable source for /public/Mohamed_Atoui_CV.pdf (kept in sync with the portfolio content).
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[top=1.25cm,bottom=1.25cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+% ---- Fonts (macOS system font; close to the original LibreOffice look) ----
+\setmainfont{Helvetica Neue}[
+  BoldFont       = * Bold,
+  ItalicFont     = * Italic,
+  BoldItalicFont = * Bold Italic,
+]
+\newfontfamily\namefont{Helvetica Neue}[LetterSpace=6.0, BoldFont = * Bold]
+
+\linespread{1.04}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---- Helpers ----------------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  {\bfseries\fontsize{11}{13}\selectfont\MakeUppercase{#1}}\par
+  \vspace{1.5pt}{\color{black!75}\hrule height 0.6pt}\vspace{4pt}%
+}
+
+% role, organisation, dates
+\newcommand{\job}[3]{%
+  \noindent\textbf{#1}, \textit{#2}\hfill {\color{black!70}#3}\par\vspace{1.5pt}%
+}
+
+% project title, tech stack
+\newcommand{\project}[2]{%
+  \noindent\textbf{#1}\,\textit{#2}\par\vspace{1pt}%
+}
+
+\newcommand{\skill}[2]{\noindent\textbf{#1:} #2\par\vspace{1.5pt}}
+
+\newenvironment{tight}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.35em}\setlength{\labelsep}{0.5em}%
+    \setlength{\itemsep}{1.0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2.5pt}%
+    \setlength{\partopsep}{0pt}}%
+}{\end{list}}
+
+% =============================================================================
+\begin{document}
+
+% ---- Header -----------------------------------------------------------------
+\begin{center}
+  {\namefont\bfseries\fontsize{23}{27}\selectfont MOHAMED ATOUI}\\[5pt]
+  {\itshape AI Engineer\, $\cdot$\, Researcher\, $\cdot$\, Builder}\\[3pt]
+  Egham, UK\, $\cdot$\, mohamedelamineatoui@gmail.com\, $\cdot$\, +44\,7985\,665024\\[3pt]
+  \href{https://mohamedatoui.uk}{\underline{mohamedatoui.uk}}\quad|\quad
+  \href{https://www.linkedin.com/in/mohamed-el-amine-atoui-3a39a5299}{\underline{LinkedIn}}\quad|\quad
+  \href{https://github.com/mohamedAtoui}{\underline{GitHub}}
+\end{center}
+\vspace{2pt}{\color{black!75}\hrule height 0.8pt}
+
+% ---- Summary ----------------------------------------------------------------
+\cvsection{Summary}
+BSc Computer Science \& AI graduate from Royal Holloway (First-Class, 2026). I work across the research-to-production stack: published academic research on adversarial robustness; built diffusion models from first principles; led KV-cache research that cut Llama-3.1-8B inference memory by 62\%; and co-founded Nordlys Labs, where I shipped Hypernova, a Mixture of Models framework that reached \#1 on SWE-bench at 75.6\% serving 500+ users. I am now co-founding an early-stage startup in stealth. Comfortable moving between research, engineering, and customer-facing work in fast-moving environments.
+
+% ---- Experience -------------------------------------------------------------
+\cvsection{Experience}
+
+\job{Co-Founder}{Stealth Startup}{Jun 2026 – Present}
+\begin{tight}
+  \item Co-founding an early-stage startup; building in stealth — more to share soon.
+\end{tight}
+\vspace{4pt}
+
+\job{Co-organiser}{London Systems Club}{Feb 2026 – Present}
+\begin{tight}
+  \item Co-organise a London community bringing together systems-level engineers and practitioners to share expertise, exchange ideas, and learn from one another.
+\end{tight}
+\vspace{4pt}
+
+\job{Teaching Assistant}{Royal Holloway, University of London}{Oct 2025 – Present}
+\begin{tight}
+  \item Mentor \textbf{50+ students} in Object-Oriented Programming and Software Engineering; support lab sessions with hands-on Java/Python help, and grade assignments with detailed feedback on code quality and engineering standards.
+\end{tight}
+\vspace{4pt}
+
+\job{Ambassador}{Thinking About Thinking}{Oct 2025 – Present}
+\begin{tight}
+  \item Represent the community in London, supporting its events and outreach.
+\end{tight}
+\vspace{4pt}
+
+\job{Co-Founder \& AI Lead}{Nordlys Labs}{Feb 2025 – May 2026}
+\begin{tight}
+  \item Built \textbf{Hypernova}, a Mixture of Models framework that lets developers compose their own LLM routers across heterogeneous backends. Reached \textbf{\#1 on SWE-bench at 75.6\%} and served 500+ users in production.
+  \item Designed an \textbf{intelligent routing layer} that scores prompt complexity and dispatches inference across 30+ models, reducing inference cost 50–60\% versus running frontier models directly.
+  \item Built the \textbf{production backend} (Python, FastAPI, PostgreSQL, Redis, Docker), the client-facing API, and a \textbf{real-time monitoring dashboard} tracking accuracy, latency, and per-model cost. Defined corrective-action workflows when production performance regressed.
+  \item Worked directly with non-technical clients to gather requirements and translate technical work into commercial-grade product surfaces, real-time dashboards, and integration guides.
+\end{tight}
+\vspace{4pt}
+
+\job{Product Data Intern}{Stats Perform}{Jun 2025 – Oct 2025}
+\begin{tight}
+  \item Analysed large-scale sports datasets (NFL, NBA, MLB) using SQL and Python; built feature-engineering pipelines and feature-selection algorithms for production analytics products.
+  \item Modelled revenue projections for AWS marketplace distribution using \textbf{Monte-Carlo simulations}, informing go-to-market strategy.
+  \item Worked directly with \textbf{enterprise clients} to scope analytics deliverables and presented findings to cross-functional product teams.
+\end{tight}
+\vspace{4pt}
+
+\job{Machine Learning Researcher}{Information Security Group (ISG), Royal Holloway}{Dec 2024 – Sep 2025}
+\begin{tight}
+  \item Researched \textbf{adversarial robustness and representation learning} in ML-based perception and intrusion-detection systems for autonomous vehicles, analysing failure modes under attack and distribution shift.
+  \item Designed and trained \textbf{CNN and LSTM models} in PyTorch; built an end-to-end evaluation framework with controlled ablations on real-world automotive sensor datasets.
+  \item Co-authored \textbf{academic reports and technical whitepapers} documenting methodology, experimental setup, and findings for technical reviewers.
+\end{tight}
+
+% ---- Selected Projects ------------------------------------------------------
+\cvsection{Selected Projects}
+
+\project{StratigraphicKV, Hybrid KV-Cache Method (Undergraduate FYP)}{ $\cdot$ Python $\cdot$ PyTorch $\cdot$ HuggingFace Transformers}
+\begin{tight}
+  \item Benchmarked four attention mechanisms (MHA, MQA, GQA, MLA) in iso-parameter 16M-param transformers under controlled experimental conditions; MLA reached \textbf{13–26\% lower perplexity} than MHA at 72\% smaller cache.
+  \item Built \textbf{StratigraphicKV}, a layered method combining approaches across the KV-cache literature: classifies attention heads as retrieval or streaming and swaps the streaming cache for O(1) recurrent state. On Llama-3.1-8B: \textbf{62\% memory reduction} at +0.09 perplexity. Self-directed, topic and direction my own.
+\end{tight}
+\vspace{3pt}
+
+\project{ZeroToDiffusion, Diffusion Models From First Principles}{ $\cdot$ Python $\cdot$ PyTorch}
+\begin{tight}
+  \item From-scratch implementation of \textbf{DDPM and a VAE} in PyTorch. Derived the variational lower bound, implemented forward and reverse processes, tested each component (noise schedule, loss, sampler) in isolation before composition.
+  \item Built without library wrappers to develop a working understanding of objective decomposition, inductive biases, and reverse-process parameterisation.
+\end{tight}
+\vspace{3pt}
+
+\project{Vantage, Agentic AI Assessment Platform}{ $\cdot$ Python $\cdot$ LangGraph $\cdot$ ChromaDB $\cdot$ Sentence Transformers $\cdot$ FastAPI}
+\begin{tight}
+  \item Built an \textbf{agentic system orchestrated with LangGraph} executing multi-step reasoning across feasibility scoring, three-year financial projections, and build-vs-buy analysis. Compresses 40+ consultant hours into a 5–10 minute evaluation.
+  \item Implemented a \textbf{RAG pipeline} with Sentence Transformers and ChromaDB over 200+ real-world case studies; tracked retrieval hit rate and recommendation accuracy as core product metrics.
+\end{tight}
+\vspace{3pt}
+
+\project{CrossGen, Multi-Stage LLM Reasoning Pipeline}{ $\cdot$ Python $\cdot$ FastAPI $\cdot$ Claude API $\cdot$ Pydantic}
+\begin{tight}
+  \item Designed a \textbf{6-stage agentic reasoning pipeline} (Gentner's Structure-Mapping Theory) that decomposes problems into domain-neutral relations and discovers solutions by mapping structural parallels across 42 curated domains.
+  \item Hybrid deterministic + LLM architecture with mandatory weakness documentation and falsifiable predictions for every output, built for evaluability and reliable production behaviour.
+\end{tight}
+\vspace{3pt}
+
+\project{TurboQuant, Vector Quantisation Library (co-built with a friend)}{ $\cdot$ Zig $\cdot$ SIMD $\cdot$ Python}
+\begin{tight}
+  \item Co-built a Zig implementation of Google's TurboQuant online vector-quantisation algorithm: \textbf{\textasciitilde3 bits/dim} ($\approx$6$\times$ compression) of float embeddings with near-perfect recall@10. Targets memory-efficient inference under tight resource budgets.
+\end{tight}
+
+% ---- Technical Skills -------------------------------------------------------
+\cvsection{Technical Skills}
+\skill{Programming}{Python, TypeScript, JavaScript, Java, C, SQL}
+\skill{ML \& Deep Learning}{PyTorch, TensorFlow, Scikit-learn, HuggingFace Transformers, NumPy, Pandas, ONNX}
+\skill{Generative \& Representation Learning}{Diffusion (DDPM), VAEs, autoregressive transformers, attention mechanisms (MHA/MQA/GQA/MLA), self-supervised methods}
+\skill{Agentic AI \& LLMs}{LangGraph, LangChain, Claude API, RAG, Sentence Transformers, ChromaDB, multi-agent orchestration, prompt engineering}
+\skill{Research Methods}{Ablation studies, systematic benchmarking, adversarial robustness, hypothesis-driven experimentation, technical writing}
+\skill{Infrastructure}{Linux, Docker, Git, GitLab CI/CD, FastAPI, AWS, Azure, GPU training}
+\skill{Languages}{English (fluent) $\cdot$ French (fluent) $\cdot$ Arabic (native)}
+
+% ---- Education --------------------------------------------------------------
+\cvsection{Education}
+\noindent\textbf{Royal Holloway, University of London}\hfill {\color{black!70}Sep 2023 – Jun 2026}\par
+\textit{BSc (Hons) Computer Science \& Artificial Intelligence $\cdot$ First-Class Honours}\par
+\vspace{2pt}
+Quantum Computing $\cdot$ Computational Finance, Machine Learning, Deep Learning, Natural Language Processing, Statistics.
+
+% ---- Honors & Awards --------------------------------------------------------
+\cvsection{Honors \& Awards}
+\begin{tight}
+  \item \textbf{International Youth Robotics Competition} (2020): placed 1st; the team was honoured by the President of Algeria. I was 14.
+  \item \textbf{E-commerce business} (2024): co-founded with two friends after my first year of university; borrowed £1,500 each, ran sourcing/marketing/fulfilment, and turned a profit within three months. Business is still operating today.
+  \item \textbf{MoM Framework public talk} (Feb 2026): presented Hypernova's Mixture of Models architecture to a technical audience.
+\end{tight}
+
+\end{document}
