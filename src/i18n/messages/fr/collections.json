@@ -2,6 +2,16 @@
   "news": {
     "items": [
       {
+        "date": "2026.6",
+        "title": "Co-Fondation d'une nouvelle startup en stealth",
+        "content": "Après Nordlys Labs, début de la co-fondation d'une nouvelle startup en phase initiale — actuellement en construction en mode furtif."
+      },
+      {
+        "date": "2026.2",
+        "title": "Co-organisation du London Systems Club",
+        "content": "Début de la co-organisation du London Systems Club, une communauté réunissant des ingénieurs et praticiens systèmes pour partager leur expertise, échanger des idées et apprendre les uns des autres."
+      },
+      {
         "date": "2025.10",
         "title": "Assistant d'enseignement à Royal Holloway",
         "content": "Début en tant qu'assistant d'enseignement pour la Programmation Orientée Objet & Ingénierie Logicielle à Royal Holloway, University of London."
@@ -33,7 +43,7 @@
       {
         "title": "Nordlys Labs",
         "href": "https://github.com/Nordlys-Labs/nordlys",
-        "dates": "Fév. 2025 - Présent",
+        "dates": "Fév. 2025 - Mai 2026",
         "active": false,
         "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Classé n°1 sur SWE-bench, battant les modèles frontière, et passé à plus de 500 utilisateurs.",
         "technologies": [
@@ -87,8 +97,8 @@
       {
         "title": "KV Cache Optimization",
         "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
-        "dates": "Sept. 2025 – Présent",
-        "active": true,
+        "dates": "Sept. 2025 – Avr. 2026",
+        "active": false,
         "description": "Recherche sur la compression du KV-cache pour les LLMs. Démarre par une comparaison des mécanismes d'attention (MHA / MQA / GQA / MLA) sur des modèles jouets, puis développe des techniques à l'échelle de production — conversion en état récurrent et compression adaptative multi-niveaux — pour Llama-3.1-8B-Instruct.",
         "technologies": [
           "Python",
@@ -564,14 +574,36 @@
   "work": {
     "items": [
       {
+        "company": "Startup en Stealth",
+        "href": "",
+        "badges": [],
+        "location": "Royaume-Uni",
+        "title": "Co-Fondateur",
+        "logoUrl": "",
+        "start": "Juin 2026",
+        "end": "Présent",
+        "description": "- Co-fondation d'une startup en phase initiale, actuellement en construction en mode furtif.\n- Plus de détails bientôt."
+      },
+      {
+        "company": "London Systems Club",
+        "href": "",
+        "badges": [],
+        "location": "Londres, Royaume-Uni",
+        "title": "Co-organisateur",
+        "logoUrl": "",
+        "start": "Fév. 2026",
+        "end": "Présent",
+        "description": "- Co-organisation du London Systems Club, une communauté réunissant des ingénieurs et praticiens systèmes pour partager leur expertise, échanger des idées et apprendre les uns des autres."
+      },
+      {
         "company": "Nordlys Labs",
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "badges": [],
         "location": "Royaume-Uni",
-        "title": "Co-Fondateur & Responsable Recherche ML",
+        "title": "Co-Fondateur & Responsable IA",
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Fév. 2025",
-        "end": "Présent",
+        "end": "Mai 2026",
         "description": "- Co-fondé Nordlys Labs et dirigé la recherche ML sur le **routage LLM** — choisir le meilleur modèle par requête selon les signaux de la tâche.\n- Conçu et livré un système de routage **classé n°1 sur SWE-bench**, battant des modèles frontière comme Claude et GPT.\n- Passé la plateforme à **plus de 500 utilisateurs** ; stack de production en Python / FastAPI / LangChain avec Redis + PostgreSQL derrière un déploiement Dockerisé.\n- Sélectionné pour l'accélérateur **Antler** ; présenté le framework *MoM (Mixture of Models)* lors d'un meetup en ligne."
       },
       {
@@ -606,6 +638,17 @@
         "start": "Oct. 2025",
         "end": "Présent",
         "description": "- Assistant d'enseignement pour **Programmation Orientée Objet** et **Ingénierie Logicielle** (2ème année).\n- Anime les sessions de TP hebdomadaires, debug le code étudiant en Java, et corrige les devoirs / copies d'examen.\n- Tient des permanences sur les patrons de conception, les pratiques de test et la modélisation OO."
+      },
+      {
+        "company": "Thinking About Thinking",
+        "href": "",
+        "badges": [],
+        "location": "Londres, Royaume-Uni",
+        "title": "Ambassadeur",
+        "logoUrl": "",
+        "start": "Oct. 2025",
+        "end": "Présent",
+        "description": "- Ambassadeur de la communauté Thinking About Thinking, soutenant ses évènements et son rayonnement à Londres."
       }
     ]
   },

@@ -6,10 +6,10 @@
         "initials": "MA"
     },
     "subtitle": "BSc Computer Science & AI",
-    "headline": "ML Engineer\nCo-Founder at Nordlys Labs",
+    "headline": "AI Engineer\nCo-Founder (Stealth)",
     "welcome": "Welcome to my portfolio!",
     "ogImageUrl": "",
-    "bioMarkdown": "Hi, I'm Mohamed — Co-Founder & ML Research Lead at ![Nordlys Logo](/icon/nordlys_logo.png) [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys), where we built an LLM routing system that **ranked #1 on SWE-bench, defeating frontier models**, and scaled to 500+ users.\n\nI'm a final-year Computer Science & AI student at ![RHUL Logo](/icon/rhul.png) [Royal Holloway, University of London](https://www.royalholloway.ac.uk/), graduating with First-Class Honours. My research is on transformer attention mechanisms and KV-cache compression for large language models. Alongside that, I've worked on adversarial robustness for ML-based intrusion detection at the ISG Smart Card & IoT Security Centre, sports analytics at ![Stats Perform Logo](/icon/statsperform.png) [Stats Perform](https://www.statsperform.com/), and currently teach Object-Oriented Programming & Software Engineering at Royal Holloway.\n\nMore in my [CV](./Mohamed_Atoui_CV.pdf).\n\n**Interests:** Machine Learning, LLM Systems, Applied AI, Product Development.",
+    "bioMarkdown": "Hi, I'm Mohamed — I'm currently co-founding an early-stage startup, building in stealth. Before this, I was Co-Founder & AI Lead at ![Nordlys Logo](/icon/nordlys_logo.png) [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys), where we built an LLM routing system that **ranked #1 on SWE-bench, defeating frontier models**, and scaled to 500+ users.\n\nI'm a Computer Science & AI graduate of ![RHUL Logo](/icon/rhul.png) [Royal Holloway, University of London](https://www.royalholloway.ac.uk/) (First-Class Honours, 2026). My research is on transformer attention mechanisms and KV-cache compression for large language models. Alongside that, I've worked on adversarial robustness for ML-based intrusion detection at the ISG Smart Card & IoT Security Centre, sports analytics at ![Stats Perform Logo](/icon/statsperform.png) [Stats Perform](https://www.statsperform.com/), teach Object-Oriented Programming & Software Engineering at Royal Holloway, and co-organise the London Systems Club.\n\nMore in my [CV](./Mohamed_Atoui_CV.pdf).\n\n**Interests:** Machine Learning, LLM Systems, Applied AI, Product Development.",
     "location": {
         "name": "Egham, United Kingdom",
         "mapUrl": "https://www.google.com/maps/place/egham"

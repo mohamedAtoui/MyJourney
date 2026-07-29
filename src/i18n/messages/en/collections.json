@@ -2,6 +2,16 @@
   "news": {
     "items": [
       {
+        "date": "2026.6",
+        "title": "Co-Founding a New Startup in Stealth",
+        "content": "After Nordlys Labs, started co-founding a new early-stage startup — currently building in stealth."
+      },
+      {
+        "date": "2026.2",
+        "title": "Co-organising the London Systems Club",
+        "content": "Started co-organising the London Systems Club, a community bringing together systems-level engineers and practitioners to share expertise, exchange ideas, and learn from one another."
+      },
+      {
         "date": "2026.2",
         "title": "Presented MoM Framework at Online Meetup",
         "content": "Presented the MoM (Mixture of Models) framework in an online meetup, followed by engaging discussions with the audience on LLM routing and model selection strategies."
@@ -43,7 +53,7 @@
           "Business"
         ],
         "href": "https://github.com/Nordlys-Labs/nordlys",
-        "dates": "Feb. 2025 - Present",
+        "dates": "Feb. 2025 - May. 2026",
         "active": false,
         "description": "Intelligent LLM routing system that selects the best model for each task. Ranked #1 on SWE-bench, defeating frontier models, and scaled to 500+ users.",
         "longDescription": "## About\n\nNordlys Labs is an intelligent LLM routing startup that selects the best model for each task. We were selected by the Antler accelerator and scaled to over 500 users.\n\n## Highlights\n\n- Ranked **#1 on SWE-bench**, defeating frontier models\n- Scaled to **500+ active users**\n- Selected by the **Antler** accelerator program\n- Production stack: Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
@@ -97,8 +107,8 @@
           "Research"
         ],
         "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
-        "dates": "Sep. 2025 – Present",
-        "active": true,
+        "dates": "Sep. 2025 – Apr. 2026",
+        "active": false,
         "description": "Research on KV-cache compression for LLMs. Starts from a comparison of attention mechanisms (MHA / MQA / GQA / MLA) on toy models, then develops production-scale techniques — streaming recurrent state conversion and multi-tier adaptive compression — targeting Llama-3.1-8B-Instruct.",
         "longDescription": "## About\n\nResearch project exploring KV cache compression strategies for large language models. Starts from a comparison of attention mechanisms (MHA, MQA, GQA, MLA) on toy models, then develops and benchmarks production-scale techniques — including streaming recurrent state conversion and multi-tier adaptive compression — targeting Llama-3.1-8B-Instruct.\n\n## Project Structure\n\n```\nKV-cache-optimization/\n├── AttentionHeads/           Toy 16M-param models comparing MHA / MQA / GQA / MLA\n│   ├── mha/                  Multi-Head Attention (baseline)\n│   ├── mqa/                  Multi-Query Attention\n│   ├── gqa/                  Grouped Query Attention\n│   ├── mla/                  Multi-Head Latent Attention (DeepSeek-V2 style)\n│   ├── notebooks/            Training and evaluation notebooks\n│   └── results/              Comparison plots and analysis\n│\n├── streaming_attention/      Per-head KV cache → recurrent state conversion\n│   ├── head_classifier.py    DuoAttention pattern loading + head classification\n│   ├── state_attention.py    Decayed linear state: S_t = λ·S_{t-1} + v_t·k_tᵀ\n│   ├── hybrid_attention.py   Monkey-patches Llama for hybrid KV/state attention\n│   ├── calibration.py        Two-stage tuning: per-head MSE + LoRA fine-tuning\n│   ├── importance.py         Multi-signal token importance scoring\n│   ├── adaptive_cache.py     Tiered KV cache (FP16 / INT8 / INT4 / evict)\n│   ├── stratigraphic.py      Per-head zone assignment with geological metaphor\n│   └── notebooks/            Experiments on H100 (zero-shot, calibration, benchmarks)\n│\n├── kv_bench/                 Benchmarking framework for KV cache strategies\n│   ├── strategies/           8 strategy implementations\n│   ├── runner.py             Model loading + strategy execution\n│   └── report.py             Console / JSON / Markdown output\n│\n└── docs/                     Research diary and design documents\n```\n\n## Packages\n\n**AttentionHeads** — Foundational comparison of four attention architectures on TinyStories and SimpleStories. Each variant is a ~16M-parameter decoder-only transformer.\n\n**streaming_attention** — Production-scale KV cache optimization for Llama-3.1-8B-Instruct. Streaming heads (identified by DuoAttention) are converted to fixed-size recurrent state matrices, while retrieval heads keep full or tiered KV cache. Includes a two-stage calibration pipeline (decay alignment + LoRA) and multi-tier adaptive compression.\n\n**kv_bench** — Unified benchmarking framework comparing 8 KV cache strategies: FullKV baseline, H2O, SnapKV, INT8 / INT4 uniform quantization, Stratigraphic compression, StreamingAttention, and Hybrid.\n\n## Quick Start\n\n```bash\npip install -e .                    # Install streaming_attention package\npip install -e \".[fla]\"             # + Flash Linear Attention kernels\npip install -e \".[train]\"           # + PEFT/Accelerate for calibration\n\n# Run benchmarks\npython -m kv_bench \\\n  --model meta-llama/Llama-3.1-8B-Instruct \\\n  --pattern-dir attn_patterns/Meta-Llama-3.1-8B-Instruct \\\n  --strategies baseline streaming_attention h2o snapkv int8 int4 \\\n  --output results.json -v\n```\n\n## Key Results\n\n| Strategy           | Perplexity | Memory vs Baseline |\n|--------------------|-----------:|-------------------:|\n| FullKV (baseline)  |       7.96 |              1.00× |\n| H2O (50%)          |       8.31 |              0.50× |\n| SnapKV (50%)       |       8.15 |              0.50× |\n| INT8               |       7.97 |              0.50× |\n| INT4               |       8.42 |              0.25× |\n| Stratigraphic      |       8.05 |              0.38× |\n\n## References\n\n- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017)\n- [Fast Transformer Decoding](https://arxiv.org/abs/1911.02150) (Shazeer, 2019) — MQA\n- [GQA: Training Generalized Multi-Query Transformer Models](https://arxiv.org/abs/2305.13245) (Ainslie et al., 2023)\n- [DuoAttention](https://arxiv.org/abs/2410.10819) (Xiao et al., 2024) — Head classification\n- [H2O: Heavy-Hitter Oracle](https://arxiv.org/abs/2306.14048) (Zhang et al., 2023)\n- [SnapKV](https://arxiv.org/abs/2404.14469) (Li et al., 2024)",
         "technologies": [
@@ -569,14 +579,36 @@
   "work": {
     "items": [
       {
+        "company": "Stealth Startup",
+        "href": "",
+        "badges": [],
+        "location": "United Kingdom",
+        "title": "Co-Founder",
+        "logoUrl": "",
+        "start": "Jun. 2026",
+        "end": "Present",
+        "description": "- Co-founding an early-stage startup, currently building in stealth.\n- More to share soon."
+      },
+      {
+        "company": "London Systems Club",
+        "href": "",
+        "badges": [],
+        "location": "London, UK",
+        "title": "Co-organiser",
+        "logoUrl": "",
+        "start": "Feb. 2026",
+        "end": "Present",
+        "description": "- Co-organise the London Systems Club, a community bringing together systems-level engineers and practitioners to share expertise, exchange ideas, and learn from one another."
+      },
+      {
         "company": "Nordlys Labs",
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "badges": [],
         "location": "United Kingdom",
-        "title": "Co-Founder & ML Research Lead",
+        "title": "Co-Founder & AI Lead",
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Feb. 2025",
-        "end": "Present",
+        "end": "May. 2026",
         "description": "- Co-founded Nordlys Labs and led ML research on **LLM routing** — picking the best model per request based on task signals.\n- Designed and shipped a routing system that **ranked #1 on SWE-bench**, beating frontier models such as Claude and GPT.\n- Scaled the platform to **500+ users**; built the production stack on Python / FastAPI / LangChain with Redis + PostgreSQL behind a Dockerised deploy.\n- Selected for the **Antler** accelerator program; presented the *MoM (Mixture of Models)* framework at an online meetup."
       },
       {
@@ -611,6 +643,17 @@
         "start": "Oct. 2025",
         "end": "Present",
         "description": "- Teaching Assistant for **Object-Oriented Programming** and **Software Engineering** (Year 2).\n- Run weekly lab sessions, debug student code in Java, and mark coursework / exam scripts.\n- Hold office hours focused on design patterns, testing practice and OO modelling."
+      },
+      {
+        "company": "Thinking About Thinking",
+        "href": "",
+        "badges": [],
+        "location": "London Area, United Kingdom",
+        "title": "Ambassador",
+        "logoUrl": "",
+        "start": "Oct. 2025",
+        "end": "Present",
+        "description": "- Ambassador for the Thinking About Thinking community, supporting its events and outreach in London."
       }
     ]
   },
