@@ -31,13 +31,13 @@ export function WorkPageClient({
   );
 
   const filteredProjects = activeCategory
-    ? projects.filter((p) => p.categories.includes(activeCategory))
+    ? projects.filter((p) => p.categories?.includes(activeCategory))
     : projects;
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const cat of categories) {
-      counts[cat] = projects.filter((p) => p.categories.includes(cat)).length;
+      counts[cat] = projects.filter((p) => p.categories?.includes(cat)).length;
     }
     return counts;
   }, [projects, categories]);

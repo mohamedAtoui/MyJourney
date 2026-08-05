@@ -42,7 +42,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return constructMetadata({
-    description: t("headline"),
+    description: t("metaDescription"),
     locale: locale as Locale,
     path: `/`,
   });

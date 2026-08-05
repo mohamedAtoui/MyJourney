@@ -59,7 +59,7 @@ export async function generateWebsiteJsonLd(
     url: baseUrl,
   };
 
-  const headline = t("headline").replace(/\n/g, ", ");
+  const headline = t("metaDescription");
   const websiteJsonLd: WithContext<WebSite> = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -100,10 +100,13 @@ async function getAddress(
   locale: Locale = DEFAULT_LOCALE,
 ): Promise<PostalAddress> {
   const t = await getTranslations({ locale });
-  const addressCountry: Country = { "@type": "Country", name: "Singapore" };
+  const addressCountry: Country = {
+    "@type": "Country",
+    name: t("location.country"),
+  };
   const address: PostalAddress = {
     "@type": "PostalAddress",
-    addressLocality: t("location.name"),
+    addressLocality: t("location.city"),
     addressCountry,
   };
   return address;
@@ -126,7 +129,8 @@ async function getOrganization(
     const organization: Organization = {
       "@type": "Organization",
       name: workItems[0].company,
-      url: workItems[0].href,
+      // An empty string is invalid structured data — omit the key instead.
+      ...(workItems[0].href?.trim() ? { url: workItems[0].href } : {}),
     };
     return organization;
   } catch {
@@ -188,7 +192,7 @@ export async function generatePersonJsonLd(
   locale: Locale = DEFAULT_LOCALE,
 ): Promise<string> {
   const t = await getTranslations({ locale });
-  const headline = t("headline").replace(/\n/g, ", ");
+  const headline = t("metaDescription");
   const baseUrl = getLocaleUrl(locale);
   const socialData = t.raw("social") as Record<
     string,

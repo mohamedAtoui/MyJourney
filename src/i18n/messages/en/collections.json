@@ -2,19 +2,14 @@
   "news": {
     "items": [
       {
-        "date": "2026.6",
-        "title": "Co-Founding a New Startup in Stealth",
-        "content": "After Nordlys Labs, started co-founding a new early-stage startup — currently building in stealth."
+        "date": "2026.2",
+        "title": "Presented MoM Framework at Online Meetup",
+        "content": "Presented the MoM (Mixture of Models) framework in an online meetup, followed by engaging discussions with the audience on LLM routing and model selection strategies."
       },
       {
         "date": "2026.2",
         "title": "Co-organising the London Systems Club",
         "content": "Started co-organising the London Systems Club, a community bringing together systems-level engineers and practitioners to share expertise, exchange ideas, and learn from one another."
-      },
-      {
-        "date": "2026.2",
-        "title": "Presented MoM Framework at Online Meetup",
-        "content": "Presented the MoM (Mixture of Models) framework in an online meetup, followed by engaging discussions with the audience on LLM routing and model selection strategies."
       },
       {
         "date": "2025.10",
@@ -27,14 +22,14 @@
         "content": "Joined Stats Perform as a Product Data Intern, working on sports analytics and data science."
       },
       {
+        "date": "2025.2",
+        "title": "Founded [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys)",
+        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems that select the best model for each task. Scored 75.6% on SWE-bench Verified (Dec 2025) against 74.4% for the best single model. Scaled to 500+ users."
+      },
+      {
         "date": "2024.12",
         "title": "ML Research at ISG Smart Card & IoT Security Center",
         "content": "Started ML research at the ISG Smart Card & IoT Security Center, working on adversarial robustness in ML-based intrusion detection for autonomous vehicles."
-      },
-      {
-        "date": "2025.2",
-        "title": "Founded [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys)",
-        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems that select the best model for each task. Ranked #1 on SWE-bench, defeating frontier models. Scaled to 500+ users."
       },
       {
         "date": "2023.9",
@@ -48,15 +43,12 @@
       {
         "title": "Nordlys Labs",
         "slug": "nordlys-labs",
-        "categories": [
-          "AI",
-          "Business"
-        ],
+        "categories": ["AI", "Business"],
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "dates": "Feb. 2025 - May. 2026",
         "active": false,
-        "description": "Intelligent LLM routing system that selects the best model for each task. Ranked #1 on SWE-bench, defeating frontier models, and scaled to 500+ users.",
-        "longDescription": "## About\n\nNordlys Labs is an intelligent LLM routing startup that selects the best model for each task. We were selected by the Antler accelerator and scaled to over 500 users.\n\n## Highlights\n\n- Ranked **#1 on SWE-bench**, defeating frontier models\n- Scaled to **500+ active users**\n- Selected by the **Antler** accelerator program\n- Production stack: Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
+        "description": "Intelligent LLM routing system that selects the best model for each task. Scored **75.6% on SWE-bench Verified** (Dec 2025), above the best single-model baseline, and scaled to 500+ users.",
+        "longDescription": "## About\n\nNordlys Labs is an intelligent LLM routing startup that selects the best model for each task. We were selected by the Antler accelerator and scaled to over 500 users.\n\n## Highlights\n\n- Scored **75.6% on SWE-bench Verified** (December 2025), above the strongest published single-model baseline at the time (Claude Opus 4.5, 74.4%) — full write-up in the [Hypernova post](/blog/hypernova)\n- Scaled to **500+ active users**\n- Selected by the **Antler** accelerator program\n- Production stack: Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
         "technologies": [
           "Python",
           "FastAPI",
@@ -78,34 +70,9 @@
         "gallery": []
       },
       {
-        "title": "ZeroToDiffusion",
-        "slug": "diffusion",
-        "categories": ["AI", "Research"],
-        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
-        "dates": "Mar. 2026",
-        "active": true,
-        "description": "From-scratch implementation of diffusion models: derived the probability theory, built a VAE, then implemented DDPM step by step to understand image generation from first principles.",
-        "longDescription": "## About\n\nI kept reading about Stable Diffusion and DALL-E but the math never clicked from blog posts alone. So I decided to go through it properly. Pen and paper first, then code.\n\n## How I went about it\n\nWeek 1 was just probability: Gaussians, Bayes, KL divergence, ELBO. Boring but necessary. Turns out the entire loss function makes sense once you actually derive it yourself.\n\nThen I built a VAE on MNIST. VAEs and diffusion models share the same probabilistic backbone, so this made the transition way smoother than jumping straight into DDPM.\n\nAfter that: the forward process (gradually adding noise to images), the reverse process (learning to denoise), training a UNet to predict the noise, and finally generating images from pure noise. Seeing it work for the first time was honestly pretty satisfying.\n\n## Takeaways\n\n- The connection between VAEs and diffusion clicked once I saw both as learning to reverse a destruction process\n- Noise schedules matter more than I expected for sample quality\n- Attention layers are what give diffusion models their ability to capture global structure\n\n## Papers I worked through\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
-        "technologies": ["Python", "PyTorch", "Jupyter"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-diffusion.png",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "KV Cache Optimization",
         "slug": "kv-cache-optimization",
-        "categories": [
-          "AI",
-          "Research"
-        ],
+        "categories": ["AI", "Research"],
         "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
         "dates": "Sep. 2025 – Apr. 2026",
         "active": false,
@@ -132,81 +99,37 @@
         "gallery": []
       },
       {
-        "title": "Transformer From Stones",
-        "slug": "transformer-from-stones",
-        "categories": [
-          "AI",
-          "Research"
-        ],
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
-        "active": false,
-        "description": "From-scratch implementation of the original Transformer architecture from 'Attention is All You Need', building multi-head attention, positional encoding, and training pipelines.",
-        "longDescription": "## About\n\nA from-scratch implementation of the original Transformer architecture as described in the \"Attention is All You Need\" paper. Every component is built from first principles.\n\n## Implementation Details\n\n- Multi-head self-attention with scaled dot-product attention\n- Sinusoidal positional encoding\n- Layer normalization and residual connections\n- Feed-forward networks with GELU activation\n- Byte-pair encoding tokenization\n- Training pipeline with gradient accumulation",
-        "technologies": [
-          "Python",
-          "PyTorch",
-          "NumPy"
-        ],
+        "title": "ZeroToDiffusion",
+        "slug": "diffusion",
+        "categories": ["AI", "Research"],
+        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+        "dates": "Mar. 2026",
+        "active": true,
+        "description": "From-scratch implementation of diffusion models: derived the probability theory, built a VAE, then implemented DDPM step by step to understand image generation from first principles.",
+        "longDescription": "## About\n\nI kept reading about Stable Diffusion and DALL-E but the math never clicked from blog posts alone. So I decided to go through it properly. Pen and paper first, then code.\n\n## How I went about it\n\nWeek 1 was just probability: Gaussians, Bayes, KL divergence, ELBO. Boring but necessary. Turns out the entire loss function makes sense once you actually derive it yourself.\n\nThen I built a VAE on MNIST. VAEs and diffusion models share the same probabilistic backbone, so this made the transition way smoother than jumping straight into DDPM.\n\nAfter that: the forward process (gradually adding noise to images), the reverse process (learning to denoise), training a UNet to predict the noise, and finally generating images from pure noise. Seeing it work for the first time was honestly pretty satisfying.\n\n## Takeaways\n\n- The connection between VAEs and diffusion clicked once I saw both as learning to reverse a destruction process\n- Noise schedules matter more than I expected for sample quality\n- Attention layers are what give diffusion models their ability to capture global structure\n\n## Papers I worked through\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
+        "technologies": ["Python", "PyTorch", "Jupyter"],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
+            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
             "icon": "github"
           }
         ],
-        "image": "/proj-transformer.png",
-        "video": "",
-        "gallery": []
-      },
-      {
-        "title": "Cyber Attack Detection",
-        "slug": "cyber-attack-detection",
-        "categories": [
-          "AI",
-          "Research"
-        ],
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
-        "active": false,
-        "description": "Machine learning-based threat detection system that identifies and classifies cyber attacks using network traffic analysis.",
-        "longDescription": "## About\n\nA machine learning-based threat detection system that identifies and classifies cyber attacks by analyzing network traffic patterns.\n\n## Approach\n\n- Feature engineering on network traffic data\n- Multiple ML classifiers (Random Forest, SVM, Neural Networks)\n- Real-time classification pipeline\n- High accuracy on benchmark datasets",
-        "technologies": [
-          "Python",
-          "scikit-learn",
-          "Pandas",
-          "NumPy"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-cyber-attack.png",
+        "image": "/proj-diffusion.png",
         "video": "",
         "gallery": []
       },
       {
         "title": "Mixture of Models Framework",
         "slug": "mom-paper",
-        "categories": [
-          "AI",
-          "Research"
-        ],
+        "categories": ["AI", "Research"],
         "href": "https://github.com/Nordlys-Labs/nordlys/tree/main/nordlys",
         "dates": "Feb. 2026",
         "active": false,
         "description": "Research paper on the Mixture of Models (MoM) framework for intelligent LLM routing and model selection strategies.",
         "longDescription": "## About\n\nThe MoM (Mixture of Models) framework is a research contribution to intelligent LLM routing. It introduces a systematic approach to selecting the best model for each task, combining routing strategies with cost optimization.\n\n## Contributions\n\n- Framework for LLM model selection\n- Cost-aware routing strategies\n- Benchmarking across multiple model families\n- Presented at an online meetup with community engagement",
-        "technologies": [
-          "Python",
-          "PyTorch",
-          "LangChain"
-        ],
+        "technologies": ["Python", "PyTorch", "LangChain"],
         "authors": "",
         "links": [
           {
@@ -222,19 +145,13 @@
       {
         "title": "Git-RLMs",
         "slug": "git-rlms",
-        "categories": [
-          "AI",
-          "SWE"
-        ],
+        "categories": ["AI", "SWE"],
         "href": "https://github.com/mohamedAtoui/Git-RLMs",
         "dates": "Jan. 2026",
         "active": false,
         "description": "Framework that lets LLMs analyze git repositories through an iterative REPL loop, exploring code incrementally instead of loading entire codebases into context.",
         "longDescription": "## About\n\nGit-RLMs is a framework that enables LLMs to explore and analyze git repositories through an iterative REPL (Read-Eval-Print Loop). Instead of dumping an entire codebase into context, the model incrementally discovers relevant code using 12 built-in tools.\n\n## How It Works\n\n1. The LLM sends a tool command (e.g., `git_log`, `read_file`, `search_code`)\n2. The REPL executes it against the repository\n3. Results feed back to the LLM for the next exploration step\n4. Sub-model delegation via `llm_query` for focused analysis\n\n## Available Tools\n\n`git_log`, `git_show`, `git_diff`, `search_code`, `read_file`, `list_files`, `get_file_at_commit`, `git_blame`, `git_branches`, `git_tags`, `llm_query`, `python_exec`\n\n## Features\n\n- CLI and Python API\n- Supports OpenAI and Anthropic as LLM providers\n- Cost tracking and trajectory logging for reproducibility\n- Sandboxed Python execution environment",
-        "technologies": [
-          "Python",
-          "LangChain"
-        ],
+        "technologies": ["Python", "LangChain"],
         "authors": "",
         "links": [
           {
@@ -250,21 +167,13 @@
       {
         "title": "CrossGen",
         "slug": "crossgen",
-        "categories": [
-          "AI",
-          "Research"
-        ],
+        "categories": ["AI", "Research"],
         "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
         "dates": "2025",
         "active": false,
         "description": "Cross-domain idea generator that solves problems by mapping structural relationships across unrelated fields using analogical reasoning, not surface-level keyword matching.",
         "longDescription": "## About\n\nCrossGen is a cross-domain idea generator that discovers solutions by mapping deep structural relationships across unrelated fields. Instead of asking \"what field resembles mine,\" it identifies fundamental relational patterns that transcend surface features using Gentner's Structure-Mapping Theory.\n\n## Pipeline\n\n1. Decompose the problem into domain-neutral relations\n2. Abstract through four parallel frameworks (SAPPhIRE, Biologize, WordTree, TRIZ)\n3. Expand to 6-8 distant domains\n4. Mine for structural analogies\n5. Synthesize actionable solutions\n6. Evaluate on novelty, feasibility, and depth\n\n## Design choices\n\n- Maps RELATIONS, not surface features\n- Mandatory honesty: at least three specific weak spots per solution\n- 40 universal principles and 42 curated domains across 8 categories\n- Deterministic TRIZ lookups complemented by LLM reasoning to prevent hallucination\n- CLI and web UI with live streaming output",
-        "technologies": [
-          "Python",
-          "FastAPI",
-          "Typer",
-          "Claude API"
-        ],
+        "technologies": ["Python", "FastAPI", "Typer", "Claude API"],
         "authors": "",
         "links": [
           {
@@ -278,28 +187,20 @@
         "gallery": []
       },
       {
-        "title": "Vantage",
-        "slug": "vantage",
-        "categories": [
-          "AI",
-          "Business"
-        ],
-        "href": "https://github.com/mohamedAtoui/Vantage",
-        "dates": "Nov. 2025",
+        "title": "Prompt Repetition Experiment",
+        "slug": "prompt-repetition-experiment",
+        "categories": ["AI", "Research"],
+        "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+        "dates": "Feb. 2026",
         "active": false,
-        "description": "AI investment assessment tool that evaluates whether an AI project is worth building, with three-year cost projections and industry benchmarks.",
-        "longDescription": "## About\n\nVantage is a strategic AI investment assessment platform that compresses 40+ consultant hours into a 5-10 minute evaluation. It combines financial modeling, industry benchmarking, and AI analysis.\n\n## What it does\n\n- Feasibility scoring across technical complexity, data readiness, and risk\n- Three-year financial projections with risk-adjusted returns\n- Industry benchmarking grounded in 200+ real-world case studies\n- Build-vs-buy analysis and implementation roadmaps\n\n## Tech Stack\n\nUses Claude API with LangGraph for multi-step reasoning, Sentence Transformers for semantic search, and ChromaDB for vector-based case study retrieval.",
-        "technologies": [
-          "Python",
-          "LangGraph",
-          "ChromaDB",
-          "Sentence Transformers"
-        ],
+        "description": "Research replication testing whether prompt repetition improves small language models' accuracy, achieving near-doubling on ARC-Challenge benchmarks.",
+        "longDescription": "## About\n\nA research experiment investigating whether repeating prompts within a single request boosts accuracy on standardized benchmarks for small language models.\n\n## Findings\n\n- Tested 9 open-source models (0.5B to 9B parameters)\n- Benchmarks: ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- ARC-Challenge accuracy nearly doubled from 22% to 44% with triple repetition (p=0.022)\n- Works because the second copy of the prompt gets to attend to the first, giving the model a quasi-bidirectional pass",
+        "technologies": ["Python", "PyTorch", "Jupyter"],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/Vantage",
+            "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
             "icon": "github"
           }
         ],
@@ -308,43 +209,37 @@
         "gallery": []
       },
       {
-        "title": "Get Me Clients",
-        "slug": "get-me-clients",
-        "categories": [
-          "AI",
-          "Business"
-        ],
-        "href": "https://github.com/mohamedAtoui/get-me-clients",
-        "dates": "Jan. 2026",
+        "title": "Claude with Ads",
+        "slug": "claude-with-ads",
+        "categories": ["AI", "SWE"],
+        "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
+        "dates": "Feb. 2026",
         "active": false,
-        "description": "AI-powered lead generation tool for pharmaceutical sales teams. Discovers medical professionals across Algeria's 58 wilayas using Google Maps API, with LLM-driven search refinement and quality scoring.",
-        "longDescription": "## About\n\nAn AI-powered lead generation tool designed for pharmaceutical sales teams. It discovers doctors and medical professionals across Algeria's 58 wilayas using the Google Maps Places API, then scores and deduplicates leads for export.\n\n## Workflow\n\n1. **Business context input**: Describe your product and target audience\n2. **AI refinement**: DeepSeek generates clarifying questions to narrow the search\n3. **Search matrix**: Combines wilayas with medical specialties for full coverage\n4. **Lead deduplication**: Uses rapidfuzz fuzzy matching to merge duplicate entries\n5. **Quality scoring**: AI-driven scoring of each lead's relevance\n6. **Excel export**: Download clean, scored lead lists\n\n## Tech Stack\n\n- Streamlit wizard UI for step-by-step interaction\n- Google Maps Places API for location-based discovery\n- DeepSeek LLM for search refinement and scoring\n- rapidfuzz for lead deduplication",
-        "technologies": [
-          "Python",
-          "FastAPI",
-          "Streamlit",
-          "Google Maps API",
-          "DeepSeek"
-        ],
+        "description": "Ad-supported AI chat application offering free access to Claude-level AI, funded by contextual advertising via Thrad's network.",
+        "longDescription": "## About\n\nAn ad-supported AI chat application that gives users free access to Claude-level AI, funded by contextual advertisements. After each AI response, contextual ads from Thrad's ad network are displayed.\n\n## Features\n\n- Real-time message streaming\n- Email-based authentication via verification codes\n- Contextual ad integration with Thrad network\n- Redis-based data persistence\n- Full-stack deployment on Vercel",
+        "technologies": ["TypeScript", "Next.js", "React", "Django", "Redis"],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/get-me-clients",
+            "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
             "icon": "github"
           }
         ],
-        "image": "",
+        "image": "/proj-claude-ads.png",
         "video": "",
-        "gallery": []
+        "gallery": [
+          {
+            "type": "image",
+            "src": "/proj-claude-ads-2.png",
+            "alt": "Claude with Ads screenshot"
+          }
+        ]
       },
       {
         "title": "MedVoice Assistant",
         "slug": "medvoice-assistant",
-        "categories": [
-          "AI",
-          "Business"
-        ],
+        "categories": ["AI", "Business"],
         "href": "https://github.com/mohamedAtoui/sales-assistant",
         "dates": "Jan. 2026",
         "active": false,
@@ -376,48 +271,9 @@
         "gallery": []
       },
       {
-        "title": "Claude with Ads",
-        "slug": "claude-with-ads",
-        "categories": [
-          "AI",
-          "SWE"
-        ],
-        "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
-        "dates": "Feb. 2026",
-        "active": false,
-        "description": "Ad-supported AI chat application offering free access to Claude-level AI, funded by contextual advertising via Thrad's network.",
-        "longDescription": "## About\n\nAn ad-supported AI chat application that gives users free access to Claude-level AI, funded by contextual advertisements. After each AI response, contextual ads from Thrad's ad network are displayed.\n\n## Features\n\n- Real-time message streaming\n- Email-based authentication via verification codes\n- Contextual ad integration with Thrad network\n- Redis-based data persistence\n- Full-stack deployment on Vercel",
-        "technologies": [
-          "TypeScript",
-          "Next.js",
-          "React",
-          "Django",
-          "Redis"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-claude-ads.png",
-        "video": "",
-        "gallery": [
-          {
-            "type": "image",
-            "src": "/proj-claude-ads-2.png",
-            "alt": "Claude with Ads screenshot"
-          }
-        ]
-      },
-      {
         "title": "Altair",
         "slug": "altair",
-        "categories": [
-          "SWE"
-        ],
+        "categories": ["SWE"],
         "href": "https://github.com/mohamedAtoui/Altair",
         "dates": "Feb. 2026",
         "active": false,
@@ -445,27 +301,26 @@
         "gallery": []
       },
       {
-        "title": "Prompt Repetition Experiment",
-        "slug": "prompt-repetition-experiment",
-        "categories": [
-          "AI",
-          "Research"
-        ],
-        "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
-        "dates": "Feb. 2026",
+        "title": "Get Me Clients",
+        "slug": "get-me-clients",
+        "categories": ["AI", "Business"],
+        "href": "https://github.com/mohamedAtoui/get-me-clients",
+        "dates": "Jan. 2026",
         "active": false,
-        "description": "Research replication testing whether prompt repetition improves small language models' accuracy, achieving near-doubling on ARC-Challenge benchmarks.",
-        "longDescription": "## About\n\nA research experiment investigating whether repeating prompts within a single request boosts accuracy on standardized benchmarks for small language models.\n\n## Findings\n\n- Tested 9 open-source models (0.5B to 9B parameters)\n- Benchmarks: ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- ARC-Challenge accuracy nearly doubled from 22% to 44% with triple repetition (p=0.022)\n- Works because the second copy of the prompt gets to attend to the first, giving the model a quasi-bidirectional pass",
+        "description": "AI-powered lead generation tool for pharmaceutical sales teams. Discovers medical professionals across Algeria's 58 wilayas using Google Maps API, with LLM-driven search refinement and quality scoring.",
+        "longDescription": "## About\n\nAn AI-powered lead generation tool designed for pharmaceutical sales teams. It discovers doctors and medical professionals across Algeria's 58 wilayas using the Google Maps Places API, then scores and deduplicates leads for export.\n\n## Workflow\n\n1. **Business context input**: Describe your product and target audience\n2. **AI refinement**: DeepSeek generates clarifying questions to narrow the search\n3. **Search matrix**: Combines wilayas with medical specialties for full coverage\n4. **Lead deduplication**: Uses rapidfuzz fuzzy matching to merge duplicate entries\n5. **Quality scoring**: AI-driven scoring of each lead's relevance\n6. **Excel export**: Download clean, scored lead lists\n\n## Tech Stack\n\n- Streamlit wizard UI for step-by-step interaction\n- Google Maps Places API for location-based discovery\n- DeepSeek LLM for search refinement and scoring\n- rapidfuzz for lead deduplication",
         "technologies": [
           "Python",
-          "PyTorch",
-          "Jupyter"
+          "FastAPI",
+          "Streamlit",
+          "Google Maps API",
+          "DeepSeek"
         ],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
+            "href": "https://github.com/mohamedAtoui/get-me-clients",
             "icon": "github"
           }
         ],
@@ -474,21 +329,37 @@
         "gallery": []
       },
       {
+        "title": "Transformer From Stones",
+        "slug": "transformer-from-stones",
+        "categories": ["AI", "Research", "Learning"],
+        "href": "https://github.com/mohamedAtoui",
+        "dates": "2024",
+        "active": false,
+        "description": "From-scratch implementation of the original Transformer architecture from 'Attention is All You Need', building multi-head attention, positional encoding, and training pipelines.",
+        "longDescription": "## About\n\nA from-scratch implementation of the original Transformer architecture as described in the \"Attention is All You Need\" paper. Every component is built from first principles.\n\n## Implementation Details\n\n- Multi-head self-attention with scaled dot-product attention\n- Sinusoidal positional encoding\n- Layer normalization and residual connections\n- Feed-forward networks with GELU activation\n- Byte-pair encoding tokenization\n- Training pipeline with gradient accumulation",
+        "technologies": ["Python", "PyTorch", "NumPy"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-transformer.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "LSTM from Scratch",
         "slug": "lstm-from-scratch",
-        "categories": [
-          "AI",
-          "Research"
-        ],
+        "categories": ["AI", "Research", "Learning"],
         "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
         "dates": "Jan. 2025",
         "active": false,
         "description": "From-scratch implementation of LSTM networks, building every gate and cell state mechanism from first principles with backpropagation through time.",
         "longDescription": "## About\n\nA from-scratch implementation of LSTM (Long Short-Term Memory) networks, building every gate and cell state mechanism from first principles to understand recurrent neural network architectures.\n\n## Implementation\n\n- Forget, input, and output gates\n- Cell state management\n- Backpropagation through time\n- Training on sequence data",
-        "technologies": [
-          "Python",
-          "NumPy"
-        ],
+        "technologies": ["Python", "NumPy"],
         "authors": "",
         "links": [
           {
@@ -504,20 +375,13 @@
       {
         "title": "Mini Compiler",
         "slug": "mini-compiler",
-        "categories": [
-          "SWE"
-        ],
+        "categories": ["SWE", "Learning"],
         "href": "https://github.com/mohamedAtoui/Mini-Compiler",
         "dates": "Oct. 2025",
         "active": false,
         "description": "Lexical analyzer and parser for Mini3ADR, a simple language with variables, arithmetic, and control flow, built with Lex/Flex for a compiler construction course.",
         "longDescription": "## About\n\nA lexical analyzer and parser for Mini3ADR, a simple programming language designed for a compiler construction course. The project covers the front-end stages of compilation.\n\n## Language Features (Mini3ADR)\n\n- Integer variable declarations\n- Assignment statements\n- Arithmetic operators (+, -, *, /)\n- Relational operators (<, >, ==, !=)\n- Control flow: `while` loops and `if`/`else` statements\n\n## Implementation\n\n- **Lexer**: Tokenization with line tracking using Lex/Flex\n- **Symbol table**: Tracks declared variables and their types\n- **Parser**: Planned integration with Yacc/Bison for syntax analysis",
-        "technologies": [
-          "Lex",
-          "C",
-          "Flex",
-          "Yacc/Bison"
-        ],
+        "technologies": ["Lex", "C", "Flex", "Yacc/Bison"],
         "authors": "",
         "links": [
           {
@@ -531,21 +395,37 @@
         "gallery": []
       },
       {
+        "title": "Cyber Attack Detection",
+        "slug": "cyber-attack-detection",
+        "categories": ["AI", "Research", "Learning"],
+        "href": "https://github.com/mohamedAtoui",
+        "dates": "2024",
+        "active": false,
+        "description": "Machine learning-based threat detection system that identifies and classifies cyber attacks using network traffic analysis.",
+        "longDescription": "## About\n\nA machine learning-based threat detection system that identifies and classifies cyber attacks by analyzing network traffic patterns.\n\n## Approach\n\n- Feature engineering on network traffic data\n- Multiple ML classifiers (Random Forest, SVM, Neural Networks)\n- Real-time classification pipeline\n- High accuracy on benchmark datasets",
+        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-cyber-attack.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "Harry Potter Text Generator",
         "slug": "generate-harry-potter",
-        "categories": [
-          "AI"
-        ],
+        "categories": ["AI", "Learning"],
         "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
         "dates": "Jul. 2024",
         "active": false,
         "description": "Character-level text generator using vanilla RNNs trained on Harry Potter, exploring sequence modeling and the vanishing gradient problem in recurrent architectures.",
         "longDescription": "## About\n\nA character-level text generation project using Recurrent Neural Networks trained on the Harry Potter corpus. The goal was to understand sequence modeling from first principles and observe where vanilla RNNs break down.\n\n## Technical Approach\n\n- Character-level tokenization with one-hot encoding\n- Vanilla RNN cells with tanh activation and hidden state propagation\n- Cross-entropy loss with temperature-controlled softmax sampling\n- Backpropagation through time (BPTT) with gradient clipping\n\n## What I learned\n\n- Vanishing gradients make it difficult for vanilla RNNs to capture long-range dependencies, the model loses coherence beyond short phrases\n- Without gating mechanisms (LSTM/GRU), the hidden state saturates and forgets earlier context\n- Temperature tuning is critical: too low produces repetitive text, too high produces gibberish\n- This project motivated my subsequent LSTM from Scratch implementation to address these limitations",
-        "technologies": [
-          "Python",
-          "PyTorch",
-          "Jupyter"
-        ],
+        "technologies": ["Python", "PyTorch", "Jupyter"],
         "authors": "",
         "links": [
           {
@@ -579,15 +459,26 @@
   "work": {
     "items": [
       {
-        "company": "Stealth Startup",
-        "href": "",
+        "company": "Nordlys Labs",
+        "href": "https://github.com/Nordlys-Labs/nordlys",
         "badges": [],
         "location": "United Kingdom",
-        "title": "Co-Founder",
-        "logoUrl": "",
-        "start": "Jun. 2026",
-        "end": "Present",
-        "description": "- Co-founding an early-stage startup, currently building in stealth.\n- More to share soon."
+        "title": "Co-Founder & AI Lead",
+        "logoUrl": "/icon/nordlys_logo.png",
+        "start": "Feb. 2025",
+        "end": "May. 2026",
+        "description": "- Co-founded Nordlys Labs and led ML research on **LLM routing** — picking the best model per request based on task signals.\n- Designed and shipped a routing system that scored **75.6% on SWE-bench Verified** (December 2025), above the strongest published single-model baseline at the time (Claude Opus 4.5, 74.4%).\n- Scaled the platform to **500+ users**; built the production stack on Python / FastAPI / LangChain with Redis + PostgreSQL behind a Dockerised deploy.\n- Selected for the **Antler** accelerator program; presented the *MoM (Mixture of Models)* framework at an online meetup."
+      },
+      {
+        "company": "Royal Holloway, University of London",
+        "href": "https://www.royalholloway.ac.uk/",
+        "badges": [],
+        "location": "Egham, UK",
+        "title": "Teaching Assistant",
+        "logoUrl": "/icon/rhul.png",
+        "start": "Oct. 2025",
+        "end": "May. 2026",
+        "description": "- Teaching Assistant for **Object-Oriented Programming** and **Software Engineering** (Year 2).\n- Run weekly lab sessions, debug student code in Java, and mark coursework / exam scripts.\n- Hold office hours focused on design patterns, testing practice and OO modelling."
       },
       {
         "company": "London Systems Club",
@@ -601,15 +492,15 @@
         "description": "- Co-organise the London Systems Club, a community bringing together systems-level engineers and practitioners to share expertise, exchange ideas, and learn from one another."
       },
       {
-        "company": "Nordlys Labs",
-        "href": "https://github.com/Nordlys-Labs/nordlys",
+        "company": "Thinking About Thinking",
+        "href": "",
         "badges": [],
-        "location": "United Kingdom",
-        "title": "Co-Founder & AI Lead",
-        "logoUrl": "/icon/nordlys_logo.png",
-        "start": "Feb. 2025",
-        "end": "May. 2026",
-        "description": "- Co-founded Nordlys Labs and led ML research on **LLM routing** — picking the best model per request based on task signals.\n- Designed and shipped a routing system that **ranked #1 on SWE-bench**, beating frontier models such as Claude and GPT.\n- Scaled the platform to **500+ users**; built the production stack on Python / FastAPI / LangChain with Redis + PostgreSQL behind a Dockerised deploy.\n- Selected for the **Antler** accelerator program; presented the *MoM (Mixture of Models)* framework at an online meetup."
+        "location": "London Area, United Kingdom",
+        "title": "Ambassador",
+        "logoUrl": "",
+        "start": "Oct. 2025",
+        "end": "Present",
+        "description": "- Ambassador for the Thinking About Thinking community, supporting its events and outreach in London."
       },
       {
         "company": "Stats Perform",
@@ -620,7 +511,7 @@
         "logoUrl": "/icon/statsperform.png",
         "start": "Jun. 2025",
         "end": "Oct. 2025",
-        "description": "- Worked in the Product Data team on sports analytics pipelines feeding broadcast and betting customers.\n- Built and maintained Python data-processing workflows; ran exploratory analyses and quality checks on event-level match data.\n- Collaborated with product managers and data scientists to translate analytics requirements into shippable jobs."
+        "description": "- Analysed large-scale NFL, NBA and MLB datasets in SQL and Python; built feature-engineering and feature-selection pipelines for production analytics products.\n- Modelled three-year revenue projections for AWS marketplace distribution using **Monte-Carlo simulations**, informing go-to-market strategy.\n- Worked with enterprise clients to scope analytics deliverables and presented findings to cross-functional product teams."
       },
       {
         "company": "ISG Smart Card & IoT Security Centre",
@@ -632,38 +523,11 @@
         "start": "Dec. 2024",
         "end": "Sep. 2025",
         "description": "- Research on **adversarial robustness** of ML-based intrusion detection systems for autonomous vehicles.\n- Studied evasion attacks against in-vehicle network IDS models (CAN-bus traffic) and explored defences: adversarial training and input sanitisation.\n- Trained PyTorch classifiers on automotive intrusion datasets and benchmarked their behaviour under perturbations."
-      },
-      {
-        "company": "Royal Holloway, University of London",
-        "href": "https://www.royalholloway.ac.uk/",
-        "badges": [],
-        "location": "Egham, UK",
-        "title": "Teaching Assistant",
-        "logoUrl": "/icon/rhul.png",
-        "start": "Oct. 2025",
-        "end": "Present",
-        "description": "- Teaching Assistant for **Object-Oriented Programming** and **Software Engineering** (Year 2).\n- Run weekly lab sessions, debug student code in Java, and mark coursework / exam scripts.\n- Hold office hours focused on design patterns, testing practice and OO modelling."
-      },
-      {
-        "company": "Thinking About Thinking",
-        "href": "",
-        "badges": [],
-        "location": "London Area, United Kingdom",
-        "title": "Ambassador",
-        "logoUrl": "",
-        "start": "Oct. 2025",
-        "end": "Present",
-        "description": "- Ambassador for the Thinking About Thinking community, supporting its events and outreach in London."
       }
     ]
   },
   "awards": {
-    "items": [
-      {
-        "year": 2025,
-        "title": "Scaled Nordlys Labs to 500+ users"
-      }
-    ]
+    "items": []
   },
   "invitedTalks": {
     "items": []
@@ -678,7 +542,17 @@
     ]
   },
   "skills": {
-    "ML & AI": ["Python", "PyTorch", "TensorFlow", "Hugging Face", "scikit-learn", "LangChain", "NumPy", "Pandas", "Prolog (Symbolic AI)"],
+    "ML & AI": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face",
+      "scikit-learn",
+      "LangChain",
+      "NumPy",
+      "Pandas",
+      "Prolog (Symbolic AI)"
+    ],
     "Backend": ["FastAPI", "PostgreSQL", "Redis", "SQL", "Go", "Kafka"],
     "Frontend": ["TypeScript", "Next.js", "React", "Vite", "Three.js"],
     "Infrastructure": ["Docker", "AWS", "Modal", "Git", "Linux"],

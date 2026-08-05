@@ -89,8 +89,7 @@
             "projects": "Projects",
             "education": "Education",
             "experience": "Experience",
-            "skills": "Skills",
-            "awards": "Awards"
+            "skills": "Skills"
         },
         "sections": {
             "quickNavigation": "Quick Navigation",
@@ -103,10 +102,6 @@
             {
                 "name": "Blog",
                 "url": "/blog"
-            },
-            {
-                "name": "Template",
-                "url": "https://github.com/zhengzangw/nextjs-portfolio-blog-research"
             },
             {
                 "name": "Download CV",
@@ -136,9 +131,7 @@
             "termsDisclaimer": "Terms & Disclaimer"
         },
         "bottom": {
-            "lastUpdated": "Last updated",
-            "madeWith": "Made with",
-            "modifiedFrom": "Build with"
+            "lastUpdated": "Last updated"
         }
     },
     "privacyPolicy": {

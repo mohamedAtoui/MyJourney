@@ -110,7 +110,7 @@ export async function GET(request: Request) {
 
   const nameFull = t("name.full");
   const blogTitle = t("blog.title");
-  const headline = t("headline").replace(/\n/g, ", ");
+  const headline = t("metaDescription");
   const blogUrl = getLocaleUrl(locale, "/blog");
   const selfFeedUrl = getSelfFeedUrl(locale, explicit);
   const feedTitle = `${blogTitle} | ${nameFull}`;

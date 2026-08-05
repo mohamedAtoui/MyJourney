@@ -1,18 +1,21 @@
 {
-    "name": {
-        "full": "Mohamed Atoui",
-        "given": "Mohamed",
-        "family": "Atoui",
-        "initials": "MA"
-    },
-    "subtitle": "BSc Computer Science & AI",
-    "headline": "AI Engineer\nCo-Founder (Stealth)",
-    "welcome": "Welcome to my portfolio!",
-    "ogImageUrl": "",
-    "bioMarkdown": "Hi, I'm Mohamed — I'm currently co-founding an early-stage startup, building in stealth. Before this, I was Co-Founder & AI Lead at ![Nordlys Logo](/icon/nordlys_logo.png) [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys), where we built an LLM routing system that **ranked #1 on SWE-bench, defeating frontier models**, and scaled to 500+ users.\n\nI'm a Computer Science & AI graduate of ![RHUL Logo](/icon/rhul.png) [Royal Holloway, University of London](https://www.royalholloway.ac.uk/) (First-Class Honours, 2026). My research is on transformer attention mechanisms and KV-cache compression for large language models. Alongside that, I've worked on adversarial robustness for ML-based intrusion detection at the ISG Smart Card & IoT Security Centre, sports analytics at ![Stats Perform Logo](/icon/statsperform.png) [Stats Perform](https://www.statsperform.com/), teach Object-Oriented Programming & Software Engineering at Royal Holloway, and co-organise the London Systems Club.\n\nMore in my [CV](./Mohamed_Atoui_CV.pdf).\n\n**Interests:** Machine Learning, LLM Systems, Applied AI, Product Development.",
-    "location": {
-        "name": "Egham, United Kingdom",
-        "mapUrl": "https://www.google.com/maps/place/egham"
-    },
-    "blogTagline": "Thoughts on AI, machine learning, and more."
+  "name": {
+    "full": "Mohamed Atoui",
+    "given": "Mohamed",
+    "family": "Atoui",
+    "initials": "MA"
+  },
+  "subtitle": "BSc Computer Science and AI, First Class Honours",
+  "headline": "AI Engineer, London",
+  "metaDescription": "AI Engineer in London. BSc Computer Science and AI (First Class Honours, Royal Holloway). LLM routing, KV-cache compression, and applied ML systems.",
+  "welcome": "Welcome to my portfolio!",
+  "ogImageUrl": "",
+  "bioMarkdown": "Hi, I'm Mohamed — I was Co-Founder & AI Lead at ![Nordlys Logo](/icon/nordlys_logo.png) [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys), where we built an LLM routing system that scored **75.6% on SWE-bench Verified** (December 2025), above the strongest published single-model baseline at the time (Claude Opus 4.5, 74.4%), and scaled to 500+ users.\n\nI'm a Computer Science & AI graduate of ![RHUL Logo](/icon/rhul.png) [Royal Holloway, University of London](https://www.royalholloway.ac.uk/) (First-Class Honours, 2026). My research is on transformer attention mechanisms and KV-cache compression for large language models. Alongside that, I've worked on adversarial robustness for ML-based intrusion detection at the ISG Smart Card & IoT Security Centre, sports analytics at ![Stats Perform Logo](/icon/statsperform.png) [Stats Perform](https://www.statsperform.com/), taught Object-Oriented Programming & Software Engineering at Royal Holloway, and co-organise the London Systems Club.\n\nMore in my [CV](/Mohamed_Atoui_CV.pdf).\n\n**Interests:** Machine Learning, LLM Systems, Applied AI, Product Development.",
+  "location": {
+    "name": "London, United Kingdom",
+    "city": "London",
+    "country": "United Kingdom",
+    "mapUrl": "https://www.google.com/maps/place/london"
+  },
+  "blogTagline": "Thoughts on AI, machine learning, and more."
 }

@@ -41,7 +41,7 @@ export async function constructMetadata({
   const pageTitle = title || t("name.full");
   const finalTitle =
     path === "/" ? pageTitle : `${pageTitle} | ${t("name.full")}`;
-  const finalDescription = description || t("headline");
+  const finalDescription = description || t("metaDescription");
   const canonicalUrl = getLocaleUrl(resolvedLocale, path || "");
   const atomFeedUrl = getAtomFeedUrl(resolvedLocale);
 

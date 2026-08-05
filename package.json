@@ -1,11 +1,12 @@
 {
-  "name": "nextjs-portfolio-blog-research",
+  "name": "myjourney",
   "version": "1.1.0",
   "private": true,
+  "license": "MIT",
   "author": {
-    "name": "Zangwei Zheng",
-    "url": "https://www.zangwei.dev",
-    "repository": "https://github.com/zhengzangw/nextjs-portfolio-blog-research"
+    "name": "Mohamed Atoui",
+    "url": "https://mohamedatoui.uk",
+    "repository": "https://github.com/mohamedAtoui/MyJourney"
   },
   "scripts": {
     "dev": "next dev",

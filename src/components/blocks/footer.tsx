@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import type React from "react";
 
-import { Icons } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/data/site";
 import { Link as I18nLink } from "@/i18n/routing";
@@ -89,7 +88,6 @@ export default function Footer() {
     { name: t("footer.navigation.education"), href: "/#education" },
     { name: t("footer.navigation.experience"), href: "/#work" },
     { name: t("footer.navigation.skills"), href: "/#skills" },
-    { name: t("footer.navigation.awards"), href: "/#awards" },
   ];
 
   return (
@@ -187,11 +185,14 @@ export default function Footer() {
           {/* Copyright and Legal Links - Desktop: same line, Mobile: separate lines */}
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div className="text-muted-foreground flex items-center gap-2 text-sm">
-              <span>
-                © 2025 Zangwei Zheng
-              </span>
+              <span>© {currentYear} Mohamed Atoui</span>
               <span>•</span>
-              <span>{t("footer.legal.mitLicense")}</span>
+              <FooterLink
+                href="https://github.com/mohamedAtoui/MyJourney/blob/main/LICENSE"
+                className="hover:text-foreground transition-colors"
+              >
+                {t("footer.legal.mitLicense")}
+              </FooterLink>
             </div>
 
             <div className="text-muted-foreground flex items-center gap-2 text-sm">
@@ -211,22 +212,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Last Updated and Made with - Desktop: same line, Mobile: separate lines */}
-          <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-            <div className="text-muted-foreground text-sm">
-              {t("footer.bottom.lastUpdated")}: {siteConfig.lastUpdated}
-            </div>
-
-            <div className="text-muted-foreground flex items-center gap-2 text-sm">
-              <span>{t("footer.bottom.modifiedFrom")}</span>
-              <FooterLink
-                href="https://github.com/zhengzangw/nextjs-portfolio-blog-research"
-                className="hover:text-foreground inline-flex items-center gap-1 transition-colors"
-              >
-                <Icons.github className="h-4 w-4" />
-                <span>zhengzangw/nextjs-portfolio-blog-research</span>
-              </FooterLink>
-            </div>
+          {/* Last Updated */}
+          <div className="text-muted-foreground text-sm">
+            {t("footer.bottom.lastUpdated")}: {siteConfig.lastUpdated}
           </div>
         </div>
       </div>
