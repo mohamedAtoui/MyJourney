@@ -45,7 +45,7 @@
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "dates": "Fév. 2025 - Mai 2026",
         "active": false,
-        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. A obtenu **75,6 % sur SWE-bench Verified** (déc. 2025), au-dessus du meilleur modèle unique publié, et passé à plus de 500 utilisateurs.",
+        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. A obtenu **75,6 % sur SWE-bench Verified** (déc. 2025), au-dessus du meilleur modèle unique publié, pour un **coût par requête inférieur de 50 à 60 %**, et passé à plus de 500 utilisateurs.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -66,7 +66,29 @@
         "video": "",
         "slug": "nordlys-labs",
         "categories": ["IA", "Business"],
-        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Nous avons été sélectionnés par l'accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Points forts\n\n- **75,6 % sur SWE-bench Verified** (décembre 2025), au-dessus du meilleur modèle unique publié à l'époque (Claude Opus 4.5, 74,4 %). Analyse complète dans l'[article Hypernova](/blog/hypernova)\n- **Plus de 500 utilisateurs actifs**\n- Sélectionnés par le programme accélérateur **Antler**\n- Stack de production : Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
+        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Nous avons été sélectionnés par l'accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Points forts\n\n- **75,6 % sur SWE-bench Verified** (décembre 2025), au-dessus du meilleur modèle unique publié à l'époque (Claude Opus 4.5, 74,4 %). Analyse complète dans l'[article Hypernova](/blog/hypernova)\n- **Coût par requête inférieur de 50 à 60 %** par rapport à un routage systématique vers un modèle frontière\n- **Plus de 500 utilisateurs actifs**\n- Sélectionnés par le programme accélérateur **Antler**\n- Stack de production : Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
+        "gallery": []
+      },
+      {
+        "title": "LLM Judge Audit",
+        "slug": "llm-judge-audit",
+        "categories": ["IA", "Recherche"],
+        "href": "https://github.com/mohamedAtoui/llm-judge-audit",
+        "dates": "Août 2026",
+        "active": false,
+        "description": "Outil open source qui teste si un juge LLM est fiable avant de se fier à ses scores : biais de position, biais de longueur, préférence pour sa propre famille de modèles et cohérence des verdicts répétés, comparés à des annotations humaines. Sur six juges ouverts, la précision brute les classe mal.",
+        "longDescription": "## À propos\n\nAvant de faire confiance aux scores d'un juge LLM, il faut savoir comment il échoue. Cet outil audite un juge sur quatre modes de défaillance et rapporte les métriques qui suivent réellement l'accord avec les annotations humaines.\n\n## Ce qui est mesuré\n\n- **Biais de position** : le verdict change-t-il quand les deux réponses sont permutées ?\n- **Biais de longueur** : rallonger une mauvaise réponse améliore-t-il son score ?\n- **Préférence pour soi** : le juge favorise-t-il les textes de sa propre famille de modèles ?\n- **Cohérence** : le verdict est-il stable sur des évaluations répétées ?\n- **Validité de référence** : précision brute et kappa de Cohen face aux annotations humaines\n\n## Méthode\n\n150 paires difficiles issues de JudgeBench, même prompt, même seed, tous les juges auto-hébergés pour une comparaison à armes égales.\n\n## Résultats sur six juges ouverts\n\n- **La précision classe mal les juges.** Ministral-8B devance Qwen3-4B en précision brute avec un kappa de 0,05, à peine au-dessus du hasard.\n- **Le passage à l'échelle sature.** Qwen3 14B et 32B sont identiques au bruit près.\n- **La famille prime sur la taille.** phi-4 en 14B juge moins bien que Qwen3-4B, trois fois plus petit.\n- **Le meilleur juge n'est pas le plus gros.** gpt-oss-20b l'emporte sur les métriques honnêtes.",
+        "technologies": ["Python"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/llm-judge-audit",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
         "gallery": []
       },
       {
@@ -74,7 +96,7 @@
         "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
         "dates": "Sept. 2025 – Avr. 2026",
         "active": false,
-        "description": "Recherche sur la compression du KV-cache pour les LLMs. Démarre par une comparaison des mécanismes d'attention (MHA / MQA / GQA / MLA) sur des modèles jouets, puis développe des techniques à l'échelle de production (conversion en état récurrent et compression adaptative multi-niveaux) pour Llama-3.1-8B-Instruct.",
+        "description": "Recherche sur la compression du KV-cache pour les LLMs. Démarre par une comparaison des mécanismes d'attention (MHA / MQA / GQA / MLA) sur des modèles jouets, puis développe des techniques à l'échelle de production (conversion en état récurrent et compression adaptative multi-niveaux) pour Llama-3.1-8B-Instruct. La meilleure configuration tient **0,38x de mémoire pour une perplexité de 8,05 contre 7,96 en référence**, mesuré sur H100.",
         "technologies": [
           "Python",
           "PyTorch",
@@ -99,57 +121,13 @@
         "gallery": []
       },
       {
-        "title": "ZeroToDiffusion",
-        "slug": "diffusion",
-        "categories": ["IA", "Recherche"],
-        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
-        "dates": "Mars 2026",
-        "active": true,
-        "description": "Implémentation de modèles de diffusion depuis zéro : dérivation de la théorie des probabilités, construction d'un VAE, puis implémentation de DDPM étape par étape pour comprendre la génération d'images depuis les principes fondamentaux.",
-        "longDescription": "## A propos\n\nJe lisais sans cesse sur Stable Diffusion et DALL-E mais les maths ne cliquaient jamais a partir des articles de blog seuls. Alors j'ai decide de tout reprendre correctement. Stylo et papier d'abord, puis code.\n\n## Comment j'ai procede\n\nLa premiere semaine, c'etait juste des probabilites : gaussiennes, Bayes, divergence KL, ELBO. Ennuyeux mais necessaire. Il s'avere que toute la fonction de perte a du sens une fois qu'on la derive soi-meme.\n\nEnsuite j'ai construit un VAE sur MNIST. Les VAEs et les modeles de diffusion partagent la meme base probabiliste, ce qui a rendu la transition bien plus fluide que de sauter directement au DDPM.\n\nApres ca : le processus forward (ajout progressif de bruit aux images), le processus inverse (apprendre a debruiter), l'entrainement d'un UNet pour predire le bruit, et enfin la generation d'images a partir de bruit pur. Le voir fonctionner pour la premiere fois etait vraiment satisfaisant.\n\n## Ce que j'en retiens\n\n- La connexion entre VAEs et diffusion a clique quand j'ai vu les deux comme apprendre a inverser un processus de destruction\n- Les schedules de bruit comptent plus que je ne le pensais pour la qualite des echantillons\n- Les couches d'attention sont ce qui donne aux modeles de diffusion leur capacite a capturer la structure globale\n\n## Articles que j'ai etudies\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
-        "technologies": ["Python", "PyTorch", "Jupyter"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-diffusion.png",
-        "video": "",
-        "gallery": []
-      },
-      {
-        "title": "Mixture of Models Framework",
-        "slug": "mom-paper",
-        "categories": ["IA", "Recherche"],
-        "href": "https://github.com/Nordlys-Labs/nordlys/tree/main/nordlys",
-        "dates": "Fev. 2026",
-        "active": false,
-        "description": "Article de recherche sur le framework Mixture of Models (MoM) pour le routage intelligent de LLM et les strategies de selection de modeles.",
-        "longDescription": "## A propos\n\nLe framework MoM (Mixture of Models) est une contribution de recherche au routage intelligent de LLM. Il introduit une approche systematique pour selectionner le meilleur modele pour chaque tache.\n\n## Contributions\n\n- Framework pour la selection de modeles LLM\n- Strategies de routage optimisees en couts\n- Benchmarking sur plusieurs familles de modeles\n- Presente lors d'un meetup en ligne",
-        "technologies": ["Python", "PyTorch", "LangChain"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/Nordlys-Labs/nordlys/tree/main/nordlys",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-mom.png",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "Git-RLMs",
         "slug": "git-rlms",
         "categories": ["IA", "SWE"],
         "href": "https://github.com/mohamedAtoui/Git-RLMs",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Framework permettant aux LLMs d'analyser des depots git via une boucle REPL iterative, explorant le code de maniere incrementale au lieu de charger tout le codebase en contexte.",
+        "description": "Framework permettant aux LLMs d'analyser des dépôts git via une boucle REPL itérative, explorant le code de manière incrémentale au lieu de charger tout le codebase en contexte. **Douze outils, délégation à des sous-modèles et budgets de coût stricts.**",
         "longDescription": "## A propos\n\nGit-RLMs est un framework qui permet aux LLMs d'explorer et d'analyser des depots git via une boucle REPL iterative. Au lieu de charger tout un codebase en contexte, le modele decouvre le code pertinent de maniere incrementale avec 12 outils integres.\n\n## Fonctionnement\n\n1. Le LLM envoie une commande outil (ex: `git_log`, `read_file`, `search_code`)\n2. Le REPL l'execute contre le depot\n3. Les resultats alimentent le LLM pour l'etape suivante\n4. Delegation a un sous-modele via `llm_query` pour l'analyse ciblee\n\n## Outils disponibles\n\n`git_log`, `git_show`, `git_diff`, `search_code`, `read_file`, `list_files`, `get_file_at_commit`, `git_blame`, `git_branches`, `git_tags`, `llm_query`, `python_exec`\n\n## Fonctionnalites\n\n- CLI et API Python\n- Support OpenAI et Anthropic\n- Suivi des couts et journalisation des trajectoires\n- Environnement Python securise",
         "technologies": ["Python", "LangChain"],
         "authors": "",
@@ -165,10 +143,157 @@
         "gallery": []
       },
       {
+        "title": "Altair",
+        "slug": "altair",
+        "categories": ["SWE"],
+        "href": "https://github.com/mohamedAtoui/Altair",
+        "dates": "Fev. 2026",
+        "active": false,
+        "description": "Plateforme de visualisation 3D interactive qui transforme des jeux de données CSV en nuages de particules, pilotés par gestes de la main via la webcam. **Six gestes, trois topologies, rendu instancié Three.js sans plafond de particules.**",
+        "longDescription": "## A propos\n\nAltair est une plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules explorables. Les utilisateurs interagissent avec les donnees via des gestes de la main suivis en temps reel par webcam.\n\n## Fonctionnalites\n\n- **Trois modes de topologie** : Centralise, decentralise et distribue\n- **Controles gestuels** : Main ouverte pour repulsion, pince pour selectionner, poing pour effondrer, pointer pour surligner\n- **Aucun plafond de particules** : le nombre de points suit le CSV, rendu avec des meshes instanciés Three.js\n- **Six gestes** classifiés à partir des 21 points de la main de MediaPipe à ~30 fps\n- **Suivi des mains sur appareil** avec MediaPipe pour la confidentialite\n- Upload CSV et mapping automatique des colonnes",
+        "technologies": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "Three.js",
+          "React Three Fiber",
+          "MediaPipe",
+          "Zustand"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Altair",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "MedVoice Assistant",
+        "slug": "medvoice-assistant",
+        "categories": ["IA", "Business"],
+        "href": "https://sales-assistant-brown.vercel.app",
+        "dates": "Jan. 2026",
+        "active": false,
+        "description": "Assistant IA vocal pour les représentants commerciaux médicaux. Push-to-talk, transcription en temps réel et intégration PubMed pour citer des études pendant les conversations.",
+        "longDescription": "## A propos\n\nUn assistant IA vocal concu pour les representants commerciaux medicaux. Il combine l'interaction vocale push-to-talk avec la recherche PubMed, pour que les commerciaux puissent citer de vraies etudes en parlant aux medecins.\n\n## Fonctionnalites\n\n- **Push-to-talk** : Maintenez la barre d'espace pour parler, avec visualisation audio en temps reel\n- **Parole-texte** : Transcription en direct affichee pendant que l'utilisateur parle\n- **Recherche PubMed** : Outil IA citant des etudes medicales pertinentes\n- **Redemarrage automatique** : La conversation reprend automatiquement apres chaque reponse\n- **Authentification** : Connexion et gestion de session NextAuth\n- **Backend Mistral AI** : Reponses medicales rapides et precises",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "Mistral AI",
+          "AI SDK",
+          "NextAuth"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Website",
+            "href": "https://sales-assistant-brown.vercel.app",
+            "icon": "globe"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Fracture",
+        "slug": "fracture",
+        "categories": ["IA", "SWE"],
+        "href": "https://github.com/mohamedAtoui/fracture",
+        "dates": "Juin 2026",
+        "active": false,
+        "description": "Fuzzer qui trouve des bugs dans les moteurs d'inférence LLM en mutant directement leur état interne, blocs de KV-cache, files du planificateur et caches de préfixes, plutôt qu'en sollicitant l'API. Cinq bugs réels signalés à vLLM et SGLang.",
+        "longDescription": "## À propos\n\nLa plupart des fuzzers testent un moteur d'inférence via son API. Fracture passe en dessous : il capture l'état interne du moteur, le mute directement, et vérifie ce qui casse avec un ensemble d'oracles.\n\n## Fonctionnement\n\nTrois protocoles : **Target** (interface du moteur), **Mutator** (perturbation de l'état) et **Oracle** (détection de bugs). Les captures couvrent les blocs de KV-cache, les files du planificateur et les caches de préfixes.\n\n## Bugs trouvés en production\n\n- Corruption du KV-cache par réutilisation de préfixes obsolètes entre étapes du planificateur (vLLM #38715)\n- Aliasing de tables de blocs quand des groupes de cache aux dispositions différentes partagent des tenseurs bruts (vLLM #41657)\n- Courses TOCTOU où les hits de cache sont évincés entre deux phases du planificateur (vLLM #42289)\n- Bugs de frontière du cache radix produisant des sorties non déterministes (SGLang #22819)\n- Plantages sur batch vide, la rétraction du pool KV lançant des kernels CUDA de longueur nulle (SGLang #24252)",
+        "technologies": ["Python", "vLLM", "SGLang", "CUDA"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/fracture",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Orbit Wars",
+        "slug": "orbit-wars",
+        "categories": ["IA", "Recherche"],
+        "href": "https://github.com/mohamedAtoui/Orbit-Wars",
+        "dates": "2026 – Présent",
+        "active": true,
+        "description": "Travaux en cours sur la robustesse adversariale des satellites autonomes : entraîner un satellite à planifier ses opérations par apprentissage par renforcement, lui envoyer de fausses mesures pour le casser, puis construire des alarmes qui détectent le mensonge.",
+        "longDescription": "## À propos\n\nLes satellites décident de plus en plus seuls quand se recharger, prendre des photos et transmettre leurs données, et ils décident à partir de leurs capteurs. J'en ai donc entraîné un avec PPO, je lui ai envoyé de fausses mesures pour le casser, puis j'ai construit des alarmes pour détecter le mensonge.\n\n## Où ça en est\n\nLe pilote PPO atteint **97 % de survie pour un score de 38,5**, contre **77 % et 21,3** pour une baseline à règles écrites à la main.\n\nTrois détecteurs, face à une baseline aléatoire de 40 à 53 % :\n\n- L'alarme géométrique détecte une fausse éclipse **100 %** du temps, en 3 minutes\n- Un modèle de motifs détecte les stations sol cachées **97 %** du temps, en 34 minutes\n- Une alarme d'énergie détecte la surestimation de batterie **93 %** du temps, en 3 heures\n\n## Statut\n\nActif. Les résultats d'attaque et de détection ci-dessus sont dans le dépôt, avec une analyse des erreurs commises en chemin.",
+        "technologies": ["Python", "Apprentissage par renforcement", "PPO"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Orbit-Wars",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Field Report",
+        "slug": "field-report",
+        "categories": ["IA", "SWE"],
+        "href": "https://github.com/mohamedAtoui/Field-Report",
+        "dates": "Août 2026",
+        "active": false,
+        "description": "Découvre comment une bibliothèque Python est réellement utilisée sur GitHub, et où l'usage réel diverge de sa propre documentation. Donnez-lui un nom de paquet, il fait le reste.",
+        "longDescription": "## À propos\n\nLa documentation montre comment une bibliothèque est censée être utilisée. Field Report montre comment elle l'est vraiment. Donnez-lui un nom de paquet : il trouve les dépôts qui en dépendent, lit leurs sites d'appel, et compare l'usage réel aux exemples officiels.\n\n## Pipeline\n\n1. **Find** : rechercher les dépôts dépendant du paquet\n2. **Fetch** : les cloner et vérifier que les imports sont réels\n3. **Read** : extraire les sites d'appel du code source\n4. **Canon** : récupérer les exemples de la documentation officielle\n5. **Compare** : comparer usage réel et usage documenté\n6. **Report** : produire un rapport Markdown, adossé à SQLite\n\nS'exécute en parallèle sur Modal, environ 5 minutes contre 15 en séquentiel.\n\n## Exemple de résultat\n\nSur **119 dépôts** utilisant `clerk-backend-api` : un même symbole importé par **5 chemins différents**, et **0 appel sur 544** n'utilise de retries alors que la bibliothèque fournit un `RetryConfig`.",
+        "technologies": ["Python", "SQLite", "Modal"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Field-Report",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "ZeroToDiffusion",
+        "slug": "diffusion",
+        "categories": ["IA", "Recherche"],
+        "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+        "dates": "Mars 2026",
+        "active": true,
+        "description": "Implémentation des modèles de diffusion depuis zéro, de bout en bout : rappels de probabilités, divergence KL, ELBO, VAE, puis DDPM, pour comprendre la génération d'images depuis les principes de base.",
+        "longDescription": "## A propos\n\nJe lisais sans cesse sur Stable Diffusion et DALL-E mais les maths ne cliquaient jamais a partir des articles de blog seuls. Alors j'ai decide de tout reprendre correctement. Stylo et papier d'abord, puis code.\n\n## Comment j'ai procede\n\nLa premiere semaine, c'etait juste des probabilites : gaussiennes, Bayes, divergence KL, ELBO. Ennuyeux mais necessaire. Il s'avere que toute la fonction de perte a du sens une fois qu'on la derive soi-meme.\n\nEnsuite j'ai construit un VAE sur MNIST. Les VAEs et les modeles de diffusion partagent la meme base probabiliste, ce qui a rendu la transition bien plus fluide que de sauter directement au DDPM.\n\nApres ca : le processus forward (ajout progressif de bruit aux images), le processus inverse (apprendre a debruiter), l'entrainement d'un UNet pour predire le bruit, et enfin la generation d'images a partir de bruit pur. Le voir fonctionner pour la premiere fois etait vraiment satisfaisant.\n\n## Ce que j'en retiens\n\n- La connexion entre VAEs et diffusion a clique quand j'ai vu les deux comme apprendre a inverser un processus de destruction\n- Les schedules de bruit comptent plus que je ne le pensais pour la qualite des echantillons\n- Les couches d'attention sont ce qui donne aux modeles de diffusion leur capacite a capturer la structure globale\n\n## Articles que j'ai etudies\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
+        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
+            "icon": "github"
+          }
+        ],
+        "image": "/proj-diffusion.png",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "CrossGen",
         "slug": "crossgen",
         "categories": ["IA", "Recherche"],
-        "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+        "href": "https://github.com/mohamedAtoui/CrossGen",
         "dates": "2025",
         "active": false,
         "description": "Generateur d'idees inter-domaines qui resout des problemes en cartographiant les relations structurelles entre domaines non lies, par raisonnement analogique plutot que par correspondance de mots-cles.",
@@ -178,7 +303,7 @@
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/Gen-Ideas-differently",
+            "href": "https://github.com/mohamedAtoui/CrossGen",
             "icon": "github"
           }
         ],
@@ -193,7 +318,7 @@
         "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
         "dates": "Fev. 2026",
         "active": false,
-        "description": "Replication de recherche testant si la repetition de prompts ameliore la precision des petits modeles de langage, doublant quasi les scores ARC-Challenge.",
+        "description": "Réplication de recherche testant si répéter un prompt dans une même requête améliore la précision des petits modèles. Répliquée sur neuf modèles ouverts avec test de significativité de McNemar, y compris les benchmarks où l'effet ne tient pas.",
         "longDescription": "## A propos\n\nUne experience de recherche qui teste si la repetition de prompts dans une seule requete ameliore la precision sur des benchmarks standardises.\n\n## Resultats\n\n- 9 modeles open-source testes (0.5B a 9B parametres)\n- Benchmarks : ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- Precision ARC-Challenge quasi doublee de 22% a 44% avec triple repetition (p=0.022)\n- Ca marche parce que la deuxieme copie du prompt peut attend a la premiere, donnant au modele un quasi-passage bidirectionnel",
         "technologies": ["Python", "PyTorch", "Jupyter"],
         "authors": "",
@@ -205,6 +330,28 @@
           }
         ],
         "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Mixture of Models Framework",
+        "slug": "mom-paper",
+        "categories": ["IA", "Recherche"],
+        "href": "/blog/hypernova",
+        "dates": "Fev. 2026",
+        "active": false,
+        "description": "Note technique sur le framework Mixture of Models (MoM) derrière le routage Nordlys : comment choisir le meilleur modèle par tâche, et les compromis de coût associés.",
+        "longDescription": "## A propos\n\nLe framework MoM (Mixture of Models) est une contribution de recherche au routage intelligent de LLM. Il introduit une approche systematique pour selectionner le meilleur modele pour chaque tache.\n\n## Contributions\n\n- Framework pour la selection de modeles LLM\n- Strategies de routage optimisees en couts\n- Benchmarking sur plusieurs familles de modeles\n- Presente lors d'un meetup en ligne",
+        "technologies": ["Python", "PyTorch", "LangChain"],
+        "authors": "",
+        "links": [
+          {
+            "type": "Website",
+            "href": "/blog/hypernova",
+            "icon": "globe"
+          }
+        ],
+        "image": "/proj-mom.png",
         "video": "",
         "gallery": []
       },
@@ -237,62 +384,20 @@
         ]
       },
       {
-        "title": "MedVoice Assistant",
-        "slug": "medvoice-assistant",
+        "title": "Business Expert Skill",
+        "slug": "business-expert-skill",
         "categories": ["IA", "Business"],
-        "href": "https://github.com/mohamedAtoui/sales-assistant",
-        "dates": "Jan. 2026",
+        "href": "https://github.com/mohamedAtoui/business-expert-skill",
+        "dates": "Mars 2026",
         "active": false,
-        "description": "Assistant IA vocal pour les représentants commerciaux médicaux. Push-to-talk, transcription en temps réel et intégration PubMed pour citer des études pendant les conversations.",
-        "longDescription": "## A propos\n\nUn assistant IA vocal concu pour les representants commerciaux medicaux. Il combine l'interaction vocale push-to-talk avec la recherche PubMed, pour que les commerciaux puissent citer de vraies etudes en parlant aux medecins.\n\n## Fonctionnalites\n\n- **Push-to-talk** : Maintenez la barre d'espace pour parler, avec visualisation audio en temps reel\n- **Parole-texte** : Transcription en direct affichee pendant que l'utilisateur parle\n- **Recherche PubMed** : Outil IA citant des etudes medicales pertinentes\n- **Redemarrage automatique** : La conversation reprend automatiquement apres chaque reponse\n- **Authentification** : Connexion et gestion de session NextAuth\n- **Backend Mistral AI** : Reponses medicales rapides et precises",
-        "technologies": [
-          "TypeScript",
-          "Next.js",
-          "React",
-          "Mistral AI",
-          "AI SDK",
-          "NextAuth"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "Site web",
-            "href": "https://sales-assistant-brown.vercel.app",
-            "icon": "globe"
-          },
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/sales-assistant",
-            "icon": "github"
-          }
-        ],
-        "image": "",
-        "video": "",
-        "gallery": []
-      },
-      {
-        "title": "Altair",
-        "slug": "altair",
-        "categories": ["SWE"],
-        "href": "https://github.com/mohamedAtoui/Altair",
-        "dates": "Fev. 2026",
-        "active": false,
-        "description": "Plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules, controles par gestes de la main via webcam avec MediaPipe.",
-        "longDescription": "## A propos\n\nAltair est une plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules explorables. Les utilisateurs interagissent avec les donnees via des gestes de la main suivis en temps reel par webcam.\n\n## Fonctionnalites\n\n- **Trois modes de topologie** : Centralise, decentralise et distribue\n- **Controles gestuels** : Main ouverte pour repulsion, pince pour selectionner, poing pour effondrer, pointer pour surligner\n- **Support 10K+ particules** via les meshes instances de Three.js pour un rendu fluide a 60fps\n- **Suivi des mains sur appareil** avec MediaPipe pour la confidentialite\n- Upload CSV et mapping automatique des colonnes",
-        "technologies": [
-          "TypeScript",
-          "React",
-          "Vite",
-          "Three.js",
-          "React Three Fiber",
-          "MediaPipe",
-          "Zustand"
-        ],
+        "description": "Skill d'agent qui transforme Claude Code en stratège d'entreprise : un workflow en cinq phases qui pose d'abord des questions précises, puis répond par des options chiffrées en coûts, délais et risques plutôt que par des conseils génériques.",
+        "longDescription": "## À propos\n\nUn skill d'agent pour Claude Code et plus de 40 agents compatibles. Il se comporte en consultant plutôt qu'en chatbot : il interroge la situation avant de conseiller, et répond par des options assorties de coûts, délais, risques et compromis.\n\n## Workflow en cinq phases\n\nDécouvrir, rechercher, analyser, proposer, planifier.\n\n## Conception\n\n- Un dossier `knowledge/` pour le contexte local : démographie, baux, veille concurrentielle, études de marché\n- Un dossier `prompts/` de modèles pour les cas courants : évaluer une nouvelle activité, diagnostiquer une activité existante, analyse de marché, évaluation de loyer\n- Utilisable en conversation libre comme via les modèles",
+        "technologies": ["Claude Code", "Agent Skills"],
         "authors": "",
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui/Altair",
+            "href": "https://github.com/mohamedAtoui/business-expert-skill",
             "icon": "github"
           }
         ],
@@ -329,8 +434,24 @@
         "gallery": []
       },
       {
+        "title": "Détection de cyberattaques",
+        "href": "",
+        "dates": "2024",
+        "active": false,
+        "description": "Détection d'intrusions par apprentissage automatique pour les réseaux embarqués de véhicules, menée dans le cadre de ma recherche à l'ISG Smart Card & IoT Security Centre, Royal Holloway. Le code de recherche reste la propriété du groupe.",
+        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+        "authors": "",
+        "links": [],
+        "image": "/proj-cyber-attack.png",
+        "video": "",
+        "slug": "cyber-attack-detection",
+        "categories": ["IA", "Recherche"],
+        "longDescription": "## À propos\n\nUn système de détection de menaces basé sur l’apprentissage automatique qui identifie et classifie les cyberattaques en analysant les patterns du trafic réseau.\n\n## Approche\n\n- Ingénierie de features sur les données de trafic réseau\n- Plusieurs classifieurs ML (Random Forest, SVM, réseaux de neurones)\n- Pipeline de classification en temps réel\n- Haute précision sur les jeux de données de référence",
+        "gallery": []
+      },
+      {
         "title": "Transformer From Stones",
-        "href": "https://github.com/mohamedAtoui",
+        "href": "https://github.com/mohamedAtoui/Transformer-From-Stones",
         "dates": "2024",
         "active": false,
         "description": "Implementation de l’architecture Transformer originale de ‘Attention is All You Need’, construisant l’attention multi-tetes, l’encodage positionnel et les pipelines d’entrainement.",
@@ -339,7 +460,7 @@
         "links": [
           {
             "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
+            "href": "https://github.com/mohamedAtoui/Transformer-From-Stones",
             "icon": "github"
           }
         ],
@@ -379,9 +500,9 @@
         "href": "https://github.com/mohamedAtoui/Mini-Compiler",
         "dates": "Oct. 2025",
         "active": false,
-        "description": "Analyseur lexical et parseur pour Mini3ADR, un langage simple avec variables, arithmétique et contrôle de flux, construit avec Lex/Flex pour un cours de compilation.",
+        "description": "Analyseur lexical et syntaxique pour Mini3ADR, un petit langage avec variables, arithmétique et structures de contrôle, construit avec Flex et Bison pour un cours de compilation.",
         "longDescription": "## A propos\n\nUn analyseur lexical et parseur pour Mini3ADR, un langage de programmation simple concu pour un cours de construction de compilateurs.\n\n## Fonctionnalites du langage (Mini3ADR)\n\n- Declarations de variables entieres\n- Instructions d'affectation\n- Operateurs arithmetiques (+, -, *, /)\n- Operateurs relationnels (<, >, ==, !=)\n- Controle de flux : boucles `while` et instructions `if`/`else`\n\n## Implementation\n\n- **Lexer** : Tokenisation avec suivi de ligne via Lex/Flex\n- **Table des symboles** : Suivi des variables declarees et leurs types\n- **Parseur** : Integration prevue avec Yacc/Bison pour l'analyse syntaxique",
-        "technologies": ["Lex", "C", "Flex", "Yacc/Bison"],
+        "technologies": ["C", "Flex", "Bison", "Make"],
         "authors": "",
         "links": [
           {
@@ -392,28 +513,6 @@
         ],
         "image": "",
         "video": "",
-        "gallery": []
-      },
-      {
-        "title": "Détection de cyberattaques",
-        "href": "https://github.com/mohamedAtoui",
-        "dates": "2024",
-        "active": false,
-        "description": "Système de détection de menaces basé sur l'apprentissage automatique qui identifie et classifie les cyberattaques via l'analyse du trafic réseau.",
-        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui",
-            "icon": "github"
-          }
-        ],
-        "image": "/proj-cyber-attack.png",
-        "video": "",
-        "slug": "cyber-attack-detection",
-        "categories": ["IA", "Recherche", "Apprentissage"],
-        "longDescription": "## À propos\n\nUn système de détection de menaces basé sur l’apprentissage automatique qui identifie et classifie les cyberattaques en analysant les patterns du trafic réseau.\n\n## Approche\n\n- Ingénierie de features sur les données de trafic réseau\n- Plusieurs classifieurs ML (Random Forest, SVM, réseaux de neurones)\n- Pipeline de classification en temps réel\n- Haute précision sur les jeux de données de référence",
         "gallery": []
       },
       {
