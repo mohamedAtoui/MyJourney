@@ -7,7 +7,6 @@ import AwardsSection from "@/components/portfolio/awards-section";
 import Brief from "@/components/portfolio/brief";
 import Contact from "@/components/portfolio/contact";
 import Education from "@/components/portfolio/education";
-import NewsSection from "@/components/portfolio/news";
 import ProjectsSection from "@/components/portfolio/projects-section/projects-section";
 import Services from "@/components/portfolio/services";
 import Skills from "@/components/portfolio/skills";
@@ -94,11 +93,6 @@ export default async function Page(props: {
   };
 
   // Get collections data and check if items are empty
-  const newsItems = getCollectionItems<{
-    date: string;
-    title: string;
-    content: string;
-  }>("news.items");
   const projectsItems = getCollectionItems<{
     title: string;
     href?: string;
@@ -197,18 +191,6 @@ export default async function Page(props: {
           </div>
         </BlurFade>
       </section>
-
-      {/* News Section */}
-      {newsItems && newsItems.length > 0 && (
-        <section id="news">
-          <NewsSection
-            news={newsItems}
-            delay={BLUR_FADE_DELAY * 5}
-            title={t("sections.news.title")}
-            showAllText={t("showAll")}
-          />
-        </section>
-      )}
 
       {/* Projects Section */}
       {projectsItems && projectsItems.length > 0 && (
