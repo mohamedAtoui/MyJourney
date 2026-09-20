@@ -45,7 +45,7 @@
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "dates": "Fév. 2025 - Mai 2026",
         "active": false,
-        "description": "Système de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. A obtenu **75,6 % sur SWE-bench Verified** (déc. 2025), au-dessus du meilleur modèle unique publié, pour un **coût par requête inférieur de 50 à 60 %**, et passé à plus de 500 utilisateurs.",
+        "description": "Routeur LLM à checkpoint séparant données annotées, entraînement et sélection de modèle à l’exécution. J’ai cofondé Nordlys Labs et dirigé le travail IA jusqu’en mai 2026.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -57,28 +57,41 @@
         "authors": "",
         "links": [
           {
-            "type": "Github",
+            "type": "GitHub",
             "href": "https://github.com/Nordlys-Labs/nordlys",
             "icon": "github"
+          },
+          {
+            "type": "Article",
+            "href": "/blog/hypernova",
+            "icon": "globe"
           }
         ],
         "image": "/proj-nordlys.png",
         "video": "",
         "slug": "nordlys-labs",
-        "categories": ["IA", "Business"],
-        "longDescription": "## À propos\n\nNordlys Labs est une startup de routage LLM intelligent qui sélectionne le meilleur modèle pour chaque tâche. Nous avons été sélectionnés par l'accélérateur Antler et avons atteint plus de 500 utilisateurs.\n\n## Points forts\n\n- **75,6 % sur SWE-bench Verified** (décembre 2025), au-dessus du meilleur modèle unique publié à l'époque (Claude Opus 4.5, 74,4 %). Analyse complète dans l'[article Hypernova](/blog/hypernova)\n- **Coût par requête inférieur de 50 à 60 %** par rapport à un routage systématique vers un modèle frontière\n- **Plus de 500 utilisateurs actifs**\n- Sélectionnés par le programme accélérateur **Antler**\n- Stack de production : Python, FastAPI, LangChain, Redis, PostgreSQL, Docker",
+        "categories": [
+          "IA",
+          "Business"
+        ],
+        "longDescription": "## Problème\n\nLes requêtes ne bénéficient pas toutes du même modèle, mais l’apprentissage du routage ne doit pas alourdir chaque requête.\n\n## Implémentation\n\nLe paquet public sépare trois interfaces : `Dataset` pour les résultats annotés, `Trainer` pour entraîner et sauvegarder un checkpoint, et `Router` pour le charger et sélectionner un modèle configuré. Les coûts des modèles sont une configuration explicite.\n\n## Ma contribution\n\nJ’ai cofondé Nordlys Labs et dirigé le travail de routage IA, en reliant la sélection des modèles au backend Python et à l’API. Le dépôt est une base de code d’équipe et peut inclure des changements postérieurs à la fin de mon rôle en mai 2026.",
         "gallery": []
       },
       {
         "title": "LLM Judge Audit",
         "slug": "llm-judge-audit",
-        "categories": ["IA", "Recherche"],
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
         "href": "https://github.com/mohamedAtoui/llm-judge-audit",
         "dates": "Août 2026",
         "active": false,
-        "description": "Outil open source qui teste si un juge LLM est fiable avant de se fier à ses scores : biais de position, biais de longueur, préférence pour sa propre famille de modèles et cohérence des verdicts répétés, comparés à des annotations humaines. Sur six juges ouverts, la précision brute les classe mal.",
-        "longDescription": "## À propos\n\nAvant de faire confiance aux scores d'un juge LLM, il faut savoir comment il échoue. Cet outil audite un juge sur quatre modes de défaillance et rapporte les métriques qui suivent réellement l'accord avec les annotations humaines.\n\n## Ce qui est mesuré\n\n- **Biais de position** : le verdict change-t-il quand les deux réponses sont permutées ?\n- **Biais de longueur** : rallonger une mauvaise réponse améliore-t-il son score ?\n- **Préférence pour soi** : le juge favorise-t-il les textes de sa propre famille de modèles ?\n- **Cohérence** : le verdict est-il stable sur des évaluations répétées ?\n- **Validité de référence** : précision brute et kappa de Cohen face aux annotations humaines\n\n## Méthode\n\n150 paires difficiles issues de JudgeBench, même prompt, même seed, tous les juges auto-hébergés pour une comparaison à armes égales.\n\n## Résultats sur six juges ouverts\n\n- **La précision classe mal les juges.** Ministral-8B devance Qwen3-4B en précision brute avec un kappa de 0,05, à peine au-dessus du hasard.\n- **Le passage à l'échelle sature.** Qwen3 14B et 32B sont identiques au bruit près.\n- **La famille prime sur la taille.** phi-4 en 14B juge moins bien que Qwen3-4B, trois fois plus petit.\n- **Le meilleur juge n'est pas le plus gros.** gpt-oss-20b l'emporte sur les métriques honnêtes.",
-        "technologies": ["Python"],
+        "description": "Audite les juges LLM pour détecter biais de position, longueur, auto-préférence et incohérence. Sur 150 paires JudgeBench, Ministral-8B passe de **0,61 de précision brute à 0,12 correcte dans les deux ordres**.",
+        "longDescription": "## Problème\n\nUn juge peut correspondre aux annotations humaines pour de mauvaises raisons. La précision brute peut masquer biais de position, réponses invalides et verdicts instables.\n\n## Implémentation\n\nJ’ai construit l’ingestion des paires annotées, l’exécution des sondes, le parsing, le cache, les limites de coût et les rapports. L’outil prend en charge position, longueur, auto-préférence et cohérence, avec précision, kappa de Cohen et intervalles de Wilson.\n\n## Résultat étayé\n\nLa comparaison publiée exécute les tests de base et de position sur 150 paires JudgeBench et six juges auto-hébergés. Ministral-8B obtient 0,61 de précision brute, mais 0,12 lorsqu’il doit être correct dans les deux ordres. Les 132 tests hors ligne et la démonstration scriptée valident le logiciel, pas l’expérience GPU sur six modèles.",
+        "technologies": [
+          "Python"
+        ],
         "authors": "",
         "links": [
           {
@@ -96,14 +109,12 @@
         "href": "https://github.com/mohamedAtoui/KV-cache-optimization",
         "dates": "Sept. 2025 – Avr. 2026",
         "active": false,
-        "description": "Recherche sur la compression du KV-cache pour les LLMs. Démarre par une comparaison des mécanismes d'attention (MHA / MQA / GQA / MLA) sur des modèles jouets, puis développe des techniques à l'échelle de production (conversion en état récurrent et compression adaptative multi-niveaux) pour Llama-3.1-8B-Instruct. La meilleure configuration tient **0,38x de mémoire pour une perplexité de 8,05 contre 7,96 en référence**, mesuré sur H100.",
+        "description": "Compare des stratégies de compression du KV-cache et leur impact sur la qualité. Stratigraphic rapporte un **KV-cache analytique 2,2× plus petit pour +0,04 de perplexité** sur Llama-3.2-1B-Instruct.",
         "technologies": [
           "Python",
           "PyTorch",
-          "CUDA",
           "Hugging Face",
-          "PEFT / LoRA",
-          "Flash Linear Attention"
+          "Quantification"
         ],
         "authors": "",
         "links": [
@@ -116,20 +127,31 @@
         "image": "/proj-kv-cache-optimization.png",
         "video": "",
         "slug": "kv-cache-optimization",
-        "categories": ["IA", "Recherche"],
-        "longDescription": "## À propos\n\nProjet de recherche explorant les stratégies de compression du KV-cache pour les grands modèles de langage. Démarre par une comparaison des mécanismes d'attention (MHA, MQA, GQA, MLA) sur des modèles jouets, puis développe et benchmark des techniques à l'échelle de production (conversion en état récurrent streaming et compression adaptative multi-niveaux) pour Llama-3.1-8B-Instruct.\n\n## Structure du projet\n\n```\nKV-cache-optimization/\n├── AttentionHeads/           Modèles jouets ~16M paramètres comparant MHA / MQA / GQA / MLA\n│   ├── mha/                  Multi-Head Attention (référence)\n│   ├── mqa/                  Multi-Query Attention\n│   ├── gqa/                  Grouped Query Attention\n│   ├── mla/                  Multi-Head Latent Attention (style DeepSeek-V2)\n│   ├── notebooks/            Notebooks d'entraînement et d'évaluation\n│   └── results/              Graphiques de comparaison et analyses\n│\n├── streaming_attention/      Conversion KV-cache → état récurrent par tête\n│   ├── head_classifier.py    Chargement de motifs DuoAttention + classification des têtes\n│   ├── state_attention.py    État linéaire décroissant : S_t = λ·S_{t-1} + v_t·k_tᵀ\n│   ├── hybrid_attention.py   Patch de Llama pour attention hybride KV/état\n│   ├── calibration.py        Réglage en deux étapes : MSE par tête + fine-tuning LoRA\n│   ├── importance.py         Score d'importance des tokens multi-signaux\n│   ├── adaptive_cache.py     KV-cache à plusieurs niveaux (FP16 / INT8 / INT4 / éviction)\n│   ├── stratigraphic.py      Affectation de zones par tête avec métaphore géologique\n│   └── notebooks/            Expériences sur H100 (zero-shot, calibration, benchmarks)\n│\n├── kv_bench/                 Cadre de benchmarking pour les stratégies de KV-cache\n│   ├── strategies/           8 implémentations de stratégies\n│   ├── runner.py             Chargement du modèle + exécution des stratégies\n│   └── report.py             Sortie console / JSON / Markdown\n│\n└── docs/                     Journal de recherche et documents de conception\n```\n\n## Résultats clés\n\n| Stratégie          | Perplexité | Mémoire vs Référence |\n|--------------------|-----------:|---------------------:|\n| FullKV (référence) |       7.96 |                1.00× |\n| H2O (50%)          |       8.31 |                0.50× |\n| SnapKV (50%)       |       8.15 |                0.50× |\n| INT8               |       7.97 |                0.50× |\n| INT4               |       8.42 |                0.25× |\n| Stratigraphic      |       8.05 |                0.38× |\n\n## Références\n\n- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017)\n- [Fast Transformer Decoding](https://arxiv.org/abs/1911.02150) (Shazeer, 2019), MQA\n- [GQA](https://arxiv.org/abs/2305.13245) (Ainslie et al., 2023)\n- [DuoAttention](https://arxiv.org/abs/2410.10819) (Xiao et al., 2024), classification des têtes\n- [H2O: Heavy-Hitter Oracle](https://arxiv.org/abs/2306.14048) (Zhang et al., 2023)\n- [SnapKV](https://arxiv.org/abs/2404.14469) (Li et al., 2024)",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "longDescription": "## Problème\n\nLe KV-cache grandit avec la longueur de séquence. Réduire son stockage n’est utile que si la perte de qualité est mesurée correctement.\n\n## Implémentation\n\nJ’ai implémenté des comparaisons d’attention, des expériences d’état récurrent et un benchmark couvrant FullKV, H2O, SnapKV, INT8, INT4 et Stratigraphic. Stratigraphic attribue des zones de précision par tête et conserve les tokens à forte attention en FP16.\n\n## Résultat étayé\n\nLe dépôt rapporte Llama-3.2-1B-Instruct sur WikiText-2 et A100 : perplexité 11,18 contre 11,15 pour FullKV, avec une compression analytique de 2,2×. Un résultat important du débogage fut de découvrir que la quantification s’exécutait avant RoPE et manquait la représentation réellement mise en cache ; son déplacement après RoPE a révélé la vraie dégradation INT4.\n\nLa compression est une estimation analytique du cache, pas une réduction de la mémoire GPU totale.",
         "gallery": []
       },
       {
         "title": "Git-RLMs",
         "slug": "git-rlms",
-        "categories": ["IA", "SWE"],
+        "categories": [
+          "IA",
+          "SWE"
+        ],
         "href": "https://github.com/mohamedAtoui/Git-RLMs",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Framework permettant aux LLMs d'analyser des dépôts git via une boucle REPL itérative, explorant le code de manière incrémentale au lieu de charger tout le codebase en contexte. **Douze outils, délégation à des sous-modèles et budgets de coût stricts.**",
-        "longDescription": "## A propos\n\nGit-RLMs est un framework qui permet aux LLMs d'explorer et d'analyser des depots git via une boucle REPL iterative. Au lieu de charger tout un codebase en contexte, le modele decouvre le code pertinent de maniere incrementale avec 12 outils integres.\n\n## Fonctionnement\n\n1. Le LLM envoie une commande outil (ex: `git_log`, `read_file`, `search_code`)\n2. Le REPL l'execute contre le depot\n3. Les resultats alimentent le LLM pour l'etape suivante\n4. Delegation a un sous-modele via `llm_query` pour l'analyse ciblee\n\n## Outils disponibles\n\n`git_log`, `git_show`, `git_diff`, `search_code`, `read_file`, `list_files`, `get_file_at_commit`, `git_blame`, `git_branches`, `git_tags`, `llm_query`, `python_exec`\n\n## Fonctionnalites\n\n- CLI et API Python\n- Support OpenAI et Anthropic\n- Suivi des couts et journalisation des trajectoires\n- Environnement Python securise",
-        "technologies": ["Python", "LangChain"],
+        "description": "Agent d’analyse de dépôts qui explore progressivement code et historique git via un REPL. Il fournit **12 outils git**, délégation à des sous-modèles, traces et budgets de coût stricts.",
+        "longDescription": "## Problème\n\nLes grands dépôts tiennent rarement de façon utile dans un seul contexte, et les fichiers ou commits pertinents ne sont pas connus à l’avance.\n\n## Implémentation\n\nGit-RLM conserve le contexte du dépôt hors du modèle et permet de l’inspecter avec un REPL Python itératif. Douze outils couvrent logs, diffs, blame, anciennes versions des fichiers, recherche de code, branches, tags et appels à un sous-modèle.\n\n## Contrôles d’ingénierie\n\nLa CLI et l’API Python exposent des limites de tours et de coût, enregistrent la trajectoire d’exploration et permettent une délégation ciblée à un modèle moins coûteux.",
+        "technologies": [
+          "Python",
+          "Git",
+          "OpenAI",
+          "Anthropic"
+        ],
         "authors": "",
         "links": [
           {
@@ -143,22 +165,175 @@
         "gallery": []
       },
       {
+        "title": "Fracture",
+        "slug": "fracture",
+        "categories": [
+          "IA",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/fracture",
+        "dates": "Juin 2026",
+        "active": false,
+        "description": "Framework de fuzzing de l’état interne des moteurs d’inférence LLM. Il capture et mute KV-cache, planificateur et cache de préfixes, puis vérifie des invariants avec des oracles réutilisables.",
+        "longDescription": "## Problème\n\nCertaines défaillances des moteurs d’inférence nécessitent des états internes rares, difficiles à atteindre uniquement par fuzzing de requêtes API.\n\n## Implémentation\n\nFracture définit trois protocoles indépendants du moteur : `Target` pour capture, restauration et progression ; `Mutator` pour perturber l’état ; `Oracle` pour détecter les violations d’invariants. Un adaptateur vLLM relie le framework à un moteur réel.\n\n## Limite des preuves\n\nLes tickets vLLM et SGLang cités dans le dépôt motivent les états ciblés par Fracture. Ils ne sont pas présentés comme des bugs découverts personnellement par ce projet. Le portfolio se concentre donc sur l’architecture de fuzzing implémentée.",
+        "technologies": [
+          "Python",
+          "vLLM",
+          "Fuzzing",
+          "Inférence LLM"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/fracture",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "FolderGate",
+        "slug": "foldergate",
+        "categories": [
+          "SWE",
+          "IA"
+        ],
+        "href": "https://github.com/mohamedAtoui/foldergate",
+        "dates": "Août 2026",
+        "active": false,
+        "description": "Scanner défensif qui inspecte les déclencheurs de démarrage contrôlés par un dépôt avant son ouverture, explique la chaîne d’exécution et crée une copie neutralisée.",
+        "longDescription": "## Problème\n\nOuvrir un dépôt non fiable peut activer des tâches IDE et des configurations d’agents avant leur vérification.\n\n## Implémentation\n\nFolderGate analyse la configuration, extrait les commandes que l’IDE déclencherait et peut émuler uniquement ces commandes dans un sandbox Modal isolé sans sortie réseau. La neutralisation est déterministe ; aucun modèle n’effectue d’édition destructive.\n\n## Preuves de sûreté\n\nLes fixtures incluses sont auto-créées et utilisent des charges bénignes. Le dépôt propose aussi une relecture hors ligne d’une trace enregistrée, clairement distinguée d’une nouvelle exécution en sandbox.",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "React",
+          "Modal",
+          "Sécurité"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "GitHub",
+            "href": "https://github.com/mohamedAtoui/foldergate",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "FinBalance",
+        "slug": "finbalance",
+        "categories": [
+          "IA",
+          "Recherche",
+          "Business"
+        ],
+        "href": "https://github.com/mohamedAtoui/finance-accounting-agent-benchmark",
+        "dates": "2026",
+        "active": false,
+        "description": "Benchmark synthétique de clôture comptable avec vérificateur déterministe, agents utilisant des outils et blocages pour les modifications comptables non autorisées.",
+        "longDescription": "## Problème\n\nUn agent financier doit être évalué sur la réconciliation effective des comptes, pas selon l’avis d’un autre modèle de langage.\n\n## Implémentation\n\nFinBalance génère des mois d’entreprise synthétiques avec six types d’écarts, dont une différence temporelle à ne pas ajuster. Les agents utilisent des outils de grand livre et de documents ; un moteur en partie double vérifie soldes, rapprochements et comptes protégés.\n\n## Preuves étayées\n\nLe benchmark inclut des agents Oracle, Baseline, Sloppy et Null pour calibrer la métrique, ainsi que des tests montrant que les corrections de référence reconstruisent les soldes propres sur plusieurs seeds. C’est une implémentation synthétique de référence, pas un système comptable de production.",
+        "technologies": [
+          "Python",
+          "Évaluation d’agents",
+          "Comptabilité",
+          "Vérification déterministe"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "GitHub",
+            "href": "https://github.com/mohamedAtoui/finance-accounting-agent-benchmark",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "DuckBackflip",
+        "slug": "duckbackflip",
+        "categories": [
+          "IA",
+          "Recherche"
+        ],
+        "href": "https://github.com/mohamedAtoui/DuckBackflip",
+        "dates": "2026",
+        "active": false,
+        "description": "Étude en simulation du football et du backflip pour Open Duck Mini. Une politique de jonglage atteint **4,87 touches consécutives en moyenne** ; l’analyse explique pourquoi le robot actuel ne peut pas faire de backflip.",
+        "longDescription": "## Problème\n\nUne courbe de récompense peut indiquer une réussite alors que les contacts, la physique instable ou les chutes produisent le score.\n\n## Implémentation\n\nJ’ai étendu la simulation Open Duck avec des tâches de football et backflip, détection des contacts à chaque sous-étape, randomisation de domaine, entraînement PPO, vérification ONNX et validation du moment cinétique. Le dépôt crédite explicitement le robot et les environnements amont.\n\n## Résultat étayé\n\nSur 128 épisodes simulés déterministes, la politique de jonglage atteint 4,87 touches consécutives en moyenne, avec un maximum de sept. Un bilan du moment montre que la position groupée ne réduit l’inertie que de 11 %, rendant le saut nécessaire irréaliste pour les servomoteurs identifiés. Tout est simulé ; aucun backflip réussi n’a été entraîné.",
+        "technologies": [
+          "Python",
+          "MuJoCo",
+          "Brax",
+          "PPO",
+          "ONNX"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "GitHub",
+            "href": "https://github.com/mohamedAtoui/DuckBackflip",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
+        "title": "Field Report",
+        "slug": "field-report",
+        "categories": [
+          "IA",
+          "SWE"
+        ],
+        "href": "https://github.com/mohamedAtoui/Field-Report",
+        "dates": "Août 2026",
+        "active": false,
+        "description": "Compare la documentation des bibliothèques Python à leur usage réel dans des dépôts publics. Une exécution de référence analyse **119 dépôts et 544 appels**.",
+        "longDescription": "## Problème\n\nLa documentation décrit l’usage prévu, mais les mainteneurs ont aussi besoin de preuves sur les imports, appels et conventions réellement employés.\n\n## Implémentation\n\nField Report découvre les dépôts dépendants, vérifie les imports, extrait les appels, extrait les exemples canoniques, compare les deux jeux et produit un rapport Markdown adossé à SQLite. Le même extracteur analyse code et documentation.\n\n## Résultat étayé\n\nPour `clerk-backend-api`, le dépôt rapporte 119 dépôts importateurs et 544 appels. Il trouve cinq chemins d’import pour un même type d’options et aucun usage de la configuration de retry fournie. Les appels non résolus et recherches échouées restent visibles.",
+        "technologies": [
+          "Python",
+          "SQLite",
+          "Analyse statique",
+          "Modal"
+        ],
+        "authors": "",
+        "links": [
+          {
+            "type": "Github",
+            "href": "https://github.com/mohamedAtoui/Field-Report",
+            "icon": "github"
+          }
+        ],
+        "image": "",
+        "video": "",
+        "gallery": []
+      },
+      {
         "title": "Altair",
         "slug": "altair",
-        "categories": ["SWE"],
+        "categories": [
+          "SWE"
+        ],
         "href": "https://github.com/mohamedAtoui/Altair",
-        "dates": "Fev. 2026",
+        "dates": "Fév. 2026",
         "active": false,
-        "description": "Plateforme de visualisation 3D interactive qui transforme des jeux de données CSV en nuages de particules, pilotés par gestes de la main via la webcam. **Six gestes, trois topologies, rendu instancié Three.js sans plafond de particules.**",
-        "longDescription": "## A propos\n\nAltair est une plateforme de visualisation 3D interactive qui transforme des datasets CSV en nuages de particules explorables. Les utilisateurs interagissent avec les donnees via des gestes de la main suivis en temps reel par webcam.\n\n## Fonctionnalites\n\n- **Trois modes de topologie** : Centralise, decentralise et distribue\n- **Controles gestuels** : Main ouverte pour repulsion, pince pour selectionner, poing pour effondrer, pointer pour surligner\n- **Aucun plafond de particules** : le nombre de points suit le CSV, rendu avec des meshes instanciés Three.js\n- **Six gestes** classifiés à partir des 21 points de la main de MediaPipe à ~30 fps\n- **Suivi des mains sur appareil** avec MediaPipe pour la confidentialite\n- Upload CSV et mapping automatique des colonnes",
+        "description": "Explorateur 3D de CSV dans le navigateur avec suivi des mains local. Il rend un jeu documenté de **2 200 points en un seul appel instancié** selon trois topologies.",
+        "longDescription": "## Problème\n\nLes tableaux masquent parfois leur structure, tandis que les graphiques classiques rendent difficile l’exploration de plusieurs vues réseau.\n\n## Implémentation\n\nAltair analyse un CSV, associe colonnes numériques et catégorielles, peut exécuter UMAP dans un web worker, construit un graphe de voisins et rend tous les points avec un seul mesh instancié Three.js. MediaPipe classe les gestes localement ; les images de la webcam ne sont pas envoyées.\n\n## Preuves étayées\n\nLe dépôt documente un jeu capturé de 2 200 points, trois topologies et le suivi des gestes à environ 30 images par seconde. Il n’existe volontairement aucune limite codée du nombre de particules ; l’échelle pratique dépend de la boucle de simulation JavaScript.",
         "technologies": [
           "TypeScript",
           "React",
-          "Vite",
           "Three.js",
-          "React Three Fiber",
           "MediaPipe",
-          "Zustand"
+          "UMAP"
         ],
         "authors": "",
         "links": [
@@ -175,12 +350,16 @@
       {
         "title": "MedVoice Assistant",
         "slug": "medvoice-assistant",
-        "categories": ["IA", "Business"],
+        "categories": [
+          "IA",
+          "Business",
+          "Apprentissage"
+        ],
         "href": "https://sales-assistant-brown.vercel.app",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Assistant IA vocal pour les représentants commerciaux médicaux. Push-to-talk, transcription en temps réel et intégration PubMed pour citer des études pendant les conversations.",
-        "longDescription": "## A propos\n\nUn assistant IA vocal concu pour les representants commerciaux medicaux. Il combine l'interaction vocale push-to-talk avec la recherche PubMed, pour que les commerciaux puissent citer de vraies etudes en parlant aux medecins.\n\n## Fonctionnalites\n\n- **Push-to-talk** : Maintenez la barre d'espace pour parler, avec visualisation audio en temps reel\n- **Parole-texte** : Transcription en direct affichee pendant que l'utilisateur parle\n- **Recherche PubMed** : Outil IA citant des etudes medicales pertinentes\n- **Redemarrage automatique** : La conversation reprend automatiquement apres chaque reponse\n- **Authentification** : Connexion et gestion de session NextAuth\n- **Backend Mistral AI** : Reponses medicales rapides et precises",
+        "description": "Prototype vocal pour la vente médicale combinant push-to-talk, transcription et recherche PubMed.",
+        "longDescription": "## Projet d’apprentissage\n\nPrototype produit explorant interaction vocale et recherche bibliographique pour la vente médicale. Le dépôt montre les fonctionnalités, pas une adoption mesurée ni une validation clinique.",
         "technologies": [
           "TypeScript",
           "Next.js",
@@ -202,37 +381,23 @@
         "gallery": []
       },
       {
-        "title": "Fracture",
-        "slug": "fracture",
-        "categories": ["IA", "SWE"],
-        "href": "https://github.com/mohamedAtoui/fracture",
-        "dates": "Juin 2026",
-        "active": false,
-        "description": "Fuzzer qui trouve des bugs dans les moteurs d'inférence LLM en mutant directement leur état interne, blocs de KV-cache, files du planificateur et caches de préfixes, plutôt qu'en sollicitant l'API. Cinq bugs réels signalés à vLLM et SGLang.",
-        "longDescription": "## À propos\n\nLa plupart des fuzzers testent un moteur d'inférence via son API. Fracture passe en dessous : il capture l'état interne du moteur, le mute directement, et vérifie ce qui casse avec un ensemble d'oracles.\n\n## Fonctionnement\n\nTrois protocoles : **Target** (interface du moteur), **Mutator** (perturbation de l'état) et **Oracle** (détection de bugs). Les captures couvrent les blocs de KV-cache, les files du planificateur et les caches de préfixes.\n\n## Bugs trouvés en production\n\n- Corruption du KV-cache par réutilisation de préfixes obsolètes entre étapes du planificateur (vLLM #38715)\n- Aliasing de tables de blocs quand des groupes de cache aux dispositions différentes partagent des tenseurs bruts (vLLM #41657)\n- Courses TOCTOU où les hits de cache sont évincés entre deux phases du planificateur (vLLM #42289)\n- Bugs de frontière du cache radix produisant des sorties non déterministes (SGLang #22819)\n- Plantages sur batch vide, la rétraction du pool KV lançant des kernels CUDA de longueur nulle (SGLang #24252)",
-        "technologies": ["Python", "vLLM", "SGLang", "CUDA"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/fracture",
-            "icon": "github"
-          }
-        ],
-        "image": "",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "Orbit Wars",
         "slug": "orbit-wars",
-        "categories": ["IA", "Recherche"],
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/Orbit-Wars",
         "dates": "2026 – Présent",
         "active": true,
-        "description": "Travaux en cours sur la robustesse adversariale des satellites autonomes : entraîner un satellite à planifier ses opérations par apprentissage par renforcement, lui envoyer de fausses mesures pour le casser, puis construire des alarmes qui détectent le mensonge.",
-        "longDescription": "## À propos\n\nLes satellites décident de plus en plus seuls quand se recharger, prendre des photos et transmettre leurs données, et ils décident à partir de leurs capteurs. J'en ai donc entraîné un avec PPO, je lui ai envoyé de fausses mesures pour le casser, puis j'ai construit des alarmes pour détecter le mensonge.\n\n## Où ça en est\n\nLe pilote PPO atteint **97 % de survie pour un score de 38,5**, contre **77 % et 21,3** pour une baseline à règles écrites à la main.\n\nTrois détecteurs, face à une baseline aléatoire de 40 à 53 % :\n\n- L'alarme géométrique détecte une fausse éclipse **100 %** du temps, en 3 minutes\n- Un modèle de motifs détecte les stations sol cachées **97 %** du temps, en 34 minutes\n- Une alarme d'énergie détecte la surestimation de batterie **93 %** du temps, en 3 heures\n\n## Statut\n\nActif. Les résultats d'attaque et de détection ci-dessus sont dans le dépôt, avec une analyse des erreurs commises en chemin.",
-        "technologies": ["Python", "Apprentissage par renforcement", "PPO"],
+        "description": "Prototype simulé combinant planification par renforcement, attaques de capteurs et détection pour satellites autonomes.",
+        "longDescription": "## Projet d’apprentissage\n\nTravail de recherche en cours, non présenté comme un système satellitaire déployé.",
+        "technologies": [
+          "Python",
+          "Apprentissage par renforcement",
+          "PPO"
+        ],
         "authors": "",
         "links": [
           {
@@ -246,37 +411,23 @@
         "gallery": []
       },
       {
-        "title": "Field Report",
-        "slug": "field-report",
-        "categories": ["IA", "SWE"],
-        "href": "https://github.com/mohamedAtoui/Field-Report",
-        "dates": "Août 2026",
-        "active": false,
-        "description": "Découvre comment une bibliothèque Python est réellement utilisée sur GitHub, et où l'usage réel diverge de sa propre documentation. Donnez-lui un nom de paquet, il fait le reste.",
-        "longDescription": "## À propos\n\nLa documentation montre comment une bibliothèque est censée être utilisée. Field Report montre comment elle l'est vraiment. Donnez-lui un nom de paquet : il trouve les dépôts qui en dépendent, lit leurs sites d'appel, et compare l'usage réel aux exemples officiels.\n\n## Pipeline\n\n1. **Find** : rechercher les dépôts dépendant du paquet\n2. **Fetch** : les cloner et vérifier que les imports sont réels\n3. **Read** : extraire les sites d'appel du code source\n4. **Canon** : récupérer les exemples de la documentation officielle\n5. **Compare** : comparer usage réel et usage documenté\n6. **Report** : produire un rapport Markdown, adossé à SQLite\n\nS'exécute en parallèle sur Modal, environ 5 minutes contre 15 en séquentiel.\n\n## Exemple de résultat\n\nSur **119 dépôts** utilisant `clerk-backend-api` : un même symbole importé par **5 chemins différents**, et **0 appel sur 544** n'utilise de retries alors que la bibliothèque fournit un `RetryConfig`.",
-        "technologies": ["Python", "SQLite", "Modal"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/Field-Report",
-            "icon": "github"
-          }
-        ],
-        "image": "",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "ZeroToDiffusion",
         "slug": "diffusion",
-        "categories": ["IA", "Recherche"],
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/ZeroToDiffusion",
         "dates": "Mars 2026",
         "active": true,
-        "description": "Implémentation des modèles de diffusion depuis zéro, de bout en bout : rappels de probabilités, divergence KL, ELBO, VAE, puis DDPM, pour comprendre la génération d'images depuis les principes de base.",
-        "longDescription": "## A propos\n\nJe lisais sans cesse sur Stable Diffusion et DALL-E mais les maths ne cliquaient jamais a partir des articles de blog seuls. Alors j'ai decide de tout reprendre correctement. Stylo et papier d'abord, puis code.\n\n## Comment j'ai procede\n\nLa premiere semaine, c'etait juste des probabilites : gaussiennes, Bayes, divergence KL, ELBO. Ennuyeux mais necessaire. Il s'avere que toute la fonction de perte a du sens une fois qu'on la derive soi-meme.\n\nEnsuite j'ai construit un VAE sur MNIST. Les VAEs et les modeles de diffusion partagent la meme base probabiliste, ce qui a rendu la transition bien plus fluide que de sauter directement au DDPM.\n\nApres ca : le processus forward (ajout progressif de bruit aux images), le processus inverse (apprendre a debruiter), l'entrainement d'un UNet pour predire le bruit, et enfin la generation d'images a partir de bruit pur. Le voir fonctionner pour la premiere fois etait vraiment satisfaisant.\n\n## Ce que j'en retiens\n\n- La connexion entre VAEs et diffusion a clique quand j'ai vu les deux comme apprendre a inverser un processus de destruction\n- Les schedules de bruit comptent plus que je ne le pensais pour la qualite des echantillons\n- Les couches d'attention sont ce qui donne aux modeles de diffusion leur capacite a capturer la structure globale\n\n## Articles que j'ai etudies\n\n- Kingma & Welling (2014), VAEs\n- Ho et al. (2020), DDPM",
-        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "description": "Implémentation pédagogique couvrant probabilités, divergence KL, ELBO, VAE et génération DDPM.",
+        "longDescription": "## Projet d’apprentissage\n\nProjet fondamental construit pour comprendre le chemin mathématique des autoencodeurs variationnels aux modèles de diffusion.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
         "authors": "",
         "links": [
           {
@@ -292,13 +443,22 @@
       {
         "title": "CrossGen",
         "slug": "crossgen",
-        "categories": ["IA", "Recherche"],
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/CrossGen",
         "dates": "2025",
         "active": false,
-        "description": "Generateur d'idees inter-domaines qui resout des problemes en cartographiant les relations structurelles entre domaines non lies, par raisonnement analogique plutot que par correspondance de mots-cles.",
-        "longDescription": "## A propos\n\nCrossGen est un generateur d'idees inter-domaines qui decouvre des solutions en cartographiant les relations structurelles profondes entre domaines non lies. Au lieu de demander \"quel domaine ressemble au mien\", il identifie les patterns relationnels fondamentaux qui transcendent les caracteristiques de surface, en utilisant la theorie du Structure-Mapping de Gentner.\n\n## Pipeline\n\n1. Decomposer le probleme en relations neutres au domaine\n2. Abstraire via quatre frameworks paralleles (SAPPhIRE, Biologize, WordTree, TRIZ)\n3. Etendre a 6-8 domaines distants\n4. Rechercher des analogies structurelles\n5. Synthetiser des solutions actionnables\n6. Evaluer sur la nouveaute, faisabilite et profondeur\n\n## Choix de conception\n\n- Cartographie les RELATIONS, pas les caracteristiques de surface\n- Honnetete obligatoire : au moins trois points faibles specifiques par solution\n- 40 principes universels et 42 domaines a travers 8 categories\n- Recherches TRIZ deterministes completees par le raisonnement LLM\n- CLI et interface web avec streaming en direct",
-        "technologies": ["Python", "FastAPI", "Typer", "Claude API"],
+        "description": "Générateur expérimental d’idées interdomaines fondé sur analogies structurelles, critique et prédictions réfutables.",
+        "longDescription": "## Projet d’apprentissage\n\nPrototype de raisonnement dont les sorties sont des hypothèses à tester, pas des découvertes validées.",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Typer",
+          "Claude API"
+        ],
         "authors": "",
         "links": [
           {
@@ -314,13 +474,21 @@
       {
         "title": "Prompt Repetition Experiment",
         "slug": "prompt-repetition-experiment",
-        "categories": ["IA", "Recherche"],
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/prompt-repetition-experiment",
-        "dates": "Fev. 2026",
+        "dates": "Fév. 2026",
         "active": false,
-        "description": "Réplication de recherche testant si répéter un prompt dans une même requête améliore la précision des petits modèles. Répliquée sur neuf modèles ouverts avec test de significativité de McNemar, y compris les benchmarks où l'effet ne tient pas.",
-        "longDescription": "## A propos\n\nUne experience de recherche qui teste si la repetition de prompts dans une seule requete ameliore la precision sur des benchmarks standardises.\n\n## Resultats\n\n- 9 modeles open-source testes (0.5B a 9B parametres)\n- Benchmarks : ARC-Challenge, OpenBookQA, GSM8K, HellaSwag, NameIndex\n- Precision ARC-Challenge quasi doublee de 22% a 44% avec triple repetition (p=0.022)\n- Ca marche parce que la deuxieme copie du prompt peut attend a la premiere, donnant au modele un quasi-passage bidirectionnel",
-        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "description": "Petite réplication de la répétition de prompts avec tests appariés de McNemar et résultats négatifs explicites.",
+        "longDescription": "## Projet d’apprentissage\n\nExpérience préliminaire sur Qwen2.5-1.5B avec 50 exemples par benchmark standard. Les autres modèles configurés ne sont pas présentés comme exécutés.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
         "authors": "",
         "links": [
           {
@@ -334,37 +502,25 @@
         "gallery": []
       },
       {
-        "title": "Mixture of Models Framework",
-        "slug": "mom-paper",
-        "categories": ["IA", "Recherche"],
-        "href": "/blog/hypernova",
-        "dates": "Fev. 2026",
-        "active": false,
-        "description": "Note technique sur le framework Mixture of Models (MoM) derrière le routage Nordlys : comment choisir le meilleur modèle par tâche, et les compromis de coût associés.",
-        "longDescription": "## A propos\n\nLe framework MoM (Mixture of Models) est une contribution de recherche au routage intelligent de LLM. Il introduit une approche systematique pour selectionner le meilleur modele pour chaque tache.\n\n## Contributions\n\n- Framework pour la selection de modeles LLM\n- Strategies de routage optimisees en couts\n- Benchmarking sur plusieurs familles de modeles\n- Presente lors d'un meetup en ligne",
-        "technologies": ["Python", "PyTorch", "LangChain"],
-        "authors": "",
-        "links": [
-          {
-            "type": "Website",
-            "href": "/blog/hypernova",
-            "icon": "globe"
-          }
-        ],
-        "image": "/proj-mom.png",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "Claude avec Pub",
         "slug": "claude-with-ads",
-        "categories": ["IA", "SWE"],
+        "categories": [
+          "IA",
+          "SWE",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/claude-thrad-ads",
-        "dates": "Fev. 2026",
+        "dates": "Fév. 2026",
         "active": false,
-        "description": "Application de chat IA financée par la publicité, offrant un accès gratuit à l'IA de niveau Claude via des publicités contextuelles du réseau Thrad.",
-        "longDescription": "## A propos\n\nUne application de chat IA financee par la publicite qui offre un acces gratuit a l'IA de niveau Claude, financee par des publicites contextuelles du reseau Thrad.\n\n## Fonctionnalites\n\n- Streaming de messages en temps reel\n- Authentification par email avec codes de verification\n- Integration publicitaire contextuelle avec le reseau Thrad\n- Persistance des donnees via Redis\n- Deploiement full-stack sur Vercel",
-        "technologies": ["TypeScript", "Next.js", "React", "Django", "Redis"],
+        "description": "Prototype d’interface de chat IA financée par placement publicitaire contextuel.",
+        "longDescription": "## Projet d’apprentissage\n\nExpérience produit sur le financement d’un chat IA par publicité contextuelle.",
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "React",
+          "Django",
+          "Redis"
+        ],
         "authors": "",
         "links": [
           {
@@ -375,24 +531,25 @@
         ],
         "image": "/proj-claude-ads.png",
         "video": "",
-        "gallery": [
-          {
-            "type": "image",
-            "src": "/proj-claude-ads-2.png",
-            "alt": "Claude with Ads screenshot"
-          }
-        ]
+        "gallery": []
       },
       {
         "title": "Business Expert Skill",
         "slug": "business-expert-skill",
-        "categories": ["IA", "Business"],
+        "categories": [
+          "IA",
+          "Business",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/business-expert-skill",
         "dates": "Mars 2026",
         "active": false,
-        "description": "Skill d'agent qui transforme Claude Code en stratège d'entreprise : un workflow en cinq phases qui pose d'abord des questions précises, puis répond par des options chiffrées en coûts, délais et risques plutôt que par des conseils génériques.",
-        "longDescription": "## À propos\n\nUn skill d'agent pour Claude Code et plus de 40 agents compatibles. Il se comporte en consultant plutôt qu'en chatbot : il interroge la situation avant de conseiller, et répond par des options assorties de coûts, délais, risques et compromis.\n\n## Workflow en cinq phases\n\nDécouvrir, rechercher, analyser, proposer, planifier.\n\n## Conception\n\n- Un dossier `knowledge/` pour le contexte local : démographie, baux, veille concurrentielle, études de marché\n- Un dossier `prompts/` de modèles pour les cas courants : évaluer une nouvelle activité, diagnostiquer une activité existante, analyse de marché, évaluation de loyer\n- Utilisable en conversation libre comme via les modèles",
-        "technologies": ["Claude Code", "Agent Skills"],
+        "description": "Workflow d’agent réutilisable pour découverte, recherche, comparaison d’options et planification d’entreprise.",
+        "longDescription": "## Projet d’apprentissage\n\nWorkflow structuré remplaçant les conseils génériques par des options avec coûts, délais et risques.",
+        "technologies": [
+          "Claude Code",
+          "Agent Skills"
+        ],
         "authors": "",
         "links": [
           {
@@ -408,12 +565,16 @@
       {
         "title": "Get Me Clients",
         "slug": "get-me-clients",
-        "categories": ["IA", "Business"],
+        "categories": [
+          "IA",
+          "Business",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/get-me-clients",
         "dates": "Jan. 2026",
         "active": false,
-        "description": "Outil de génération de leads par IA pour les équipes commerciales pharmaceutiques. Découvre des professionnels de santé dans les 58 wilayas d'Algérie via Google Maps API, avec affinement de recherche par LLM et scoring de qualité.",
-        "longDescription": "## A propos\n\nUn outil de generation de leads par IA concu pour les equipes commerciales pharmaceutiques. Il decouvre des medecins et professionnels de sante dans les 58 wilayas d'Algerie via Google Maps Places API, puis score et deduplique les leads pour l'export.\n\n## Workflow\n\n1. **Contexte business** : Decrivez votre produit et audience cible\n2. **Affinement IA** : DeepSeek genere des questions pour affiner la recherche\n3. **Matrice de recherche** : Combine wilayas et specialites medicales\n4. **Deduplication** : Fusion des doublons avec rapidfuzz\n5. **Scoring qualite** : Notation IA de la pertinence de chaque lead\n6. **Export Excel** : Telechargez des listes de leads propres et scorees",
+        "description": "Prototype de prospection pharmaceutique combinant recherche cartographique et affinage des requêtes par LLM.",
+        "longDescription": "## Projet d’apprentissage\n\nPrototype de découverte de marché couvrant les wilayas algériennes. Aucun résultat commercial ni usage en production n’est revendiqué.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -438,15 +599,24 @@
         "href": "",
         "dates": "2024",
         "active": false,
-        "description": "Détection d'intrusions par apprentissage automatique pour les réseaux embarqués de véhicules, menée dans le cadre de ma recherche à l'ISG Smart Card & IoT Security Centre, Royal Holloway. Le code de recherche reste la propriété du groupe.",
-        "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+        "description": "Projet universitaire de détection d’intrusions par ML pour réseaux embarqués de véhicules.",
+        "technologies": [
+          "Python",
+          "scikit-learn",
+          "Pandas",
+          "NumPy"
+        ],
         "authors": "",
         "links": [],
         "image": "/proj-cyber-attack.png",
         "video": "",
         "slug": "cyber-attack-detection",
-        "categories": ["IA", "Recherche"],
-        "longDescription": "## À propos\n\nUn système de détection de menaces basé sur l’apprentissage automatique qui identifie et classifie les cyberattaques en analysant les patterns du trafic réseau.\n\n## Approche\n\n- Ingénierie de features sur les données de trafic réseau\n- Plusieurs classifieurs ML (Random Forest, SVM, réseaux de neurones)\n- Pipeline de classification en temps réel\n- Haute précision sur les jeux de données de référence",
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
+        "longDescription": "## Projet d’apprentissage\n\nExpérimentation ML menée avec l’ISG Smart Card & IoT Security Centre. Le code de recherche reste auprès du groupe.",
         "gallery": []
       },
       {
@@ -454,8 +624,12 @@
         "href": "https://github.com/mohamedAtoui/Transformer-From-Stones",
         "dates": "2024",
         "active": false,
-        "description": "Implementation de l’architecture Transformer originale de ‘Attention is All You Need’, construisant l’attention multi-tetes, l’encodage positionnel et les pipelines d’entrainement.",
-        "technologies": ["Python", "PyTorch", "NumPy"],
+        "description": "Implémentation d’un Transformer depuis zéro : attention, encodage positionnel et entraînement.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -467,20 +641,31 @@
         "image": "/proj-transformer.png",
         "video": "",
         "slug": "transformer-from-stones",
-        "categories": ["IA", "Recherche", "Apprentissage"],
-        "longDescription": "## A propos\n\nUne implementation de l’architecture Transformer originale telle que decrite dans l’article \"Attention is All You Need\". Chaque composant est construit de zero.\n\n## Details d’implementation\n\n- Attention multi-tetes avec produit scalaire\n- Encodage positionnel sinusoidal\n- Normalisation de couche et connexions residuelles\n- Reseaux feed-forward avec activation GELU\n- Tokenisation byte-pair encoding\n- Pipeline d’entrainement avec accumulation de gradients",
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
+        "longDescription": "## Projet d’apprentissage\n\nImplémentation pédagogique de l’architecture d’« Attention Is All You Need ».",
         "gallery": []
       },
       {
         "title": "LSTM from Scratch",
         "slug": "lstm-from-scratch",
-        "categories": ["IA", "Recherche", "Apprentissage"],
+        "categories": [
+          "IA",
+          "Recherche",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/LSTM-from-SCRATCH",
         "dates": "Jan. 2025",
         "active": false,
-        "description": "Implémentation de réseaux LSTM depuis zéro, construisant chaque porte et mécanisme d'état de cellule depuis les principes fondamentaux avec rétropropagation à travers le temps.",
-        "longDescription": "## A propos\n\nUne implementation de zero des reseaux LSTM, construisant chaque porte et mecanisme d'etat de cellule depuis les principes fondamentaux.\n\n## Implementation\n\n- Portes d'oubli, d'entree et de sortie\n- Gestion de l'etat de cellule\n- Retropropagation a travers le temps\n- Entrainement sur des donnees sequentielles",
-        "technologies": ["Python", "NumPy"],
+        "description": "Implémentation d’un LSTM depuis zéro : portes, état de cellule et rétropropagation temporelle.",
+        "longDescription": "## Projet d’apprentissage\n\nExercice de modélisation de séquences conçu pour comprendre les réseaux récurrents sous les abstractions des frameworks.",
+        "technologies": [
+          "Python",
+          "NumPy"
+        ],
         "authors": "",
         "links": [
           {
@@ -496,13 +681,21 @@
       {
         "title": "Mini Compiler",
         "slug": "mini-compiler",
-        "categories": ["SWE", "Apprentissage"],
+        "categories": [
+          "SWE",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/Mini-Compiler",
         "dates": "Oct. 2025",
         "active": false,
-        "description": "Analyseur lexical et syntaxique pour Mini3ADR, un petit langage avec variables, arithmétique et structures de contrôle, construit avec Flex et Bison pour un cours de compilation.",
-        "longDescription": "## A propos\n\nUn analyseur lexical et parseur pour Mini3ADR, un langage de programmation simple concu pour un cours de construction de compilateurs.\n\n## Fonctionnalites du langage (Mini3ADR)\n\n- Declarations de variables entieres\n- Instructions d'affectation\n- Operateurs arithmetiques (+, -, *, /)\n- Operateurs relationnels (<, >, ==, !=)\n- Controle de flux : boucles `while` et instructions `if`/`else`\n\n## Implementation\n\n- **Lexer** : Tokenisation avec suivi de ligne via Lex/Flex\n- **Table des symboles** : Suivi des variables declarees et leurs types\n- **Parseur** : Integration prevue avec Yacc/Bison pour l'analyse syntaxique",
-        "technologies": ["C", "Flex", "Bison", "Make"],
+        "description": "Lexer et parseur Mini3ADR construits avec Flex et Bison pour un cours de compilation.",
+        "longDescription": "## Projet d’apprentissage\n\nProjet universitaire couvrant tokenisation, grammaire, arithmétique et contrôle de flux.",
+        "technologies": [
+          "C",
+          "Flex",
+          "Bison",
+          "Make"
+        ],
         "authors": "",
         "links": [
           {
@@ -516,15 +709,22 @@
         "gallery": []
       },
       {
-        "title": "Generateur de texte Harry Potter",
+        "title": "Générateur de texte Harry Potter",
         "slug": "generate-harry-potter",
-        "categories": ["IA", "Apprentissage"],
+        "categories": [
+          "IA",
+          "Apprentissage"
+        ],
         "href": "https://github.com/mohamedAtoui/GenerateHarryPotter",
         "dates": "Juil. 2024",
         "active": false,
-        "description": "Générateur de texte au niveau caractère utilisant des RNN classiques entraînés sur Harry Potter, explorant la modélisation de séquences et le problème des gradients évanescents dans les architectures récurrentes.",
-        "longDescription": "## A propos\n\nUn projet de generation de texte au niveau caractere utilisant des reseaux de neurones recurrents entraines sur le corpus Harry Potter. L'objectif etait de comprendre la modelisation de sequences depuis les principes fondamentaux et d'observer ou les RNN classiques echouent.\n\n## Approche technique\n\n- Tokenisation au niveau caractere avec encodage one-hot\n- Cellules RNN avec activation tanh et propagation d'etat cache\n- Loss cross-entropy avec echantillonnage softmax controle par temperature\n- Retropropagation a travers le temps (BPTT) avec clipping de gradient\n\n## Ce que j'ai appris\n\n- Les gradients evanescents rendent difficile la capture de dependances a longue portee\n- Sans mecanismes de porte (LSTM/GRU), l'etat cache sature et oublie le contexte anterieur\n- Le reglage de la temperature est critique : trop basse produit du texte repetitif, trop haute du charabia\n- Ce projet a motive mon implementation LSTM from Scratch pour resoudre ces limitations",
-        "technologies": ["Python", "PyTorch", "Jupyter"],
+        "description": "Générateur de texte caractère par caractère pour étudier séquences et gradients évanescents.",
+        "longDescription": "## Projet d’apprentissage\n\nProjet pédagogique ancien consacré à la modélisation du langage par réseaux récurrents.",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "Jupyter"
+        ],
         "authors": "",
         "links": [
           {
@@ -652,10 +852,33 @@
       "Pandas",
       "Prolog (IA Symbolique)"
     ],
-    "Backend": ["FastAPI", "PostgreSQL", "Redis", "SQL", "Go", "Kafka"],
-    "Frontend": ["TypeScript", "Next.js", "React", "Vite", "Three.js"],
-    "Infrastructure": ["Docker", "AWS", "Modal", "Git", "Linux"],
-    "Langages": ["Java", "Pascal", "Lex (Compilateurs)"]
+    "Backend": [
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "SQL",
+      "Go",
+      "Kafka"
+    ],
+    "Frontend": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Vite",
+      "Three.js"
+    ],
+    "Infrastructure": [
+      "Docker",
+      "AWS",
+      "Modal",
+      "Git",
+      "Linux"
+    ],
+    "Langages": [
+      "Java",
+      "Pascal",
+      "Lex (Compilateurs)"
+    ]
   },
   "reviewerConferences": [],
   "reviewerJournals": [],
