@@ -195,37 +195,6 @@
         "gallery": []
       },
       {
-        "title": "FolderGate",
-        "slug": "foldergate",
-        "categories": [
-          "SWE",
-          "IA"
-        ],
-        "href": "https://github.com/mohamedAtoui/foldergate",
-        "dates": "Août 2026",
-        "active": false,
-        "description": "Scanner défensif qui inspecte les déclencheurs de démarrage contrôlés par un dépôt avant son ouverture, explique la chaîne d’exécution et crée une copie neutralisée.",
-        "longDescription": "## Problème\n\nOuvrir un dépôt non fiable peut activer des tâches IDE et des configurations d’agents avant leur vérification.\n\n## Implémentation\n\nFolderGate analyse la configuration, extrait les commandes que l’IDE déclencherait et peut émuler uniquement ces commandes dans un sandbox Modal isolé sans sortie réseau. La neutralisation est déterministe ; aucun modèle n’effectue d’édition destructive.\n\n## Preuves de sûreté\n\nLes fixtures incluses sont auto-créées et utilisent des charges bénignes. Le dépôt propose aussi une relecture hors ligne d’une trace enregistrée, clairement distinguée d’une nouvelle exécution en sandbox.",
-        "technologies": [
-          "Python",
-          "FastAPI",
-          "React",
-          "Modal",
-          "Sécurité"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "GitHub",
-            "href": "https://github.com/mohamedAtoui/foldergate",
-            "icon": "github"
-          }
-        ],
-        "image": "",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "FinBalance",
         "slug": "finbalance",
         "categories": [

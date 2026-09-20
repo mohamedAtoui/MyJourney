@@ -195,37 +195,6 @@
         "gallery": []
       },
       {
-        "title": "FolderGate",
-        "slug": "foldergate",
-        "categories": [
-          "SWE",
-          "AI"
-        ],
-        "href": "https://github.com/mohamedAtoui/foldergate",
-        "dates": "Aug. 2026",
-        "active": false,
-        "description": "Defensive scanner that inspects repository-controlled IDE startup triggers before a folder is opened, explains the execution chain and creates a defanged copy.",
-        "longDescription": "## Problem\n\nOpening an untrusted repository can activate IDE tasks and agent configuration before a developer has reviewed them.\n\n## Implementation\n\nFolderGate parses repository configuration, extracts the commands an IDE would trigger, and can emulate only those commands in an isolated Modal sandbox with network egress disabled. Defanging is deterministic; no model performs destructive edits.\n\n## Safety evidence\n\nThe included fixtures are self-created and use benign payloads. The repository also provides an offline recorded-trace replay, clearly separated from fresh sandbox execution.",
-        "technologies": [
-          "Python",
-          "FastAPI",
-          "React",
-          "Modal",
-          "Security"
-        ],
-        "authors": "",
-        "links": [
-          {
-            "type": "Github",
-            "href": "https://github.com/mohamedAtoui/foldergate",
-            "icon": "github"
-          }
-        ],
-        "image": "",
-        "video": "",
-        "gallery": []
-      },
-      {
         "title": "FinBalance",
         "slug": "finbalance",
         "categories": [
