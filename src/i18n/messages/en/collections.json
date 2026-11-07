@@ -24,7 +24,7 @@
       {
         "date": "2025.2",
         "title": "Founded [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys)",
-        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems that select the best model for each task. Scored 75.6% on SWE-bench Verified (Dec 2025) against 74.4% for the best single model. Scaled to 500+ users."
+        "content": "Co-founded Nordlys Labs, building intelligent LLM routing systems that select the best model for each task. Ranked above the best published single-model baseline on SWE-bench Verified (Dec 2025). Scaled to 500+ users."
       },
       {
         "date": "2024.12",
@@ -747,7 +747,7 @@
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Feb. 2025",
         "end": "May. 2026",
-        "description": "- Co-founded Nordlys Labs and led ML research on **LLM routing**: picking the best model per request based on task signals.\n- Designed and shipped a routing system that scored **75.6% on SWE-bench Verified** (December 2025), above the strongest published single-model baseline at the time (Claude Opus 4.5, 74.4%).\n- Scaled the platform to **500+ users**; built the production stack on Python / FastAPI / LangChain with Redis + PostgreSQL behind a Dockerised deploy.\n- Selected for the **Antler** accelerator program; presented the *MoM (Mixture of Models)* framework at an online meetup."
+        "description": "- Co-founded Nordlys Labs and led ML research on **LLM routing**: picking the best model per request based on task signals.\n- Designed and shipped a routing system that **ranked above the strongest published single-model baseline** (Claude Opus 4.5) on SWE-bench Verified in December 2025.\n- Scaled the platform to **500+ users**; built the production stack on Python / FastAPI / LangChain with Redis + PostgreSQL behind a Dockerised deploy.\n- Selected for the **Antler** accelerator program; presented the *MoM (Mixture of Models)* framework at an online meetup."
       },
       {
         "company": "Royal Holloway, University of London",
