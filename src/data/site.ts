@@ -7,6 +7,6 @@ export const BLUR_FADE_DELAY = 0.05;
 
 export const siteConfig = {
   url: "https://mohamedatoui.uk",
-  lastUpdated: "2026.08",
+  lastUpdated: "2026.11",
   avatarUrl: "/me.png",
 } as const;

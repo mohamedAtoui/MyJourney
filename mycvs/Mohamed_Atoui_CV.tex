@@ -7,6 +7,8 @@
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{graphicx}
+\graphicspath{{../public/icon/}}
 \usepackage[hidelinks]{hyperref}
 
 % ---- Fonts (macOS system font; close to the original LibreOffice look) ----
@@ -19,6 +21,7 @@
 
 \linespread{1.04}
 \setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
 \pagestyle{empty}
 
 % ---- Helpers ----------------------------------------------------------------
@@ -63,10 +66,13 @@
 
 % ---- Summary ----------------------------------------------------------------
 \cvsection{Summary}
-BSc Computer Science \& AI graduate from Royal Holloway (First-Class, 2026). I work across the research-to-production stack: published academic research on adversarial robustness; built diffusion models from first principles; led KV-cache research that cut Llama-3.1-8B inference memory by 62\%; and co-founded Nordlys Labs, where I shipped Hypernova, a Mixture of Models framework that scored 75.6\% on SWE-bench Verified (Dec 2025), above the strongest published single-model baseline at the time (Claude Opus 4.5, 74.4\%), serving 500+ users. Comfortable moving between research, engineering, and customer-facing work in fast-moving environments.
+AI engineer in dmg::media's Innovation Team and a First-Class Computer Science \& AI graduate from Royal Holloway (2026). Previously co-founded Nordlys Labs, building an LLM platform for \textbf{500+ users} with Python/FastAPI services, model routing and production deployment. Experience across applied ML experiments, retrieval evaluation and tool-using agents.
 
 % ---- Experience -------------------------------------------------------------
 \cvsection{Experience}
+
+\job{AI Engineer}{\raisebox{-0.2ex}{\includegraphics[height=0.34cm]{dmg-media.png}}\hspace{0.35em}\href{https://www.dmgmedia.co.uk/}{dmg::media}, Innovation Team}{Sep 2026 -- Present}
+\vspace{4pt}
 
 \job{Co-organiser}{London Systems Club}{Feb 2026 – Present}
 \begin{tight}
@@ -111,6 +117,7 @@ BSc Computer Science \& AI graduate from Royal Holloway (First-Class, 2026). I w
 \end{tight}
 
 % ---- Selected Projects ------------------------------------------------------
+\newpage
 \cvsection{Selected Projects}
 
 \project{StratigraphicKV, Hybrid KV-Cache Method (Undergraduate FYP)}{ $\cdot$ Python $\cdot$ PyTorch $\cdot$ HuggingFace Transformers}

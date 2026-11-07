@@ -27,3 +27,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Employer logos
+
+The dmg::media logo (`public/icon/dmg-media.png`) is sourced from the
+[official dmg media website](https://www.dmgmedia.co.uk/)
+([original asset](https://www.dmgmedia.co.uk/wp-content/uploads/2022/01/cropped-favicon-dmg.png?w=192)).
+It is used to identify the employer in the portfolio and CV. The logo remains
+the property of its respective owner and is not covered by this repository’s MIT license.

@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 
 interface ResumeCardProps {
   logoUrl: string;
+  logoClassName?: string;
   altText: string;
   title: string;
   subtitle?: string;
@@ -26,6 +27,7 @@ interface ResumeCardProps {
 }
 export const ResumeCard = ({
   logoUrl,
+  logoClassName,
   altText,
   title,
   subtitle,
@@ -56,7 +58,11 @@ export const ResumeCard = ({
     >
       <div className="flex-none">
         <Avatar className="bg-muted dark:bg-foreground m-auto size-12 border">
-          <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
+          <AvatarImage
+            src={logoUrl}
+            alt={altText}
+            className={cn("object-contain", logoClassName)}
+          />
           <AvatarFallback>{altText[0]}</AvatarFallback>
         </Avatar>
       </div>
