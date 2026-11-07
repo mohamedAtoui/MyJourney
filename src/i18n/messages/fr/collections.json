@@ -727,6 +727,18 @@
   "work": {
     "items": [
       {
+        "company": "dmg::media",
+        "href": "https://www.dmgmedia.co.uk/",
+        "badges": [],
+        "location": "Londres, Royaume-Uni",
+        "title": "Ingénieur IA · Innovation Team",
+        "logoUrl": "/icon/dmg-media.png",
+        "logoClassName": "p-2",
+        "start": "Sept. 2026",
+        "end": "Présent",
+        "description": ""
+      },
+      {
         "company": "Nordlys Labs",
         "href": "https://github.com/Nordlys-Labs/nordlys",
         "badges": [],

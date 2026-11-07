@@ -1,8 +1,7 @@
-import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import type React from "react";
 
-import { Icons } from "@/components/icons";
 import AwardsSection from "@/components/portfolio/awards-section";
 import Brief from "@/components/portfolio/brief";
 import Contact from "@/components/portfolio/contact";
@@ -132,6 +131,7 @@ export default async function Page(props: {
     location: string;
     title: string;
     logoUrl: string;
+    logoClassName?: string;
     start: string;
     end: string;
     description: string;
@@ -265,14 +265,17 @@ export default async function Page(props: {
       )}
 
       {/* Skills Section */}
-      {skillsRaw && (Array.isArray(skillsRaw) ? skillsRaw.length > 0 : Object.keys(skillsRaw).length > 0) && (
-        <section id="skills">
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <h2 className="text-xl font-bold">{t("sections.skills")}</h2>
-            <Skills skills={skillsRaw} />
-          </div>
-        </section>
-      )}
+      {skillsRaw &&
+        (Array.isArray(skillsRaw)
+          ? skillsRaw.length > 0
+          : Object.keys(skillsRaw).length > 0) && (
+          <section id="skills">
+            <div className="flex min-h-0 flex-col gap-y-3">
+              <h2 className="text-xl font-bold">{t("sections.skills")}</h2>
+              <Skills skills={skillsRaw} />
+            </div>
+          </section>
+        )}
 
       {/* Education Section */}
       {educationItems && educationItems.length > 0 && (

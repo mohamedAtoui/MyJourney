@@ -3,6 +3,7 @@ import { ResumeCard } from "@/components/portfolio/resume-card";
 interface Work {
   company: string;
   logoUrl: string;
+  logoClassName?: string;
   title: string;
   href?: string;
   badges?: readonly string[];
@@ -23,6 +24,7 @@ export default function Work({ work }: WorkProps) {
         <ResumeCard
           key={item.company}
           logoUrl={item.logoUrl}
+          logoClassName={item.logoClassName}
           altText={item.company}
           title={item.company}
           location={item.location}
