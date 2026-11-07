@@ -24,7 +24,7 @@
       {
         "date": "2025.2",
         "title": "Fondation de [Nordlys Labs](https://github.com/Nordlys-Labs/nordlys)",
-        "content": "Co-fondation de Nordlys Labs, construisant des systèmes de routage LLM intelligents. 75,6 % sur SWE-bench Verified (déc. 2025), contre 74,4 % pour le meilleur modèle unique. Plus de 500 utilisateurs."
+        "content": "Co-fondation de Nordlys Labs, construisant des systèmes de routage LLM intelligents. Système classé devant le meilleur modèle unique publié sur SWE-bench Verified (déc. 2025). Plus de 500 utilisateurs."
       },
       {
         "date": "2024.12",
@@ -747,7 +747,7 @@
         "logoUrl": "/icon/nordlys_logo.png",
         "start": "Fév. 2025",
         "end": "Mai 2026",
-        "description": "- Co-fondé Nordlys Labs et dirigé la recherche ML sur le **routage LLM** : choisir le meilleur modèle par requête selon les signaux de la tâche.\n- Conçu et livré un système de routage ayant obtenu **75,6 % sur SWE-bench Verified** (décembre 2025), au-dessus du meilleur modèle unique publié à l'époque (Claude Opus 4.5, 74,4 %).\n- Passé la plateforme à **plus de 500 utilisateurs** ; stack de production en Python / FastAPI / LangChain avec Redis + PostgreSQL derrière un déploiement Dockerisé.\n- Sélectionné pour l'accélérateur **Antler** ; présenté le framework *MoM (Mixture of Models)* lors d'un meetup en ligne."
+        "description": "- Co-fondé Nordlys Labs et dirigé la recherche ML sur le **routage LLM** : choisir le meilleur modèle par requête selon les signaux de la tâche.\n- Conçu et livré un système de routage **classé devant le meilleur modèle unique publié** (Claude Opus 4.5) sur SWE-bench Verified en décembre 2025.\n- Passé la plateforme à **plus de 500 utilisateurs** ; stack de production en Python / FastAPI / LangChain avec Redis + PostgreSQL derrière un déploiement Dockerisé.\n- Sélectionné pour l'accélérateur **Antler** ; présenté le framework *MoM (Mixture of Models)* lors d'un meetup en ligne."
       },
       {
         "company": "Royal Holloway, University of London",
